@@ -1,0 +1,49 @@
+{
+  "name": "knopf.css",
+  "version": "0.0.0",
+  "description": "Componentized styles for your buttons",
+  "author": {
+    "name": "Plectica",
+    "email": "tech@plectica.com",
+    "url": "https://www.plectica.com/"
+  },
+  "contributors": [
+    "Agustín Díaz <me@adiaz.uy> (https://adiaz.uy/)",
+    "Abhi Bassi <hello@abhinavbassi.com> (http://abhinavbassi.com)"
+  ],
+  "homepage": "https://knopf.dev/",
+  "style": "knopf.css",
+  "main": "knopf.css",
+  "files": [
+    "knopf.css",
+    "knopf.min.css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/systemsthinkinginstitute/knopf.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/systemsthinkinginstitute/knopf.css/issues"
+  },
+  "scripts": {
+    "lint": "stylelint knopf.css",
+    "prepare": "npm run test",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "buttons",
+    "scss",
+    "css"
+  ],
+  "devDependencies": {
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-descending-specificity": null
+    }
+  }
+}
