@@ -244,6 +244,20 @@
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
+.knpf--pale {
+  /* base */
+  --knpf-background-color: hsla(var(--knpf-color), 0.1);
+  --knpf-text-color: hsl(var(--knpf-color));
+
+  /* hover */
+  --knpf-hover-background: hsla(var(--knpf-color), 0.2);
+  --knpf-hover-text-color: hsl(var(--knpf-hover-color));
+
+  /* active */
+  --knpf-active-background: hsla(var(--knpf-color), 0.3);
+  --knpf-active-text-color: hsl(var(--knpf-active-color));
+}
+
 /* ==========================================================================
    Modifiers
    ========================================================================== */
