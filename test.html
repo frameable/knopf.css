@@ -106,6 +106,15 @@
     <hr>
 
     <div>
+      <button class="knpf knpf--link">link</button>
+      <button class="knpf knpf--link knpf--secondary">link</button>
+      <button class="knpf knpf--link knpf--positive">link</button>
+      <button class="knpf knpf--link knpf--negative">link</button>
+    </div>
+
+    <hr>
+
+    <div>
       <button class="knpf knpf--outline">primary outline</button>
       <button class="knpf knpf--outline knpf--inverse">inverse outline</button>
       <button class="knpf knpf--outline knpf--flat">flat outline</button>
@@ -238,6 +247,19 @@
       </button>
     </div>
 
+    <br>
+
+    <div>
+      <button class="knpf knpf--block" style="--knpf-justify-content: left;">
+        <svg class="knpf_icon">
+          <use xlink:href="#happy-icon" />
+        </svg>
+        <span class="knpf_label">
+          left aligned
+        </span>
+      </button>
+    </div>
+
     <hr>
 
     <div>
@@ -263,6 +285,7 @@
         </button>
       </span>
     </div>
+
     <hr>
 
     <div>
@@ -286,6 +309,62 @@
             <use xlink:href="#drop-down-icon" />
           </svg>
         </button>
+      </span>
+    </div>
+
+    <hr>
+
+    <div>
+      <span class="knpf_group knpf_group--vertical" style="--knpf-justify-content: left; width: 240px;">
+        <button class="knpf knpf--flat knpf--outline">
+          <svg class="knpf_icon">
+            <use xlink:href="#happy-icon" />
+          </svg>
+          <span class="knpf_label">first</span>
+        </button>
+        <button class="knpf knpf--flat knpf--outline knpf--active">
+          <svg class="knpf_icon">
+            <use xlink:href="#happy-icon" />
+          </svg>
+          <span class="knpf_label">second</span>
+        </button>
+        <button class="knpf knpf--flat knpf--outline">
+          <svg class="knpf_icon">
+            <use xlink:href="#happy-icon" />
+          </svg>
+          <span class="knpf_label">third</span>
+        </button>
+        <button class="knpf knpf--flat knpf--outline">
+          <svg class="knpf_icon">
+            <use xlink:href="#happy-icon" />
+          </svg>
+          <span class="knpf_label">last</span>
+        </button>
+      </span>
+
+      <span class="knpf_group knpf_group--vertical knpf_group--spaced">
+        <button class="knpf knpf--flat">A</button>
+        <button class="knpf knpf--flat knpf--active">B</button>
+        <button class="knpf knpf--flat">C</button>
+      </span>
+
+      <span class="knpf_group knpf_group--vertical knpf_group--sharp knpf_group--spaced">
+        <button class="knpf knpf--outline">A</button>
+        <button class="knpf knpf--outline knpf--active">B</button>
+        <button class="knpf knpf--outline">C</button>
+      </span>
+
+      <span class="knpf_group knpf_group--vertical knpf_group--sharp knpf_group--spaced">
+        <button class="knpf knpf--pale">A</button>
+        <button class="knpf knpf--pale knpf--active">B</button>
+        <button class="knpf knpf--pale">C</button>
+      </span>
+
+      <span class="knpf_group knpf_group--vertical knpf_group--sharp">
+        <button class="knpf">first</button>
+        <button class="knpf knpf--active">second</button>
+        <button class="knpf">third</button>
+        <button class="knpf">last</button>
       </span>
     </div>
   </main>

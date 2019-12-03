@@ -17,7 +17,7 @@
 
   /* Positive */
   --knpf-positive-color-hue: 164;
-  --knpf-positive-color-saturation: 87%;
+  --knpf-positive-color-saturation: 88%;
   --knpf-positive-color-luminosity: 28%;
 
   /* Negative */
@@ -103,12 +103,12 @@
   --knpf-text-color: white;
 
   /* Hover */
-  --knpf-hover-background: hsl(var(--knpf-hover-color));
+  --knpf-hover-background-color: hsl(var(--knpf-hover-color));
   --knpf-hover-border-color: transparent;
   --knpf-hover-text-color: white;
 
   /* Active */
-  --knpf-active-background: hsl(var(--knpf-active-color));
+  --knpf-active-background-color: hsl(var(--knpf-active-color));
   --knpf-active-border-color: transparent;
   --knpf-active-text-color: white;
 
@@ -164,7 +164,7 @@
 
 /* Active */
 .knpf:not(:disabled):not(.knpf--disabled).knpf--active {
-  --knpf-background-color: var(--knpf-active-background);
+  --knpf-background-color: var(--knpf-active-background-color);
   --knpf-border-color: var(--knpf-active-border-color);
   --knpf-text-color: var(--knpf-active-text-color);
 }
@@ -172,7 +172,7 @@
 /* Hover */
 .knpf:not(:disabled):not(.knpf--disabled):hover,
 .knpf:not(:disabled):not(.knpf--disabled):active {
-  --knpf-background-color: var(--knpf-hover-background);
+  --knpf-background-color: var(--knpf-hover-background-color);
   --knpf-border-color: var(--knpf-hover-border-color);
   --knpf-text-color: var(--knpf-hover-text-color);
 
@@ -222,11 +222,11 @@
   --knpf-text-color: hsl(var(--knpf-color));
 
   /* hover */
-  --knpf-hover-background: hsl(var(--knpf-color));
+  --knpf-hover-background-color: hsl(var(--knpf-color));
   --knpf-hover-text-color: white;
 
   /* active */
-  --knpf-active-background: hsl(var(--knpf-active-color));
+  --knpf-active-background-color: hsl(var(--knpf-active-color));
   --knpf-active-text-color: white;
 }
 
@@ -236,11 +236,11 @@
   --knpf-text-color: hsl(var(--knpf-color));
 
   /* hover */
-  --knpf-hover-background: hsla(var(--knpf-color), 0.15);
+  --knpf-hover-background-color: hsla(var(--knpf-color), 0.15);
   --knpf-hover-text-color: hsl(var(--knpf-hover-color));
 
   /* active */
-  --knpf-active-background: hsla(var(--knpf-color), 0.25);
+  --knpf-active-background-color: hsla(var(--knpf-color), 0.25);
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
@@ -250,11 +250,32 @@
   --knpf-text-color: hsl(var(--knpf-color));
 
   /* hover */
-  --knpf-hover-background: hsla(var(--knpf-color), 0.2);
+  --knpf-hover-background-color: hsla(var(--knpf-color), 0.2);
   --knpf-hover-text-color: hsl(var(--knpf-hover-color));
 
   /* active */
-  --knpf-active-background: hsla(var(--knpf-color), 0.3);
+  --knpf-active-background-color: hsla(var(--knpf-color), 0.3);
+  --knpf-active-text-color: hsl(var(--knpf-active-color));
+}
+
+.knpf--link {
+  --knpf-border-width: 0;
+  --knpf-border-radius: 0;
+  --knpf-padding: 0;
+
+  /* base */
+  --knpf-background-color: transparent;
+  --knpf-border-color: transparent;
+  --knpf-text-color: hsl(var(--knpf-color));
+
+  /* hover */
+  --knpf-hover-background-color: transparent;
+  --knpf-hover-border-color: transparent;
+  --knpf-hover-text-color: hsl(var(--knpf-hover-color));
+
+  /* active */
+  --knpf-active-background-color: transparent;
+  --knpf-active-border-color: transparent;
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
@@ -263,9 +284,9 @@
    ========================================================================== */
 
 .knpf--outline {
-  --knpf-border-color: hsl(var(--knpf-color));
-  --knpf-hover-border-color: hsl(var(--knpf-color));
-  --knpf-active-border-color: hsl(var(--knpf-color));
+  --knpf-border-color: hsla(var(--knpf-color), 0.25);
+  --knpf-hover-border-color: hsla(var(--knpf-color), 0.25);
+  --knpf-active-border-color: hsla(var(--knpf-color), 0.25);
 }
 
 .knpf--even {
@@ -375,22 +396,34 @@
   position: relative;
 }
 
+.knpf_group--vertical {
+  flex-direction: column;
+}
+
 .knpf_group--spaced {
   --knpf-group-spacing: var(--knpf-padding);
-
-  padding: var(--knpf-group-spacing);
 }
 
 .knpf_group--sharp {
   --knpf-border-radius: 0;
 }
 
-.knpf_group:not(.knpf_group--spaced) > .knpf:first-child {
+.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.knpf_group:not(.knpf_group--spaced) > .knpf:last-child {
+.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:last-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -399,6 +432,10 @@
   --knpf-border-radius: 0;
 }
 
-.knpf_group > .knpf + .knpf {
+.knpf_group--vertical > .knpf + .knpf {
+  margin-top: var(--knpf-group-spacing);
+}
+
+.knpf_group:not(.knpf_group--vertical) > .knpf + .knpf {
   margin-left: var(--knpf-group-spacing);
 }

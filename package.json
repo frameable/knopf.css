@@ -1,6 +1,6 @@
 {
   "name": "knopf.css",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Componentized styles for your buttons",
   "author": {
     "name": "Plectica",
@@ -33,7 +33,6 @@
   },
   "keywords": [
     "buttons",
-    "scss",
     "css"
   ],
   "devDependencies": {
