@@ -284,9 +284,9 @@
    ========================================================================== */
 
 .knpf--outline {
-  --knpf-border-color: hsl(var(--knpf-color));
-  --knpf-hover-border-color: hsl(var(--knpf-color));
-  --knpf-active-border-color: hsl(var(--knpf-color));
+  --knpf-border-color: hsla(var(--knpf-color), 0.25);
+  --knpf-hover-border-color: hsla(var(--knpf-color), 0.25);
+  --knpf-active-border-color: hsla(var(--knpf-color), 0.25);
 }
 
 .knpf--even {
