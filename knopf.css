@@ -258,6 +258,27 @@
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
+.knpf--link {
+  --knpf-border-width: 0;
+  --knpf-border-radius: 0;
+  --knpf-padding: 0;
+
+  /* base */
+  --knpf-background-color: transparent;
+  --knpf-border-color: transparent;
+  --knpf-text-color: hsl(var(--knpf-color));
+
+  /* hover */
+  --knpf-hover-background-color: transparent;
+  --knpf-hover-border-color: transparent;
+  --knpf-hover-text-color: hsl(var(--knpf-hover-color));
+
+  /* active */
+  --knpf-active-background-color: transparent;
+  --knpf-active-border-color: transparent;
+  --knpf-active-text-color: hsl(var(--knpf-active-color));
+}
+
 /* ==========================================================================
    Modifiers
    ========================================================================== */
