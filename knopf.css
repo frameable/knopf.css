@@ -103,12 +103,12 @@
   --knpf-text-color: white;
 
   /* Hover */
-  --knpf-hover-background: hsl(var(--knpf-hover-color));
+  --knpf-hover-background-color: hsl(var(--knpf-hover-color));
   --knpf-hover-border-color: transparent;
   --knpf-hover-text-color: white;
 
   /* Active */
-  --knpf-active-background: hsl(var(--knpf-active-color));
+  --knpf-active-background-color: hsl(var(--knpf-active-color));
   --knpf-active-border-color: transparent;
   --knpf-active-text-color: white;
 
@@ -164,7 +164,7 @@
 
 /* Active */
 .knpf:not(:disabled):not(.knpf--disabled).knpf--active {
-  --knpf-background-color: var(--knpf-active-background);
+  --knpf-background-color: var(--knpf-active-background-color);
   --knpf-border-color: var(--knpf-active-border-color);
   --knpf-text-color: var(--knpf-active-text-color);
 }
@@ -172,7 +172,7 @@
 /* Hover */
 .knpf:not(:disabled):not(.knpf--disabled):hover,
 .knpf:not(:disabled):not(.knpf--disabled):active {
-  --knpf-background-color: var(--knpf-hover-background);
+  --knpf-background-color: var(--knpf-hover-background-color);
   --knpf-border-color: var(--knpf-hover-border-color);
   --knpf-text-color: var(--knpf-hover-text-color);
 
@@ -222,11 +222,11 @@
   --knpf-text-color: hsl(var(--knpf-color));
 
   /* hover */
-  --knpf-hover-background: hsl(var(--knpf-color));
+  --knpf-hover-background-color: hsl(var(--knpf-color));
   --knpf-hover-text-color: white;
 
   /* active */
-  --knpf-active-background: hsl(var(--knpf-active-color));
+  --knpf-active-background-color: hsl(var(--knpf-active-color));
   --knpf-active-text-color: white;
 }
 
@@ -236,11 +236,11 @@
   --knpf-text-color: hsl(var(--knpf-color));
 
   /* hover */
-  --knpf-hover-background: hsla(var(--knpf-color), 0.15);
+  --knpf-hover-background-color: hsla(var(--knpf-color), 0.15);
   --knpf-hover-text-color: hsl(var(--knpf-hover-color));
 
   /* active */
-  --knpf-active-background: hsla(var(--knpf-color), 0.25);
+  --knpf-active-background-color: hsla(var(--knpf-color), 0.25);
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
@@ -250,11 +250,11 @@
   --knpf-text-color: hsl(var(--knpf-color));
 
   /* hover */
-  --knpf-hover-background: hsla(var(--knpf-color), 0.2);
+  --knpf-hover-background-color: hsla(var(--knpf-color), 0.2);
   --knpf-hover-text-color: hsl(var(--knpf-hover-color));
 
   /* active */
-  --knpf-active-background: hsla(var(--knpf-color), 0.3);
+  --knpf-active-background-color: hsla(var(--knpf-color), 0.3);
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
