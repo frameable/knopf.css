@@ -408,22 +408,22 @@
   --knpf-border-radius: 0;
 }
 
-.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:first-child {
+.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:first-child:not(:last-child) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:last-child {
+.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:first-child {
+.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:last-child {
+.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -432,10 +432,10 @@
   --knpf-border-radius: 0;
 }
 
-.knpf_group--vertical > .knpf + .knpf {
+.knpf_group--vertical > * + * {
   margin-top: var(--knpf-group-spacing);
 }
 
-.knpf_group:not(.knpf_group--vertical) > .knpf + .knpf {
+.knpf_group:not(.knpf_group--vertical) > * + * {
   margin-left: var(--knpf-group-spacing);
 }
