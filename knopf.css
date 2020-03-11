@@ -354,8 +354,15 @@
 }
 
 .knpf_icon--floating {
-  left: var(--knpf-horizontal-padding);
   position: absolute;
+}
+
+.knpf_icon--floating:first-child:not(:only-child) {
+  left: var(--knpf-horizontal-padding);
+}
+
+.knpf_icon--floating:last-child:not(:only-child) {
+  right: var(--knpf-horizontal-padding);
 }
 
 /* ==========================================================================
