@@ -353,8 +353,10 @@
   margin-right: calc(var(--knpf-horizontal-padding) * -0.25);
 }
 
-.knpf_icon--floating {
-  position: absolute;
+@media screen and (min-width: 576px) {
+  .knpf_icon--floating {
+    position: absolute;
+  }
 }
 
 .knpf_icon--floating:first-child:not(:only-child) {
