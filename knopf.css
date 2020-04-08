@@ -354,7 +354,7 @@
 }
 
 @media screen and (min-width: 576px) {
-  .knpf_icon--floating {
+  .knpf_icon--floating:not(:only-child) {
     position: absolute;
   }
 }
