@@ -343,18 +343,20 @@
   width: var(--knpf-icon-size);
 }
 
-.knpf_icon:first-child:not(:only-child):not(.knpf_icon--floating) {
+.knpf_icon:first-child:not(:only-child) {
   margin-left: calc(var(--knpf-horizontal-padding) * -0.25);
   margin-right: calc(var(--knpf-horizontal-padding) * 0.5);
 }
 
-.knpf_icon:last-child:not(:only-child):not(.knpf_icon--floating) {
+.knpf_icon:last-child:not(:only-child) {
   margin-left: calc(var(--knpf-horizontal-padding) * 0.5);
   margin-right: calc(var(--knpf-horizontal-padding) * -0.25);
 }
 
 @media screen and (min-width: 576px) {
   .knpf_icon--floating:not(:only-child) {
+    margin-left: 0;
+    margin-right: 0;
     position: absolute;
   }
 
