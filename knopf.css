@@ -251,7 +251,7 @@
 }
 
 .knpf--wide {
-  --knpf-horizontal-padding: calc(var(--knpf-padding) * 2);
+  --knpf-horizontal-padding: calc(var(--knpf-padding) * 3);
 }
 
 /* ==========================================================================
