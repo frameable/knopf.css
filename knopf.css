@@ -250,6 +250,10 @@
   --knpf-horizontal-padding: var(--knpf-padding);
 }
 
+.knpf--wide {
+  --knpf-horizontal-padding: calc(var(--knpf-padding) * 2);
+}
+
 /* ==========================================================================
    Corners
    ========================================================================== */
