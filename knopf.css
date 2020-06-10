@@ -187,20 +187,6 @@
    Types
    ========================================================================== */
 
-.knpf--inverse {
-  /* base */
-  --knpf-background-color: white;
-  --knpf-text-color: hsl(var(--knpf-color));
-
-  /* hover */
-  --knpf-hover-background-color: hsl(var(--knpf-color));
-  --knpf-hover-text-color: white;
-
-  /* active */
-  --knpf-active-background-color: hsl(var(--knpf-active-color));
-  --knpf-active-text-color: white;
-}
-
 .knpf--flat {
   /* base */
   --knpf-background-color: transparent;
