@@ -43,7 +43,7 @@
   --knpf-icon-size: var(--knpf-icon-size-base);
 
   /* Border */
-  --knpf-border-radius: 4px;
+  --knpf-border-radius: 6px;
   --knpf-border-style: solid;
   --knpf-border-width: 1px;
 
