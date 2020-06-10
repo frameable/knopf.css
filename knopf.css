@@ -5,30 +5,10 @@
      Colors
      ========================================================================== */
 
-  /* Primary */
-  --knpf-primary-color-hue: 218;
-  --knpf-primary-color-saturation: 77%;
-  --knpf-primary-color-luminosity: 37%;
-
-  /* Secondary */
-  --knpf-secondary-color-hue: 209;
-  --knpf-secondary-color-saturation: 34%;
-  --knpf-secondary-color-luminosity: 30%;
-
-  /* Positive */
-  --knpf-positive-color-hue: 164;
-  --knpf-positive-color-saturation: 88%;
-  --knpf-positive-color-luminosity: 28%;
-
-  /* Negative */
-  --knpf-negative-color-hue: 356;
-  --knpf-negative-color-saturation: 57%;
-  --knpf-negative-color-luminosity: 51%;
-
   /* Initial */
-  --knpf-color-hue: var(--knpf-primary-color-hue);
-  --knpf-color-saturation: var(--knpf-primary-color-saturation);
-  --knpf-color-luminosity: var(--knpf-primary-color-luminosity);
+  --knpf-color-hue: 218;
+  --knpf-color-saturation: 77%;
+  --knpf-color-luminosity: 37%;
 
   /* ==========================================================================
      Sizes
@@ -303,28 +283,6 @@
 
 .knpf--sharp {
   --knpf-border-radius: 0;
-}
-
-/* ==========================================================================
-   Colors
-   ========================================================================== */
-
-.knpf--secondary {
-  --knpf-color-hue: var(--knpf-secondary-color-hue);
-  --knpf-color-saturation: var(--knpf-secondary-color-saturation);
-  --knpf-color-luminosity: var(--knpf-secondary-color-luminosity);
-}
-
-.knpf--positive {
-  --knpf-color-hue: var(--knpf-positive-color-hue);
-  --knpf-color-saturation: var(--knpf-positive-color-saturation);
-  --knpf-color-luminosity: var(--knpf-positive-color-luminosity);
-}
-
-.knpf--negative {
-  --knpf-color-hue: var(--knpf-negative-color-hue);
-  --knpf-color-saturation: var(--knpf-negative-color-saturation);
-  --knpf-color-luminosity: var(--knpf-negative-color-luminosity);
 }
 
 /* ==========================================================================
