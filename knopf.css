@@ -54,9 +54,16 @@
   --knpf-justify-content: center;
   --knpf-text-transform: none;
 
-  /* Misc */
+  /* Flex */
+  --knpf-display: inline-flex;
+  --knpf-flex-direction: row;
+  --knpf-flex-grow: 0;
+
+  /* Group */
   --knpf-group-direction: row;
   --knpf-group-spacing: -1px;
+
+  /* Misc */
   --knpf-transition:
     background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out,
@@ -102,8 +109,9 @@
   box-sizing: border-box;
   color: var(--knpf-text-color);
   cursor: pointer;
-  display: inline-flex;
-  flex-direction: row;
+  display: var(--knpf-display);
+  flex-direction: var(--knpf-flex-direction);
+  flex-grow: var(--knpf-flex-grow);
   font-family: var(--knpf-font-family);
   font-size: var(--knpf-font-size);
   font-weight: var(--knpf-font-weight);
@@ -178,8 +186,8 @@
 }
 
 .knpf--block {
-  display: flex;
-  width: 100%;
+  --knpf-display: flex;
+  --knpf-flex-grow: 1;
 }
 
 /* ==========================================================================
