@@ -349,6 +349,7 @@
 .knpf_group {
   display: flex;
   flex-direction: var(--knpf-group-direction);
+  flex-wrap: nowrap;
 }
 
 .vertical {
