@@ -2,10 +2,9 @@
 
 :root {
   /* ==========================================================================
-     Colors
+     Color
      ========================================================================== */
 
-  /* Initial */
   --knpf-color-hue: 218;
   --knpf-color-saturation: 77%;
   --knpf-color-luminosity: 37%;
@@ -129,6 +128,7 @@
    States
    ========================================================================== */
 
+/* Visited */
 .knpf:visited {
   color: var(--knpf-text-color);
 }
@@ -253,6 +253,10 @@
   --knpf-active-border-color: hsla(var(--knpf-color), 0.25);
 }
 
+/* ==========================================================================
+   Spaces
+   ========================================================================== */
+
 .knpf--even {
   --knpf-horizontal-padding: var(--knpf-padding);
 }
@@ -299,6 +303,7 @@
   margin-right: calc(var(--knpf-horizontal-padding) * -0.25);
 }
 
+/* Prevent floating icons on small screens */
 @media screen and (min-width: 576px) {
   .knpf_icon--floating:not(:only-child) {
     margin-left: 0;
