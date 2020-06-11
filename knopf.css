@@ -55,6 +55,7 @@
   --knpf-text-transform: none;
 
   /* Misc */
+  --knpf-group-direction: row;
   --knpf-group-spacing: -1px;
   --knpf-transition:
     background-color 0.15s ease-in-out,
@@ -331,25 +332,20 @@
 }
 
 /* ==========================================================================
-   Group
+   Groups
    ========================================================================== */
 
 .knpf_group {
-  border-radius: var(--knpf-border-radius);
-  display: inline-flex;
-  position: relative;
+  display: flex;
+  flex-direction: var(--knpf-group-direction);
 }
 
 .knpf_group--vertical {
-  flex-direction: column;
+  --knpf-group-direction: column;
 }
 
 .knpf_group--spaced {
   --knpf-group-spacing: var(--knpf-padding);
-}
-
-.knpf_group--sharp {
-  --knpf-border-radius: 0;
 }
 
 .knpf_group--vertical:not(.knpf_group--spaced) > .knpf:first-child:not(:last-child) {
