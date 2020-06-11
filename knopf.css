@@ -292,20 +292,20 @@
 }
 
 .knpf_icon:first-child:not(:only-child) {
-  margin-left: calc(var(--knpf-horizontal-padding) * -0.25);
-  margin-right: calc(var(--knpf-horizontal-padding) * 0.5);
+  margin-inline-start: calc(var(--knpf-horizontal-padding) * -0.25);
+  margin-inline-end: calc(var(--knpf-horizontal-padding) * 0.5);
 }
 
 .knpf_icon:last-child:not(:only-child) {
-  margin-left: calc(var(--knpf-horizontal-padding) * 0.5);
-  margin-right: calc(var(--knpf-horizontal-padding) * -0.25);
+  margin-inline-start: calc(var(--knpf-horizontal-padding) * 0.5);
+  margin-inline-end: calc(var(--knpf-horizontal-padding) * -0.25);
 }
 
 /* Prevent floating icons on small screens */
 @media screen and (min-width: 576px) {
   .knpf_icon--floating:not(:only-child) {
-    margin-left: 0;
-    margin-right: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     position: absolute;
   }
 
