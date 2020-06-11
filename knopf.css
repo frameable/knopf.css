@@ -128,16 +128,24 @@
    States
    ========================================================================== */
 
-/* Visited */
-.knpf:visited {
-  color: var(--knpf-text-color);
-}
-
 /* Disabled */
 .knpf:disabled {
   cursor: default;
   opacity: 0.4;
   pointer-events: none;
+}
+
+/* Visited */
+.knpf:visited {
+  color: var(--knpf-text-color);
+}
+
+/* Hover */
+.knpf:hover,
+.knpf:active {
+  --knpf-background-color: var(--knpf-hover-background-color);
+  --knpf-border-color: var(--knpf-hover-border-color);
+  --knpf-text-color: var(--knpf-hover-text-color);
 }
 
 /* Focus */
@@ -151,14 +159,6 @@
   --knpf-background-color: var(--knpf-active-background-color);
   --knpf-border-color: var(--knpf-active-border-color);
   --knpf-text-color: var(--knpf-active-text-color);
-}
-
-/* Hover */
-.knpf:hover,
-.knpf:active {
-  --knpf-background-color: var(--knpf-hover-background-color);
-  --knpf-border-color: var(--knpf-hover-border-color);
-  --knpf-text-color: var(--knpf-hover-text-color);
 }
 
 /* ==========================================================================
