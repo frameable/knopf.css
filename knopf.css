@@ -155,7 +155,7 @@
 }
 
 /* Active */
-.knpf--active {
+.active {
   --knpf-background-color: var(--knpf-active-background-color);
   --knpf-border-color: var(--knpf-active-border-color);
   --knpf-text-color: var(--knpf-active-text-color);
@@ -165,25 +165,25 @@
    Sizes
    ========================================================================== */
 
-.knpf--small {
+.small {
   --knpf-font-size: var(--knpf-font-size-small);
   --knpf-padding: var(--knpf-padding-small);
   --knpf-icon-size: var(--knpf-icon-size-small);
 }
 
-.knpf--large {
+.large {
   --knpf-font-size: var(--knpf-font-size-large);
   --knpf-padding: var(--knpf-padding-large);
   --knpf-icon-size: var(--knpf-icon-size-large);
 }
 
-.knpf--huge {
+.huge {
   --knpf-font-size: var(--knpf-font-size-huge);
   --knpf-padding: var(--knpf-padding-huge);
   --knpf-icon-size: var(--knpf-icon-size-huge);
 }
 
-.knpf--block {
+.block {
   --knpf-display: flex;
   --knpf-flex-grow: 1;
 }
@@ -192,7 +192,7 @@
    Types
    ========================================================================== */
 
-.knpf--flat {
+.flat {
   /* base */
   --knpf-background-color: transparent;
   --knpf-text-color: hsl(var(--knpf-color));
@@ -206,7 +206,7 @@
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
-.knpf--pale {
+.pale {
   /* base */
   --knpf-background-color: hsla(var(--knpf-color), 0.1);
   --knpf-text-color: hsl(var(--knpf-color));
@@ -220,7 +220,7 @@
   --knpf-active-text-color: hsl(var(--knpf-active-color));
 }
 
-.knpf--link {
+.link {
   --knpf-border-width: 0;
   --knpf-border-radius: 0;
   --knpf-padding: 0;
@@ -245,7 +245,7 @@
    Modifiers
    ========================================================================== */
 
-.knpf--outline {
+.outline {
   --knpf-border-color: hsla(var(--knpf-color), 0.25);
   --knpf-hover-border-color: hsla(var(--knpf-color), 0.25);
   --knpf-active-border-color: hsla(var(--knpf-color), 0.25);
@@ -255,11 +255,11 @@
    Spaces
    ========================================================================== */
 
-.knpf--even {
+.even {
   --knpf-horizontal-padding: var(--knpf-padding);
 }
 
-.knpf--wide {
+.wide {
   --knpf-horizontal-padding: calc(var(--knpf-padding) * 3);
 }
 
@@ -267,11 +267,11 @@
    Corners
    ========================================================================== */
 
-.knpf--pill {
+.pill {
   --knpf-border-radius: 9999px;
 }
 
-.knpf--sharp {
+.sharp {
   --knpf-border-radius: 0;
 }
 
@@ -351,42 +351,42 @@
   flex-direction: var(--knpf-group-direction);
 }
 
-.knpf_group--vertical {
+.vertical {
   --knpf-group-direction: column;
 }
 
-.knpf_group--spaced {
+.spaced {
   --knpf-group-spacing: var(--knpf-padding);
 }
 
-.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:first-child:not(:last-child) {
+.vertical:not(.spaced) > .knpf:first-child:not(:last-child) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.knpf_group--vertical:not(.knpf_group--spaced) > .knpf:last-child:not(:first-child) {
+.vertical:not(.spaced) > .knpf:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:first-child:not(:last-child) {
+.knpf_group:not(.spaced):not(.vertical) > .knpf:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.knpf_group:not(.knpf_group--spaced):not(.knpf_group--vertical) > .knpf:last-child:not(:first-child) {
+.knpf_group:not(.spaced):not(.vertical) > .knpf:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.knpf_group:not(.knpf_group--spaced) > .knpf:not(:first-child):not(:last-child) {
+.knpf_group:not(.spaced) > .knpf:not(:first-child):not(:last-child) {
   --knpf-border-radius: 0;
 }
 
-.knpf_group--vertical > .knpf + .knpf {
+.vertical > .knpf + .knpf {
   margin-top: var(--knpf-group-spacing);
 }
 
-.knpf_group:not(.knpf_group--vertical) > .knpf + .knpf {
+.knpf_group:not(.vertical) > .knpf + .knpf {
   margin-left: var(--knpf-group-spacing);
 }
