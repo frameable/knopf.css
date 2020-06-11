@@ -125,30 +125,28 @@
 }
 
 /* Disabled */
-.knpf:disabled,
-.knpf--disabled {
+.knpf:disabled {
   cursor: default;
   opacity: 0.4;
   pointer-events: none;
 }
 
 /* Focus */
-.knpf:not(:disabled):not(.knpf--disabled):focus {
+.knpf:focus {
   box-shadow: 0 0 0 3px hsla(var(--knpf-color), 0.4);
   outline: none;
-  z-index: 1;
 }
 
 /* Active */
-.knpf:not(:disabled):not(.knpf--disabled).knpf--active {
+.knpf--active {
   --knpf-background-color: var(--knpf-active-background-color);
   --knpf-border-color: var(--knpf-active-border-color);
   --knpf-text-color: var(--knpf-active-text-color);
 }
 
 /* Hover */
-.knpf:not(:disabled):not(.knpf--disabled):hover,
-.knpf:not(:disabled):not(.knpf--disabled):active {
+.knpf:hover,
+.knpf:active {
   --knpf-background-color: var(--knpf-hover-background-color);
   --knpf-border-color: var(--knpf-hover-border-color);
   --knpf-text-color: var(--knpf-hover-text-color);
