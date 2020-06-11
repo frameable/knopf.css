@@ -30,7 +30,6 @@
   --knpf-icon-size-small: calc(var(--knpf-icon-size-base) - 0.25rem);
   --knpf-icon-size-large: calc(var(--knpf-icon-size-base) + 0.375rem);
   --knpf-icon-size-huge: calc(var(--knpf-icon-size-base) + 0.625rem);
-  --knpf-icon-size-massive: calc(var(--knpf-icon-size-base) + 1.125rem);
 
   /* ==========================================================================
      Initial
@@ -316,30 +315,6 @@
   .knpf_icon--floating:last-child:not(:only-child) {
     right: var(--knpf-horizontal-padding);
   }
-}
-
-/* ==========================================================================
-   Icon Sizes
-   ========================================================================== */
-
-.knpf_icon--small {
-  --knpf-icon-size: var(--knpf-icon-size-small);
-}
-
-.knpf_icon--base {
-  --knpf-icon-size: var(--knpf-icon-size-base);
-}
-
-.knpf_icon--large {
-  --knpf-icon-size: var(--knpf-icon-size-large);
-}
-
-.knpf_icon--huge {
-  --knpf-icon-size: var(--knpf-icon-size-huge);
-}
-
-.knpf_icon--massive {
-  --knpf-icon-size: var(--knpf-icon-size-massive);
 }
 
 /* ==========================================================================
