@@ -376,10 +376,10 @@
   --knpf-border-radius: 0;
 }
 
-.knpf_group--vertical > * + * {
+.knpf_group--vertical > .knpf + .knpf {
   margin-top: var(--knpf-group-spacing);
 }
 
-.knpf_group:not(.knpf_group--vertical) > * + * {
+.knpf_group:not(.knpf_group--vertical) > .knpf + .knpf {
   margin-left: var(--knpf-group-spacing);
 }
