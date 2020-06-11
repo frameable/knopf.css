@@ -159,8 +159,6 @@
   --knpf-background-color: var(--knpf-hover-background-color);
   --knpf-border-color: var(--knpf-hover-border-color);
   --knpf-text-color: var(--knpf-hover-text-color);
-
-  text-decoration: none;
 }
 
 /* ==========================================================================
