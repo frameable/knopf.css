@@ -50,6 +50,7 @@
   --knpf-font-weight: 500;
   --knpf-line-height: 1.5;
   --knpf-justify-content: center;
+  --knpf-text-decoration: none;
   --knpf-text-transform: none;
 
   /* Flex */
@@ -117,8 +118,9 @@
   justify-content: var(--knpf-justify-content);
   padding: var(--knpf-vertical-padding) var(--knpf-horizontal-padding);
   position: relative;
-  text-decoration: none;
+  text-decoration: var(--knpf-text-decoration);
   text-transform: var(--knpf-text-transform);
+  text-underline-position: under;
   transition: var(--knpf-transition);
   white-space: nowrap;
 }
@@ -223,6 +225,8 @@
   --knpf-border-width: 0;
   --knpf-border-radius: 0;
   --knpf-padding: 0;
+
+  --knpf-text-decoration: underline;
 
   /* base */
   --knpf-background-color: transparent;
