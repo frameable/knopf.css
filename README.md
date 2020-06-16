@@ -1,6 +1,6 @@
 # knopf.css
 
-[<img src="https://knopf.dev/logo.svg" alt="knopf" width="200" height="200">][knopf.css]
+[<img src="https://knopf.dev/logo.svg" alt="Knopf logo" width="88" height="88">][knopf.css]
 
 [knopf.css] is a CSS library that provides buttons
 
@@ -14,7 +14,7 @@
 
 ```sh
 # npm
-npm install knopf.css --save
+npm install knopf.css
 
 # yarn
 yarn add knopf.css
