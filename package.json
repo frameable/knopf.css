@@ -3,13 +3,13 @@
   "version": "0.2.4",
   "description": "Componentized styles for your buttons",
   "author": {
-    "name": "Plectica",
-    "email": "tech@plectica.com",
-    "url": "https://www.plectica.com/"
+    "name": "Team.Video",
+    "email": "tech@team.video",
+    "url": "https://team.video/"
   },
   "contributors": [
     "Agustín Díaz <me@adiaz.uy> (https://adiaz.uy/)",
-    "Abhi Bassi <hello@abhinavbassi.com> (http://abhinavbassi.com)"
+    "Abhi Bassi <hello@abhinavbassi.com> (http://abhinavbassi.com/)"
   ],
   "homepage": "https://knopf.dev/",
   "style": "knopf.css",
