@@ -101,11 +101,6 @@ textarea {
   }
 } */
 
-html {
-  background-color: var(--background);
-  color: var(--text);
-}
-
 @media screen and (min-width: 20em) {
   html {
     font-size: calc(1em + (1.3125 - 1) * ((100vw - 20em) / (80 - 20)));
@@ -121,6 +116,9 @@ html {
 }
 
 body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -135,8 +133,12 @@ main {
   max-width: 960px;
 }
 
+.container--tight {
+  max-width: 480px;
+}
+
 section {
-  padding: 64px 32px;
+  padding: 128px 32px;
 }
 
 section:nth-child(even) {
