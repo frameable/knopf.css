@@ -162,15 +162,15 @@ pre {
    ========================================================================== */
 
 .primary {
-  --knpf-color-hue: 327;
-  --knpf-color-saturation: 83%;
-  --knpf-color-luminosity: 49%;
+  --knopf-hue: 327;
+  --knopf-saturation: 83%;
+  --knopf-luminosity: 49%;
 }
 
 .secondary {
-  --knpf-color-hue: 245;
-  --knpf-color-saturation: 65%;
-  --knpf-color-luminosity: 53%;
+  --knopf-hue: 245;
+  --knopf-saturation: 65%;
+  --knopf-luminosity: 53%;
 }
 
 /* ==========================================================================

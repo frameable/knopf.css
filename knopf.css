@@ -59,7 +59,9 @@
   --knopf-flex-grow: 0;
 
   /* Group */
+  --knopf-group-justify: center;
   --knopf-group-direction: row;
+  --knopf-group-align: center;
   --knopf-group-spacing: -1px;
 
   /* Misc */
@@ -342,9 +344,11 @@
    ========================================================================== */
 
 .knopf_group {
+  align-items: var(--knopf-group-align);
   display: flex;
   flex-direction: var(--knopf-group-direction);
   flex-wrap: nowrap;
+  justify-content: var(--knopf-group-justify);
 }
 
 .vertical {
@@ -353,6 +357,26 @@
 
 .spaced {
   --knopf-group-spacing: var(--knopf-padding);
+}
+
+.start {
+  --knopf-group-align: flex-start;
+}
+
+.end {
+  --knopf-group-align: flex-end;
+}
+
+.stretch {
+  --knopf-group-align: stretch;
+}
+
+.between {
+  --knopf-group-justify: space-between;
+}
+
+.around {
+  --knopf-group-justify: space-around;
 }
 
 .vertical:not(.spaced) > .knopf:first-child:not(:last-child) {

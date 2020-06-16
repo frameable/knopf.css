@@ -23,7 +23,7 @@
       text-align: center;
     }
 
-    div {
+    .row {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
@@ -55,7 +55,7 @@
 
     <hr>
 
-    <div>
+    <div class="knopf_group spaced around">
       <button class="knopf" disabled>disabled</button>
       <button class="knopf">primary</button>
       <button class="knopf active">active</button>
@@ -63,7 +63,7 @@
 
     <hr>
 
-    <div>
+    <div class="knopf_group spaced around">
       <a href="#" class="knopf link">link</a>
       <button class="knopf flat">flat</button>
       <button class="knopf pale">pale</button>
@@ -71,7 +71,7 @@
 
     <hr>
 
-    <div>
+    <div class="knopf_group spaced around">
       <button class="knopf outline">primary outline</button>
       <button class="knopf outline flat">flat outline</button>
       <button class="knopf outline pale">pale outline</button>
@@ -79,7 +79,7 @@
 
     <hr>
 
-    <div>
+    <div class="knopf_group spaced around">
       <button class="knopf sharp">sharp</button>
       <button class="knopf pill">pill</button>
       <button class="knopf even">even</button>
@@ -88,7 +88,7 @@
 
     <hr>
 
-    <div>
+    <div class="knopf_group spaced around end">
       <button class="knopf small">small</button>
       <button class="knopf">regular</button>
       <button class="knopf large">large</button>
@@ -97,42 +97,13 @@
 
     <hr>
 
-    <div>
-      <button class="knopf small">
-        <span class="knopf_label">small</span>
-        <svg class="knopf_icon">
-          <use xlink:href="#drop-down-icon" />
-        </svg>
-      </button>
-      <button class="knopf">
-        <span class="knopf_label">regular</span>
-        <svg class="knopf_icon">
-          <use xlink:href="#drop-down-icon" />
-        </svg>
-      </button>
-      <button class="knopf large">
-        <span class="knopf_label">large</span>
-        <svg class="knopf_icon">
-          <use xlink:href="#drop-down-icon" />
-        </svg>
-      </button>
-      <button class="knopf huge">
-        <span class="knopf_label">huge</span>
-        <svg class="knopf_icon">
-          <use xlink:href="#drop-down-icon" />
-        </svg>
-      </button>
-    </div>
-
-    <hr>
-
-    <div>
+    <div class="row">
       <button class="knopf block">block</button>
     </div>
 
     <br>
 
-    <div>
+    <div class="row">
       <button class="knopf block">
         <svg class="knopf_icon">
           <use xlink:href="#happy-icon" />
@@ -145,7 +116,7 @@
 
     <br>
 
-    <div>
+    <div class="row">
       <button class="knopf block">
         <svg class="knopf_icon knopf_icon--floating">
           <use xlink:href="#happy-icon" />
@@ -158,7 +129,7 @@
 
     <br>
 
-    <div>
+    <div class="row">
       <button class="knopf block">
         <span class="knopf_label">
           floating icon
@@ -171,7 +142,7 @@
 
     <br>
 
-    <div>
+    <div class="row">
       <button class="knopf block start">
         <svg class="knopf_icon">
           <use xlink:href="#happy-icon" />
@@ -184,7 +155,7 @@
 
     <br>
 
-    <div>
+    <div class="row">
       <button class="knopf block end">
         <svg class="knopf_icon">
           <use xlink:href="#happy-icon" />
@@ -197,7 +168,14 @@
 
     <hr>
 
-    <div>
+    <div class="knopf_group spaced between end">
+      <button class="knopf large">save</button>
+      <button class="knopf flat outline">cancel</button>
+    </div>
+
+    <hr>
+
+    <div class="row">
       <span class="knopf_group">
         <button class="knopf flat outline">first</button>
         <button class="knopf flat outline active">second</button>
@@ -211,7 +189,7 @@
         <button class="knopf flat">C</button>
       </span>
 
-      <span class="knopf_group" style="--knopf-group-spacing: 1px;">
+      <span class="knopf_group stretch" style="--knopf-group-spacing: 1px;">
         <button class="knopf">Dropdown</button>
         <button class="knopf even active">
           <svg class="knopf_icon">
@@ -223,27 +201,27 @@
 
     <hr>
 
-    <div>
-      <span class="knopf_group start vertical">
-        <button class="knopf flat outline">
+    <div class="row">
+      <span class="knopf_group vertical stretch">
+        <button class="knopf start flat outline">
           <svg class="knopf_icon">
             <use xlink:href="#happy-icon" />
           </svg>
           <span class="knopf_label">first</span>
         </button>
-        <button class="knopf flat outline active">
+        <button class="knopf start flat outline active">
           <svg class="knopf_icon">
             <use xlink:href="#happy-icon" />
           </svg>
           <span class="knopf_label">second</span>
         </button>
-        <button class="knopf flat outline">
+        <button class="knopf start flat outline">
           <svg class="knopf_icon">
             <use xlink:href="#happy-icon" />
           </svg>
           <span class="knopf_label">third</span>
         </button>
-        <button class="knopf flat outline">
+        <button class="knopf start flat outline">
           <svg class="knopf_icon">
             <use xlink:href="#happy-icon" />
           </svg>
@@ -269,11 +247,11 @@
         <button class="knopf pale">C</button>
       </span>
 
-      <span class="knopf_group vertical end">
-        <button class="knopf">first</button>
-        <button class="knopf active">second</button>
-        <button class="knopf">third</button>
-        <button class="knopf">last</button>
+      <span class="knopf_group vertical stretch">
+        <button class="knopf end">first</button>
+        <button class="knopf end active">second</button>
+        <button class="knopf end">third</button>
+        <button class="knopf end">last</button>
       </span>
     </div>
   </main>
