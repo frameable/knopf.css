@@ -164,18 +164,26 @@ legend {
   filter: drop-shadow(0px 4px 8px hsl(219 76% 7% / 0.08));
 }
 
+.Title {
+  font-size: 2.145em;
+}
+
+.Subtitle {
+  font-size: 1.145em;
+  font-weight: normal;
+}
+
 /* Playground */
 
 #Demo {
-  align-items: center;
   background: white;
   margin: auto;
   display: grid;
   grid-auto-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
   grid-template-areas:
-    "Settings Result"
-    "Settings Code";
+    'Settings Result'
+    'Settings Code';
 }
 
 #Settings {
@@ -183,6 +191,7 @@ legend {
 }
 
 #Result {
+  align-self: center;
   grid-area: Result;
 }
 
@@ -197,6 +206,10 @@ legend {
   background-color: white;
 }
 
+.flex {
+  display: flex;
+}
+
 .rounded {
   border-radius: 16px;
 }
@@ -207,6 +220,15 @@ legend {
 
 .m-0 {
   margin: 0;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.my-auto {
+  margin-block-end: auto;
+  margin-block-start: auto;
 }
 
 .mb-16 {
