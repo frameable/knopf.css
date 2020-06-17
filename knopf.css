@@ -51,7 +51,8 @@
   --knopf-font-weight: 500;
   --knopf-line-height: 1.5;
   --knopf-justify-content: center;
-  --knopf-text-decoration: none;
+  --knopf-text-decoration-line: none;
+  --knopf-text-decoration-color: currentColor;
   --knopf-text-transform: none;
 
   /* Flex */
@@ -68,7 +69,8 @@
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out,
     color 0.15s ease-in-out,
-    opacity 0.15s ease-in-out;
+    opacity 0.15s ease-in-out,
+    text-decoration-color 0.15s ease-in-out;
 }
 
 /* ==========================================================================
@@ -123,9 +125,9 @@
   padding-inline-end: var(--knopf-inline-padding);
   padding-inline-start: var(--knopf-inline-padding);
   position: relative;
-  text-decoration: var(--knopf-text-decoration);
+  text-decoration-color: var(--knopf-text-decoration-color);
+  text-decoration-line: var(--knopf-text-decoration-line);
   text-transform: var(--knopf-text-transform);
-  text-underline-position: under;
   transition: var(--knopf-transition);
   white-space: nowrap;
 }
@@ -167,7 +169,11 @@
   --knopf-border-radius: 0;
   --knopf-padding: 0;
 
-  --knopf-text-decoration: underline;
+  /* Text decoration */
+  --knopf-text-decoration-line: underline;
+  --knopf-text-decoration-color: hsl(var(--knopf-color) / 0.4);
+  --knopf-hover-text-decoration-color: hsl(var(--knopf-hover-color));
+  --knopf-active-text-decoration-color: hsl(var(--knopf-active-color));
 
   /* base */
   --knopf-background-color: transparent;
@@ -207,6 +213,7 @@
   --knopf-background-color: var(--knopf-hover-background-color);
   --knopf-border-color: var(--knopf-hover-border-color);
   --knopf-text-color: var(--knopf-hover-text-color);
+  --knopf-text-decoration-color: var(--knopf-hover-text-decoration-color);
 }
 
 /* Focus */
@@ -220,6 +227,7 @@
   --knopf-background-color: var(--knopf-active-background-color);
   --knopf-border-color: var(--knopf-active-border-color);
   --knopf-text-color: var(--knopf-active-text-color);
+  --knopf-text-decoration-color: var(--knopf-active-text-decoration-color);
 }
 
 /* ==========================================================================
@@ -352,7 +360,7 @@
 
 .group {
   align-items: stretch;
-  display: flex;
+  display: inline-flex;
   flex-direction: var(--knopf-group-direction);
   flex-wrap: nowrap;
   justify-content: center;
