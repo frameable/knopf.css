@@ -360,7 +360,7 @@
 
 .group {
   align-items: stretch;
-  display: flex;
+  display: inline-flex;
   flex-direction: var(--knopf-group-direction);
   flex-wrap: nowrap;
   justify-content: center;
