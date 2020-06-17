@@ -44,6 +44,7 @@
   --knopf-border-radius: 6px;
   --knopf-border-style: solid;
   --knopf-border-width: 1px;
+  --knopf-border-alpha: 0.33;
 
   /* Text */
   --knopf-font-family: inherit;
@@ -59,10 +60,7 @@
   --knopf-flex-grow: 0;
 
   /* Group */
-  --knopf-group-justify: center;
   --knopf-group-direction: row;
-  --knopf-group-align: center;
-  --knopf-group-spacing: -1px;
 
   /* Misc */
   --knopf-transition:
@@ -99,14 +97,16 @@
   --knopf-active-text-color: white;
 
   /* Spacing */
-  --knopf-vertical-padding: var(--knopf-padding);
-  --knopf-horizontal-padding: calc(var(--knopf-padding) * 2);
+  --knopf-block-padding: var(--knopf-padding);
+  --knopf-inline-padding: calc(var(--knopf-padding) * 2);
 
   /* Properties */
   align-items: center;
   background-color: var(--knopf-background-color);
-  border: var(--knopf-border-width) var(--knopf-border-style) var(--knopf-border-color);
+  border-color: var(--knopf-border-color);
   border-radius: var(--knopf-border-radius);
+  border-style: var(--knopf-border-style);
+  border-width: var(--knopf-border-width);
   box-sizing: border-box;
   color: var(--knopf-text-color);
   cursor: pointer;
@@ -118,7 +118,10 @@
   font-weight: var(--knopf-font-weight);
   line-height: var(--knopf-line-height);
   justify-content: var(--knopf-justify-content);
-  padding: var(--knopf-vertical-padding) var(--knopf-horizontal-padding);
+  padding-block-end: var(--knopf-block-padding);
+  padding-block-start: var(--knopf-block-padding);
+  padding-inline-end: var(--knopf-inline-padding);
+  padding-inline-start: var(--knopf-inline-padding);
   position: relative;
   text-decoration: var(--knopf-text-decoration);
   text-transform: var(--knopf-text-transform);
@@ -251,9 +254,13 @@
    ========================================================================== */
 
 .outline {
-  --knopf-border-color: hsl(var(--knopf-color) / 0.25);
-  --knopf-hover-border-color: hsl(var(--knopf-color) / 0.25);
-  --knopf-active-border-color: hsl(var(--knopf-color) / 0.25);
+  --knopf-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
+  --knopf-hover-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
+  --knopf-active-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
+}
+
+.solid {
+  --knopf-border-alpha: 1;
 }
 
 /* ==========================================================================
@@ -277,11 +284,11 @@
    ========================================================================== */
 
 .even {
-  --knopf-horizontal-padding: var(--knopf-padding);
+  --knopf-inline-padding: var(--knopf-padding);
 }
 
 .wide {
-  --knopf-horizontal-padding: calc(var(--knopf-padding) * 3);
+  --knopf-inline-padding: calc(var(--knopf-padding) * 3);
 }
 
 /* ==========================================================================
@@ -313,13 +320,13 @@
 }
 
 .knopf_icon:first-child:not(:only-child) {
-  margin-inline-start: calc(var(--knopf-horizontal-padding) * -0.25);
-  margin-inline-end: calc(var(--knopf-horizontal-padding) * 0.5);
+  margin-inline-start: calc(var(--knopf-inline-padding) * -0.25);
+  margin-inline-end: calc(var(--knopf-inline-padding) * 0.5);
 }
 
 .knopf_icon:last-child:not(:only-child) {
-  margin-inline-start: calc(var(--knopf-horizontal-padding) * 0.5);
-  margin-inline-end: calc(var(--knopf-horizontal-padding) * -0.25);
+  margin-inline-start: calc(var(--knopf-inline-padding) * 0.5);
+  margin-inline-end: calc(var(--knopf-inline-padding) * -0.25);
 }
 
 /* Prevent floating icons on small screens */
@@ -331,11 +338,11 @@
   }
 
   .knopf_icon--floating:first-child:not(:only-child) {
-    left: var(--knopf-horizontal-padding);
+    left: var(--knopf-inline-padding);
   }
 
   .knopf_icon--floating:last-child:not(:only-child) {
-    right: var(--knopf-horizontal-padding);
+    right: var(--knopf-inline-padding);
   }
 }
 
@@ -343,70 +350,46 @@
    Groups
    ========================================================================== */
 
-.knopf_group {
-  align-items: var(--knopf-group-align);
+.group {
+  align-items: stretch;
   display: flex;
   flex-direction: var(--knopf-group-direction);
   flex-wrap: nowrap;
-  justify-content: var(--knopf-group-justify);
+  justify-content: center;
 }
 
 .vertical {
   --knopf-group-direction: column;
 }
 
-.spaced {
-  --knopf-group-spacing: var(--knopf-padding);
-}
-
-.start {
-  --knopf-group-align: flex-start;
-}
-
-.end {
-  --knopf-group-align: flex-end;
-}
-
-.stretch {
-  --knopf-group-align: stretch;
-}
-
-.between {
-  --knopf-group-justify: space-between;
-}
-
-.around {
-  --knopf-group-justify: space-around;
-}
-
-.vertical:not(.spaced) > .knopf:first-child:not(:last-child) {
+.vertical > .knopf:first-child:not(:last-child) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.vertical:not(.spaced) > .knopf:last-child:not(:first-child) {
+.vertical > .knopf:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.knopf_group:not(.spaced):not(.vertical) > .knopf:first-child:not(:last-child) {
+.group:not(.vertical) > .knopf:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.knopf_group:not(.spaced):not(.vertical) > .knopf:last-child:not(:first-child) {
+.group:not(.vertical) > .knopf:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.knopf_group:not(.spaced) > .knopf:not(:first-child):not(:last-child) {
+.group > .knopf:not(:first-child):not(:last-child) {
   --knopf-border-radius: 0;
 }
 
 .vertical > .knopf + .knopf {
-  margin-top: var(--knopf-group-spacing);
+  margin-block-start: calc(var(--knopf-border-width) * -1);
 }
 
-.knopf_group:not(.vertical) > .knopf + .knopf {
-  margin-left: var(--knopf-group-spacing);
+.group:not(.vertical) > .knopf + .knopf {
+  margin-inline-start: calc(var(--knopf-border-width) * -1);
 }
