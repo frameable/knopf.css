@@ -93,16 +93,16 @@
         <h2 class="mt-0 mb-32">Installation</h2>
 
         <h3>CDN</h3>
-        <pre class="p-24"><code>&lt;link rel="stylesheet" href="https://unpkg.com/knopf.min.css"&gt;</code></pre>
+        <pre class="m-0 p-24 rounded bg-white"><code>&lt;link rel="stylesheet" href="https://unpkg.com/knopf.min.css"&gt;</code></pre>
 
         <h3>npm</h3>
-        <pre class="p-24"><code>npm install knopf.css</code></pre>
+        <pre class="m-0 p-24 rounded bg-white"><code>npm install knopf.css</code></pre>
 
         <h3>yarn</h3>
-        <pre class="p-24"><code>yarn add knopf.css</code></pre>
+        <pre class="m-0 p-24 rounded bg-white"><code>yarn add knopf.css</code></pre>
 
         <h3>Usage</h3>
-        <pre class="p-24"><code>import 'knopf.css'</code></pre>
+        <pre class="m-0 p-24 rounded bg-white"><code>import 'knopf.css'</code></pre>
       </div>
     </section>
     <section id="Features">
@@ -113,6 +113,75 @@
     <section id="Playground">
       <div class="container">
         <h2 class="mt-0 mb-32">Playground</h2>
+        <div id="Demo" class="rounded">
+          <form id="Settings" class="p-24">
+            <fieldset>
+              <legend>Type</legend>
+
+              <input type="radio" id="default" name="type" checked value="">
+              <label for="default">Default</label>
+
+              <input type="radio" id="pale" name="type" value="pale">
+              <label for="pale">Pale</label>
+
+              <input type="radio" id="flat" name="type" value="flat">
+              <label for="flat">Flat</label>
+
+              <input type="radio" id="link" name="type" value="link">
+              <label for="link">Link</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Size</legend>
+
+              <input type="radio" id="small" name="size" value="small">
+              <label for="small">Small</label>
+
+              <input type="radio" id="base" name="size" checked value="">
+              <label for="base">Base</label>
+
+              <input type="radio" id="large" name="size" value="large">
+              <label for="large">Large</label>
+
+              <input type="radio" id="huge" name="size" value="huge">
+              <label for="huge">Huge</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Spacing</legend>
+
+              <input type="radio" id="even" name="spacing" value="even">
+              <label for="even">Even</label>
+
+              <input type="radio" id="regular" name="spacing" checked value="">
+              <label for="regular">Regular</label>
+
+              <input type="radio" id="wide" name="spacing" value="wide">
+              <label for="wide">Wide</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Corners</legend>
+
+              <input type="radio" id="pill" name="corners" value="pill">
+              <label for="pill">Pill</label>
+
+              <input type="radio" id="rounded" name="corners" checked value="">
+              <label for="rounded">Rounded</label>
+
+              <input type="radio" id="sharp" name="corners" value="sharp">
+              <label for="sharp">Sharp</label>
+            </fieldset>
+          </form>
+          <div id="Result" class="p-24 text-center">
+            <button id="Button" class="knopf">
+              Button
+            </button>
+          </div>
+          <pre id="Pre" class="m-0 p-24"><code id="Code">&lt;button class="knopf"&gt;
+  Button
+&lt;/button&gt;</code></pre>
+        </div>
       </div>
     </section>
   </main>
@@ -120,6 +189,39 @@
   <footer class="p-24 text-center">
     <p class="m-0">Created out of 😩 but with ❤️ by the folks at <a href="https://team.video" class="knopf link">team.video</a></p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $ = selector => document.querySelector(selector)
+      const $$ = selector => document.querySelectorAll(selector)
+
+      const $Settings = $('#Settings')
+      const $Button = $('#Button')
+      const $Code = $('#Code')
+
+      const $$radios = $$('input[type="radio"]')
+
+      const updateButton = () => {
+        const { classList } = $Button
+        const classes = ['knopf']
+
+        classes.push(...Array.from($$radios)
+          .filter(({ checked, value }) => checked && value)
+          .map(({ value }) => value))
+
+        classList.remove(...classList)
+        classList.add(...classes)
+
+        $Code.innerHTML = new XMLSerializer().serializeToString(
+          document.createTextNode(`<button class="${classes.join(' ')}">
+  Button
+</button>`)
+        )
+      }
+
+      $$radios.forEach($radio => $radio.addEventListener('change', updateButton))
+    })
+  </script>
 </body>
 
 </html>
