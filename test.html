@@ -1,256 +1,256 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Knopf CSS: UI tests</title>
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://www.googletagmanager">
+  <!-- Prefetch -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager">
 
+  <title>UI tests — Knopf.css</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Germania+One&amp;display=swap"> -->
+  <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+  <link rel="stylesheet" href="/knopf.css">
+  <link rel="stylesheet" href="/styles.css">
+
+  <meta name="theme-color" content="#E31587">
   <style>
-    html {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    }
-
     body {
       display: flex;
       flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
       min-height: 100vh;
     }
 
     main {
       margin: auto;
       padding: 1em;
-      text-align: center;
     }
 
     .row {
-      align-items: center;
+      align-items: flex-end;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      max-width: 44em;
+      max-width: 33em;
       width: 80vw;
     }
+
+    .row+.row {
+      margin-top: 1em;
+    }
+
+    .hidden {
+      display: none;
+    }
+
   </style>
-  <link rel="stylesheet" href="knopf.css">
 </head>
 
 <body>
-  <svg style="display: none;">
-    <symbol id="happy-icon" viewBox="0 0 24 24">
-      <circle cx="15.5" cy="9.5" r="1.5" />
-      <circle cx="8.5" cy="9.5" r="1.5" />
-      <path
-        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm4.41-6.11c-.35-.22-.82-.11-1.03.24-.74 1.17-2 1.87-3.38 1.87s-2.64-.7-3.38-1.88c-.22-.35-.68-.46-1.03-.24-.35.22-.46.68-.24 1.03C8.37 16.54 10.1 17.5 12 17.5s3.63-.97 4.65-2.58c.22-.35.11-.81-.24-1.03z" />
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <svg class="hidden">
+    <symbol id="icon-dropdown" viewBox="0 0 24 24">
+      <path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z" />
     </symbol>
 
-    <symbol id="drop-down-icon" viewBox="0 0 24 24">
-      <path
-        d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z" />
+    <symbol id="icon-hot" viewBox="0 0 24 24">
+      <path d="M17.09 4.56c-.7-1.03-1.5-1.99-2.4-2.85-.35-.34-.94-.02-.84.46.19.94.39 2.18.39 3.29 0 2.06-1.35 3.73-3.41 3.73-1.54 0-2.8-.93-3.35-2.26-.1-.2-.14-.32-.2-.54-.11-.42-.66-.55-.9-.18-.18.27-.35.54-.51.83C4.68 9.08 4 11.46 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8c0-3.49-1.08-6.73-2.91-9.44zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.47-.3 2.98-.93 4.03-1.92.28-.26.74-.14.82.23.23 1.02.35 2.08.35 3.15.01 2.65-2.14 4.8-4.79 4.8z" />
     </symbol>
   </svg>
 
   <main>
-    <button>Button</button>
-
-    <hr>
-
-    <div class="knopf_group spaced around">
+    <h2>States</h2>
+    <div class="row">
       <button class="knopf" disabled>disabled</button>
-      <button class="knopf">primary</button>
+      <button class="knopf">default</button>
       <button class="knopf active">active</button>
     </div>
 
-    <hr>
+    <h2>Styles</h2>
 
-    <div class="knopf_group spaced around">
-      <a href="#" class="knopf link">link</a>
+    <div class="row">
       <button class="knopf flat">flat</button>
+      <button class="knopf flat outline">flat outline</button>
+      <button class="knopf flat outline solid">flat outline solid</button>
+    </div>
+
+    <div class="row">
       <button class="knopf pale">pale</button>
+      <button class="knopf pale outline">pale outline</button>
+      <button class="knopf pale outline solid">pale outline solid</button>
     </div>
 
-    <hr>
-
-    <div class="knopf_group spaced around">
-      <button class="knopf outline">primary outline</button>
-      <button class="knopf outline flat">flat outline</button>
-      <button class="knopf outline pale">pale outline</button>
+    <div class="row">
+      <button class="knopf link">link</button>
     </div>
 
-    <hr>
+    <h2>Corners</h2>
 
-    <div class="knopf_group spaced around">
+    <div class="row">
       <button class="knopf sharp">sharp</button>
       <button class="knopf pill">pill</button>
+    </div>
+
+    <h2>Spacing</h2>
+
+    <div class="row">
       <button class="knopf even">even</button>
       <button class="knopf wide">wide</button>
     </div>
 
-    <hr>
+    <h2>Sizes</h2>
 
-    <div class="knopf_group spaced around end">
+    <div class="row">
       <button class="knopf small">small</button>
       <button class="knopf">regular</button>
       <button class="knopf large">large</button>
       <button class="knopf huge">huge</button>
     </div>
 
-    <hr>
+    <h2>Icons</h2>
+
+    <div class="row">
+      <button class="knopf">
+        <svg class="knopf_icon">
+          <use xlink:href="#icon-hot" />
+        </svg>
+        <span>Label</span>
+      </button>
+      <button class="knopf even pill">
+        <svg class="knopf_icon large">
+          <use xlink:href="#icon-hot" />
+        </svg>
+      </button>
+    </div>
+
+    <h2>Block</h2>
 
     <div class="row">
       <button class="knopf block">block</button>
     </div>
 
-    <br>
-
-    <div class="row">
-      <button class="knopf block">
-        <svg class="knopf_icon">
-          <use xlink:href="#happy-icon" />
-        </svg>
-        <span class="knopf_label">
-          icon
-        </span>
-      </button>
-    </div>
-
-    <br>
+    <h3>Floating Icon</h3>
 
     <div class="row">
       <button class="knopf block">
         <svg class="knopf_icon knopf_icon--floating">
-          <use xlink:href="#happy-icon" />
+          <use xlink:href="#icon-hot" />
         </svg>
-        <span class="knopf_label">
-          floating icon
-        </span>
+        <span>floating icon</span>
       </button>
     </div>
-
-    <br>
 
     <div class="row">
       <button class="knopf block">
-        <span class="knopf_label">
-          floating icon
-        </span>
+        <span>floating icon</span>
         <svg class="knopf_icon knopf_icon--floating">
-          <use xlink:href="#happy-icon" />
+          <use xlink:href="#icon-hot" />
         </svg>
       </button>
     </div>
 
-    <br>
+    <h3>Alignment</h3>
 
     <div class="row">
       <button class="knopf block start">
         <svg class="knopf_icon">
-          <use xlink:href="#happy-icon" />
+          <use xlink:href="#icon-hot" />
         </svg>
-        <span class="knopf_label">
-          start aligned
-        </span>
+        <span>start</span>
       </button>
     </div>
-
-    <br>
 
     <div class="row">
       <button class="knopf block end">
         <svg class="knopf_icon">
-          <use xlink:href="#happy-icon" />
+          <use xlink:href="#icon-hot" />
         </svg>
-        <span class="knopf_label">
-          end aligned
-        </span>
+        <span>end</span>
       </button>
     </div>
 
-    <hr>
-
-    <div class="knopf_group spaced between end">
-      <button class="knopf large">save</button>
-      <button class="knopf flat outline">cancel</button>
-    </div>
-
-    <hr>
+    <h2>Groups</h2>
 
     <div class="row">
-      <span class="knopf_group">
+      <div class="group pill">
+        <button class="knopf wide">save</button>
+        <button class="knopf flat outline solid">cancel</button>
+      </div>
+
+      <span class="group sharp">
         <button class="knopf flat outline">first</button>
         <button class="knopf flat outline active">second</button>
-        <button class="knopf flat outline">third</button>
         <button class="knopf flat outline">last</button>
       </span>
 
-      <span class="knopf_group spaced">
-        <button class="knopf flat">A</button>
-        <button class="knopf flat active">B</button>
-        <button class="knopf flat">C</button>
-      </span>
-
-      <span class="knopf_group stretch" style="--knopf-group-spacing: 1px;">
+      <span class="group">
         <button class="knopf">Dropdown</button>
         <button class="knopf even active">
           <svg class="knopf_icon">
-            <use xlink:href="#drop-down-icon" />
+            <use xlink:href="#icon-dropdown" />
           </svg>
         </button>
       </span>
     </div>
 
-    <hr>
+    <h3>Vertical</h3>
 
     <div class="row">
-      <span class="knopf_group vertical stretch">
+      <span class="group vertical">
         <button class="knopf start flat outline">
           <svg class="knopf_icon">
-            <use xlink:href="#happy-icon" />
+            <use xlink:href="#icon-hot" />
           </svg>
-          <span class="knopf_label">first</span>
+          <span>first</span>
         </button>
         <button class="knopf start flat outline active">
           <svg class="knopf_icon">
-            <use xlink:href="#happy-icon" />
+            <use xlink:href="#icon-hot" />
           </svg>
-          <span class="knopf_label">second</span>
+          <span>second</span>
         </button>
         <button class="knopf start flat outline">
           <svg class="knopf_icon">
-            <use xlink:href="#happy-icon" />
+            <use xlink:href="#icon-hot" />
           </svg>
-          <span class="knopf_label">third</span>
-        </button>
-        <button class="knopf start flat outline">
-          <svg class="knopf_icon">
-            <use xlink:href="#happy-icon" />
-          </svg>
-          <span class="knopf_label">last</span>
+          <span>last</span>
         </button>
       </span>
 
-      <span class="knopf_group vertical spaced">
-        <button class="knopf flat">A</button>
-        <button class="knopf flat active">B</button>
-        <button class="knopf flat">C</button>
-      </span>
-
-      <span class="knopf_group vertical spaced">
+      <span class="group vertical sharp">
         <button class="knopf outline">A</button>
         <button class="knopf outline active">B</button>
         <button class="knopf outline">C</button>
       </span>
 
-      <span class="knopf_group vertical spaced">
+      <span class="group vertical">
         <button class="knopf pale">A</button>
         <button class="knopf pale active">B</button>
         <button class="knopf pale">C</button>
       </span>
 
-      <span class="knopf_group vertical stretch">
+      <span class="group vertical">
         <button class="knopf end">first</button>
         <button class="knopf end active">second</button>
-        <button class="knopf end">third</button>
         <button class="knopf end">last</button>
       </span>
     </div>
