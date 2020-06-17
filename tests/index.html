@@ -30,18 +30,6 @@
 
   <meta name="theme-color" content="#E31587">
   <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-      min-height: 100vh;
-    }
-
-    main {
-      margin: auto;
-      padding: 1em;
-    }
-
     .row {
       align-items: flex-end;
       display: flex;
@@ -55,14 +43,10 @@
       margin-top: 1em;
     }
 
-    .hidden {
-      display: none;
-    }
-
   </style>
 </head>
 
-<body>
+<body class="bg-body">
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -77,7 +61,7 @@
     </symbol>
   </svg>
 
-  <main>
+  <main class="m-auto">
     <h2>States</h2>
     <div class="row">
       <button class="knopf" disabled>disabled</button>

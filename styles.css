@@ -116,7 +116,6 @@ textarea {
 }
 
 body {
-  background-color: var(--background);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   display: flex;
@@ -176,7 +175,6 @@ legend {
 /* Playground */
 
 #Demo {
-  background: white;
   margin: auto;
   display: grid;
   grid-auto-columns: 1fr 1fr;
@@ -202,8 +200,8 @@ legend {
 
 /* Utilities */
 
-.bg-white {
-  background-color: white;
+.bg-body {
+  background-color: var(--background);
 }
 
 .flex {
