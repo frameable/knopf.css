@@ -113,64 +113,100 @@
     <section id="Playground">
       <div class="container">
         <h3 class="mt-0 mb-32">Playground</h3>
-        <div id="Demo" class="rounded">
+        <div id="Demo" class="rounded bg-body">
           <form id="Settings" class="p-24">
             <fieldset>
               <legend>Type</legend>
 
-              <input type="radio" id="default" name="type" checked value="">
-              <label for="default">Default</label>
+              <div class="group">
+                <label for="default" class="knopf flat outline solid active">
+                  <input type="radio" id="default" name="type" checked value="">
+                  <span>Default</span>
+                </label>
 
-              <input type="radio" id="pale" name="type" value="pale">
-              <label for="pale">Pale</label>
+                <label for="pale" class="knopf flat outline solid">
+                  <input type="radio" id="pale" name="type" value="pale">
+                  <span>Pale</span>
+                </label>
 
-              <input type="radio" id="flat" name="type" value="flat">
-              <label for="flat">Flat</label>
+                <label for="flat" class="knopf flat outline solid">
+                  <input type="radio" id="flat" name="type" value="flat">
+                  <span>Flat</span>
+                </label>
 
-              <input type="radio" id="link" name="type" value="link">
-              <label for="link">Link</label>
+                <label for="link" class="knopf flat outline solid">
+                  <input type="radio" id="link" name="type" value="link">
+                  <span>Link</span>
+                </label>
+              </div>
             </fieldset>
 
             <fieldset>
               <legend>Size</legend>
 
-              <input type="radio" id="small" name="size" value="small">
-              <label for="small">Small</label>
+              <div class="group">
+                <label for="small" class="knopf flat outline solid">
+                  <input type="radio" id="small" name="size" value="small">
+                  <span>Small</span>
+                </label>
 
-              <input type="radio" id="base" name="size" checked value="">
-              <label for="base">Base</label>
+                <label for="base" class="knopf flat outline solid active">
+                  <input type="radio" id="base" name="size" checked value="">
+                  <span>Base</span>
+                </label>
 
-              <input type="radio" id="large" name="size" value="large">
-              <label for="large">Large</label>
+                <label for="large" class="knopf flat outline solid">
+                  <input type="radio" id="large" name="size" value="large">
+                  <span>Large</span>
+                </label>
 
-              <input type="radio" id="huge" name="size" value="huge">
-              <label for="huge">Huge</label>
+                <label for="huge" class="knopf flat outline solid">
+                  <input type="radio" id="huge" name="size" value="huge">
+                  <span>Huge</span>
+                </label>
+              </div>
             </fieldset>
 
             <fieldset>
               <legend>Spacing</legend>
 
-              <input type="radio" id="even" name="spacing" value="even">
-              <label for="even">Even</label>
+              <div class="group">
+                <label for="even" class="knopf flat outline solid">
+                  <input type="radio" id="even" name="spacing" value="even">
+                  <span>Even</span>
+                </label>
 
-              <input type="radio" id="regular" name="spacing" checked value="">
-              <label for="regular">Regular</label>
+                <label for="regular" class="knopf flat outline solid active">
+                  <input type="radio" id="regular" name="spacing" checked value="">
+                  <span>Regular</span>
+                </label>
 
-              <input type="radio" id="wide" name="spacing" value="wide">
-              <label for="wide">Wide</label>
+                <label for="wide" class="knopf flat outline solid">
+                  <input type="radio" id="wide" name="spacing" value="wide">
+                  <span>Wide</span>
+                </label>
+              </div>
             </fieldset>
 
             <fieldset>
               <legend>Corners</legend>
 
-              <input type="radio" id="pill" name="corners" value="pill">
-              <label for="pill">Pill</label>
+              <div class="group">
+                <label for="pill" class="knopf flat outline solid">
+                  <input type="radio" id="pill" name="corners" value="pill">
+                  <span>Pill</span>
+                </label>
 
-              <input type="radio" id="rounded" name="corners" checked value="">
-              <label for="rounded">Rounded</label>
+                <label for="rounded" class="knopf flat outline solid active">
+                  <input type="radio" id="rounded" name="corners" checked value="">
+                  <span>Rounded</span>
+                </label>
 
-              <input type="radio" id="sharp" name="corners" value="sharp">
-              <label for="sharp">Sharp</label>
+                <label for="sharp" class="knopf flat outline solid">
+                  <input type="radio" id="sharp" name="corners" value="sharp">
+                  <span>Sharp</span>
+                </label>
+              </div>
             </fieldset>
           </form>
           <div id="Result" class="p-24 text-center">
