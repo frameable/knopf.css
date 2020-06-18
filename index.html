@@ -75,7 +75,45 @@
   <main>
     <section>
       <div class="container container--tight text-center">
-        <img class="Logo" src="logo.svg" alt="knopf logo" width="160" height="160">
+        <svg class="Logo" viewBox="0 0 100 100" width="160" height="160">
+          <title>knopf.css logo</title>
+
+          <style>
+            circle {
+              transform: rotate(45deg);
+              transform-origin: center;
+            }
+
+          </style>
+
+          <defs>
+            <linearGradient id="background">
+              <stop offset="0" stop-color="#E01585" />
+              <stop offset="100" stop-color="#4437D5" />
+            </linearGradient>
+
+            <mask id="details">
+              <rect fill="white" width="100" height="100" />
+
+              <g fill="white" stroke-width="1" stroke="gainsboro">
+                <circle cx="50" cy="50" r="49.5" />
+                <circle cx="50" cy="50" r="42" />
+                <circle cx="50" cy="50" r="40" stroke-width="3" stroke="black" fill="white" />
+                <circle cx="50" cy="50" r="38" />
+              </g>
+
+              <g fill="black" stroke="gainsboro" stroke-width="1">
+                <circle cx="38" cy="38" r="8" />
+                <circle cx="38" cy="62" r="8" />
+                <circle cx="62" cy="38" r="8" />
+                <circle cx="62" cy="62" r="8" />
+              </g>
+            </mask>
+          </defs>
+
+          <circle fill="url(#background)" mask="url(#details)" cx="50" cy="50" r="50" />
+        </svg>
+
         <h1 class="my-48 Title">knopf.css</h1>
         <h2 class="m-0 Tagline">Open source button system leveraging CSS variables, designed for rapid prototyping and production-ready applications</h2>
         <div class="mt-48">
