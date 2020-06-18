@@ -1,9 +1,9 @@
 {
   "name": "knopf.css",
-  "version": "0.2.4",
-  "description": "Componentized styles for your buttons",
+  "version": "1.0.0",
+  "description": "Open source button system leveraging CSS custom properties, designed for rapid prototyping and production–ready applications",
   "author": {
-    "name": "Team.Video",
+    "name": "team.video",
     "email": "tech@team.video",
     "url": "https://team.video/"
   },
@@ -28,16 +28,14 @@
   },
   "scripts": {
     "build": "uglifycss knopf.css > knopf.min.css",
-    "lint": "stylelint knopf.css",
-    "prepare": "npm run test",
-    "test": "npm run lint"
+    "lint": "stylelint knopf.css"
   },
   "keywords": [
     "buttons",
     "css"
   ],
   "devDependencies": {
-    "stylelint": "^13.2.1",
+    "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "uglifycss": "0.0.29"
   },
