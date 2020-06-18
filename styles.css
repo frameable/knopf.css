@@ -88,9 +88,10 @@ textarea {
    ========================================================================== */
 
 @font-face {
+  font-display: swap;
   font-family: 'Recursive';
-  src: url('RecursiveSansCslSt-ExtraBd.woff2') format('woff2-variations');
   font-weight: 300 1000;
+  src: url('RecursiveSansCslSt-ExtraBd.woff2') format('woff2-variations');
 }
 
 :root {
@@ -181,7 +182,6 @@ pre {
 }
 
 .Title {
-  font-display: swap;
   font-family: 'Recursive', sans-serif;
   font-size: 2.286em;
 }
