@@ -4,13 +4,12 @@
 # TEAM
 
     Agustín Díaz -- Developer -- https://adiaz.uy/
-    Abhi Bassi -- Designer -- http://abhinavbassi.com
+    Abhi Bassi -- Designer -- http://abhinavbassi.com/
 
 # THANKS
 
-    Plectica
+    team.video
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Sanitize.css, Knopf.css
+    knopf.css

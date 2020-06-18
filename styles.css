@@ -229,6 +229,11 @@ legend {
   margin-block-start: auto;
 }
 
+.my-48 {
+  margin-block-end: 48px;
+  margin-block-start: 48px;
+}
+
 .mb-16 {
   margin-bottom: 16px;
 }
@@ -258,7 +263,7 @@ legend {
 }
 
 /* ==========================================================================
-   Knopf
+   knopf
    ========================================================================== */
 
 .primary {
