@@ -3,16 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://unpkg.com">
-  <link rel="preconnect" href="https://www.googletagmanager">
   <link rel="preconnect" href="https://www.google-analytics.com">
-  <!-- Prefetch -->
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://unpkg.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
   <title>knopf.css</title>
   <meta name="description" content="Open source button system leveraging CSS custom properties, designed for rapid prototyping and production–ready applications.">
@@ -30,14 +21,19 @@
 
   <meta name="theme-color" content="#E31587">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169588720-1"></script>
+  <!-- Google Analytics -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-169588720-1');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-169588720-1', 'auto');
+    ga('send', 'pageview');
   </script>
+  <!-- End Google Analytics -->
 </head>
 
 <body class="bg-body m-0">
