@@ -181,7 +181,8 @@ pre {
 }
 
 .Title {
-  font-family: 'Recursive';
+  font-display: swap;
+  font-family: 'Recursive', sans-serif;
   font-size: 2.286em;
 }
 
