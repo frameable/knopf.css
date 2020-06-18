@@ -4,7 +4,7 @@ Open source button system leveraging CSS custom properties, designed for rapid p
 
 ## Installation
 
-The easiest way to “install” **knopf.css** on your proyect is to include the stylesheet on your website.
+The easiest way to “install” **knopf.css** on your project is to include the stylesheet on your website.
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/knopf.min.css">
@@ -22,14 +22,22 @@ npm install knopf.css
 yarn add knopf.css
 ```
 
-You will then need to import it wherever you are currently importing your styles
+You will then need to import it wherever you are currently importing your styles.
 ```node
 import 'knopf.css'
 ```
 
 ## Usage
 
-Just add the `knopf` class name to any anchor, button, or label, to start using the built-in component styles and modifiers. For the list of available features, check out [https://knopf.dev/#Features](https://knopf.dev/#Features); or use the [playground](https://knopf.dev/#Playground) to see them in action.
+Just add the `knopf` class name to any anchor, button, or label, to start using the built-in component styles and modifiers.
+
+```
+<a href="#" class="knopf pale outline solid large wide pill">
+  Button
+</a>
+```
+
+For the list of available features, check out [knopf.dev/](https://knopf.dev/#Features); or use the [playground](https://knopf.dev/#Playground) to see them in action.
 
 The true power of the library lies in its extensibility. Ideally you would modify the default values (like border-radius or the initial hsl color) to match your product’s branding. You are also encouraged to build your own modifiers to achieve whatever styles might be missing.
 
