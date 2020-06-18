@@ -87,6 +87,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@font-face {
+  font-family: 'Recursive';
+  src: url('RecursiveSansCslSt-ExtraBd.woff2') format('woff2-variations');
+  font-weight: 300 1000;
+}
+
 :root {
   --background: hsl(0 0% 100%);
   --text: hsl(219 76% 7%);
@@ -148,7 +154,14 @@ main {
 }
 
 section {
-  padding: 128px 32px;
+  padding: 80px 24px;
+}
+
+@media (min-width: 50em) {
+  section {
+    padding-block-end: 128px;
+    padding-block-start: 128px;
+  }
 }
 
 section:nth-child(even) {
@@ -159,29 +172,55 @@ legend {
   font-weight: bold;
 }
 
-#Logo {
+pre {
+  overflow: auto;
+}
+
+.Logo {
   filter: drop-shadow(0px 4px 8px hsl(219 76% 7% / 0.08));
 }
 
 .Title {
-  font-size: 2.145em;
+  font-family: 'Recursive';
+  font-size: 2.286em;
 }
 
-.Subtitle {
+.Tagline {
   font-size: 1.145em;
   font-weight: normal;
+}
+
+h3 {
+  font-size: 1.524em;
+}
+
+.row {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.row + .row {
+  margin-top: 1em;
 }
 
 /* Playground */
 
 #Demo {
-  margin: auto;
-  display: grid;
-  grid-auto-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-areas:
-    'Settings Result'
-    'Settings Code';
+  overflow: hidden;
+}
+
+@media (min-width: 50em) {
+  #Demo {
+    margin: auto;
+    display: grid;
+    grid-auto-columns: min-content auto;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+      'Settings Result'
+      'Settings Code';
+  }
 }
 
 #Settings {
@@ -194,8 +233,8 @@ legend {
 }
 
 #Pre {
+  background-color: #DBDEE4;
   grid-area: Code;
-  overflow: auto;
 }
 
 /* Utilities */
