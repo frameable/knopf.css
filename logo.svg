@@ -10,7 +10,7 @@
 
   <defs>
     <linearGradient id="background">
-      <stop offset="0" stop-color="#E31587" />
+      <stop offset="0" stop-color="#E01585" />
       <stop offset="100" stop-color="#4437D5" />
     </linearGradient>
 
