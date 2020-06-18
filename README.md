@@ -4,7 +4,7 @@ Open source button system leveraging CSS custom properties, designed for rapid p
 
 ## Installation
 
-The easiest way to “install” **knopf.css** on your proyect is to include the stylesheet on your website.
+The easiest way to “install” **knopf.css** on your project is to include the stylesheet on your website.
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/knopf.min.css">
