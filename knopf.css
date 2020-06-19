@@ -58,7 +58,6 @@
   /* Flex */
   --knopf-display: inline-flex;
   --knopf-flex-direction: row;
-  --knopf-flex-grow: 0;
 
   /* Group */
   --knopf-group-direction: row;
@@ -114,7 +113,6 @@
   cursor: pointer;
   display: var(--knopf-display);
   flex-direction: var(--knopf-flex-direction);
-  flex-grow: var(--knopf-flex-grow);
   font-family: var(--knopf-font-family);
   font-size: var(--knopf-font-size);
   font-weight: var(--knopf-font-weight);
@@ -254,7 +252,7 @@
 
 .block {
   --knopf-display: flex;
-  --knopf-flex-grow: 1;
+  width: 100%;
 }
 
 /* ==========================================================================
