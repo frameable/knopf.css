@@ -57,14 +57,13 @@
     <symbol id="icon-flame" viewBox="0 0 24 24">
       <path d="M17.09 4.56c-.7-1.03-1.5-1.99-2.4-2.85-.35-.34-.94-.02-.84.46.19.94.39 2.18.39 3.29 0 2.06-1.35 3.73-3.41 3.73-1.54 0-2.8-.93-3.35-2.26-.1-.2-.14-.32-.2-.54-.11-.42-.66-.55-.9-.18-.18.27-.35.54-.51.83C4.68 9.08 4 11.46 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8c0-3.49-1.08-6.73-2.91-9.44zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.47-.3 2.98-.93 4.03-1.92.28-.26.74-.14.82.23.23 1.02.35 2.08.35 3.15.01 2.65-2.14 4.8-4.79 4.8z" />
     </symbol>
-
     <symbol id="icon-cam" viewBox="0 0 24 24">
       <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l2.29 2.29c.63.63 1.71.18 1.71-.71V8.91c0-.89-1.08-1.34-1.71-.71L17 10.5z" />
     </symbol>
   </svg>
 
   <header class="p-16">
-    <a href="https://team.video/" class="knopf secondary wide">
+    <a href="https://team.video/" class="knopf small secondary wide">
       <svg class="knopf_icon" aria-hidden="true">
         <use xlink:href="#icon-cam" />
       </svg>
@@ -123,7 +122,7 @@
 
         <h1 class="my-48 Title">knopf<small>.css</small></h1>
         <h2 class="m-0 Tagline">Open source button system leveraging CSS variables, designed for rapid prototyping and production-ready applications</h2>
-        <div class="mt-48">
+        <div class="flex justify-center mt-48">
           <a href="#Playground" class="knopf primary wide">
             <span>Playground</span>
             <svg class="knopf_icon" aria-hidden="true">
@@ -145,86 +144,29 @@
 
         <p>The easiest way to “install” <b>knopf.css</b> on your project is to include the stylesheet on your website.</p>
 
-        <pre class="m-0 px-24 py-16 rounded bg-body"><code>&lt;link href="https://unpkg.com/knopf.css@1.0.1/knopf.min.css" rel="stylesheet"&gt;</code></pre>
+        <pre class="m-0 px-24 py-16 rounded bg-body border"><code>&lt;link href="https://unpkg.com/knopf.css@1.0.1/knopf.min.css" rel="stylesheet"&gt;</code></pre>
 
         <p>You can also install it via your favorite package manager:</p>
 
         <div class="Package">
           <article>
             <h4 class="mt-0 mb-16">Install with npm</h4>
-            <pre class="m-0 px-24 py-16 rounded bg-body"><code>npm install knopf.css</code></pre>
+            <pre class="m-0 px-24 py-16 rounded bg-body border"><code>npm install knopf.css</code></pre>
           </article>
 
           <article>
             <h4 class="mt-0 mb-16">Install with yarn</h4>
-            <pre class="m-0 px-24 py-16 rounded bg-body"><code>yarn add knopf.css</code></pre>
+            <pre class="m-0 px-24 py-16 rounded bg-body border"><code>yarn add knopf.css</code></pre>
           </article>
         </div>
 
         <p>You will then need to import it wherever you are currently importing your styles.</p>
-        <pre class="m-0 px-24 py-16 rounded bg-body"><code>import 'knopf.css'</code></pre>
+        <pre class="m-0 px-24 py-16 rounded bg-body border"><code>import 'knopf.css'</code></pre>
       </div>
     </section>
     <section id="Usage">
       <div class="container">
         <h3 class="mt-0 mb-32">Usage</h3>
-
-        <h4>Icons</h4>
-
-        <div class="row">
-          <button class="knopf">
-            <svg class="knopf_icon" aria-hidden="true">
-              <use xlink:href="#icon-flame" />
-            </svg>
-            <span>Label</span>
-          </button>
-
-          <button class="knopf even pill" aria-label="Fire">
-            <svg class="knopf_icon large">
-              <use xlink:href="#icon-flame" />
-            </svg>
-          </button>
-        </div>
-
-        <h5>Floating Icon</h5>
-
-        <div class="row">
-          <button class="knopf block">
-            <svg class="knopf_icon knopf_icon--floating">
-              <use xlink:href="#icon-flame" />
-            </svg>
-            <span>floating icon</span>
-          </button>
-        </div>
-
-        <div class="row">
-          <button class="knopf block">
-            <span>floating icon</span>
-            <svg class="knopf_icon knopf_icon--floating">
-              <use xlink:href="#icon-flame" />
-            </svg>
-          </button>
-        </div>
-
-        <h5>Alignment</h5>
-
-        <div class="row">
-          <button class="knopf block start">
-            <svg class="knopf_icon" aria-hidden="true">
-              <use xlink:href="#icon-flame" />
-            </svg>
-            <span>start</span>
-          </button>
-        </div>
-
-        <div class="row">
-          <button class="knopf block end">
-            <svg class="knopf_icon" aria-hidden="true">
-              <use xlink:href="#icon-flame" />
-            </svg>
-            <span>end</span>
-          </button>
-        </div>
 
         <h4>Groups</h4>
 
@@ -299,9 +241,9 @@
         <h3 class="mt-0 mb-32">Playground</h3>
         <p>Try out the different built in modifiers to find the style that is right for you.</p>
 
-        <div id="Demo" class="rounded bg-body">
-          <form id="Settings" class="p-24">
-            <details class="mb-16">
+        <div id="Demo" class="rounded bg-body border">
+          <form id="Settings" class="p-16 border">
+            <details class="mb-8 p-8">
               <summary>State</summary>
 
               <label class="knopf flat outline">
@@ -315,7 +257,7 @@
               </label>
             </details>
 
-            <details class="mb-16">
+            <details class="mb-8 p-8">
               <summary>Type</summary>
 
               <div class="flex flex-no-wrap mb-16">
@@ -353,10 +295,10 @@
               </div>
             </details>
 
-            <details class="mb-16">
+            <details class="mb-8 p-8">
               <summary>Size</summary>
 
-              <div class="flex flex-no-wrap items-end mb-16">
+              <div class="flex flex-no-wrap items-end">
                 <label class="knopf flat outline small">
                   <input class="sr-only" type="radio" name="size" value="small">
                   <span>Small</span>
@@ -377,14 +319,46 @@
                   <span>Huge</span>
                 </label>
               </div>
+            </details>
 
-              <label class="knopf flat outline block">
-                <input class="sr-only" type="checkbox" name="block">
-                <span>Block</span>
+            <details class="mb-8 p-8">
+              <summary>Icon</summary>
+
+              <input class="sr-only" type="checkbox" id="icon" name="icon">
+              <label for="icon" class="knopf flat outline even pill">
+                <svg class="knopf_icon large" aria-label="Toggle icon">
+                  <use xlink:href="#icon-flame" />
+                </svg>
               </label>
             </details>
 
-            <details class="mb-16">
+            <details class="mb-8 p-8">
+              <summary>Alignment</summary>
+
+              <label class="knopf flat outline block mb-16">
+                <input class="sr-only" type="checkbox" name="block">
+                <span>Block</span>
+              </label>
+
+              <div class="flex flex-no-wrap items-end">
+                <label class="knopf flat outline block start">
+                  <input class="sr-only" type="radio" name="alignment" value="start">
+                  <span>Start</span>
+                </label>
+
+                <label class="knopf flat outline block active secondary ml-8">
+                  <input class="sr-only" type="radio" name="alignment" checked value="">
+                  <span>Center</span>
+                </label>
+
+                <label class="knopf flat outline block end ml-8">
+                  <input class="sr-only" type="radio" name="alignment" value="end">
+                  <span>End</span>
+                </label>
+              </div>
+            </details>
+
+            <details class="mb-8 p-8">
               <summary>Spacing</summary>
 
               <div>
@@ -405,7 +379,7 @@
               </div>
             </details>
 
-            <details>
+            <details class="p-8">
               <summary>Corners</summary>
 
               <label class="knopf flat outline pill">
@@ -438,7 +412,7 @@
   </main>
 
   <footer class="p-24 text-center">
-    <p class="m-0">Created out of 😩 but with ❤️ by the folks at <a href="https://team.video/" class="knopf secondary link">team.video</a></p>
+    <p class="m-0 flex items-center justify-center">Created out of 😩 but with ❤️ by the folks at <a href="https://team.video/" class="knopf secondary pale ml-8">team.video</a></p>
   </footer>
 
   <script>
@@ -456,17 +430,26 @@
       const updateDemo = () => {
         const { classList } = $Button
         const classes = ['knopf']
+        let body = 'Button'
 
         const bools = Array.from($$checkboxes)
           .filter(({ checked }) => checked)
           .map(({ name }) => name)
 
-        $Button.disabled = bools.includes('disabled')
-
         if (bools.includes('active')) classes.push('active')
         if (bools.includes('block')) classes.push('block')
         if (bools.includes('outline')) classes.push('outline')
         if (bools.includes('solid')) classes.push('solid')
+
+        if (bools.includes('icon')) {
+          body = `<svg class="knopf_icon" aria-hidden="true">
+    <use xlink:href="#icon-flame" />
+  </svg>
+  <span>Button</span>`
+        }
+
+        $Button.disabled = bools.includes('disabled')
+        $Button.innerHTML = body
 
         classes.push(...Array.from($$radios)
           .filter(({ checked, value }) => checked && value)
@@ -477,7 +460,7 @@
 
         $Code.innerHTML = new XMLSerializer().serializeToString(
           document.createTextNode(`<button class="${classes.join(' ')}"${$Button.disabled ? ' disabled' : ''}>
-  Button
+  ${body}
 </button>`)
         )
       }
@@ -501,6 +484,10 @@
         toggleActiveButton(currentTarget.parentNode)
         updateDemo()
       }))
+
+      $('#icon').addEventListener('change', ({ currentTarget }) => {
+        toggleActiveButton(currentTarget.nextElementSibling)
+      })
     })
   </script>
 </body>
