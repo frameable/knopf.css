@@ -82,7 +82,7 @@
   <main>
     <section>
       <div class="container container--tight text-center">
-        <svg class="Logo" viewBox="0 0 100 100" width="100" height="100">
+        <svg class="Logo" viewBox="0 0 100 100" width="120" height="120">
           <title>knopf.css logo</title>
 
           <style>
@@ -125,13 +125,13 @@
         <h2 class="m-0 Tagline">Open source button system leveraging CSS variables, designed for rapid prototyping and production-ready applications</h2>
         <div class="mt-48">
           <a href="#Playground" class="knopf primary wide">
-            <span>Try it out</span>
+            <span>Playground</span>
             <svg class="knopf_icon" aria-hidden="true">
               <use xlink:href="#icon-try" />
             </svg>
           </a>
           <a href="/knopf.css.zip" class="knopf secondary pale wide ml-24" download>
-            <span>Download v1.0.1</span>
+            <span>Download</span>
             <svg class="knopf_icon" aria-hidden="true">
               <use xlink:href="#icon-download" />
             </svg>
@@ -145,75 +145,29 @@
 
         <p>The easiest way to “install” <b>knopf.css</b> on your project is to include the stylesheet on your website.</p>
 
-        <pre class="m-0 p-24 rounded bg-body"><code>&lt;link href="https://unpkg.com/knopf.css@1.0.1/knopf.min.css" rel="stylesheet"&gt;</code></pre>
+        <pre class="m-0 px-24 py-16 rounded bg-body"><code>&lt;link href="https://unpkg.com/knopf.css@1.0.1/knopf.min.css" rel="stylesheet"&gt;</code></pre>
 
         <p>You can also install it via your favorite package manager:</p>
 
-        <h4>Install with npm</h4>
-        <pre class="m-0 p-24 rounded bg-body"><code>npm install knopf.css</code></pre>
+        <div class="Package">
+          <article>
+            <h4 class="mt-0 mb-16">Install with npm</h4>
+            <pre class="m-0 px-24 py-16 rounded bg-body"><code>npm install knopf.css</code></pre>
+          </article>
 
-        <h4>Install with yarn</h4>
-        <pre class="m-0 p-24 rounded bg-body"><code>yarn add knopf.css</code></pre>
+          <article>
+            <h4 class="mt-0 mb-16">Install with yarn</h4>
+            <pre class="m-0 px-24 py-16 rounded bg-body"><code>yarn add knopf.css</code></pre>
+          </article>
+        </div>
 
         <p>You will then need to import it wherever you are currently importing your styles.</p>
-        <pre class="m-0 p-24 rounded bg-body"><code>import 'knopf.css'</code></pre>
+        <pre class="m-0 px-24 py-16 rounded bg-body"><code>import 'knopf.css'</code></pre>
       </div>
     </section>
-    <!-- <section id="Usage">
+    <section id="Usage">
       <div class="container">
-        <h3 class="mt-0 mb-32">How it works</h3>
-      </div>
-    </section> -->
-    <section id="Features">
-      <div class="container">
-        <h3 class="mt-0 mb-32">Features</h3>
-        <h4>States</h4>
-
-        <div class="row">
-          <button class="knopf" disabled>disabled</button>
-          <button class="knopf">default</button>
-          <button class="knopf active">active</button>
-        </div>
-
-        <h4>Styles</h4>
-
-        <div class="row">
-          <button class="knopf flat">flat</button>
-          <button class="knopf flat outline">flat outline</button>
-          <button class="knopf flat outline solid">flat outline solid</button>
-        </div>
-
-        <div class="row">
-          <button class="knopf pale">pale</button>
-          <button class="knopf pale outline">pale outline</button>
-          <button class="knopf pale outline solid">pale outline solid</button>
-        </div>
-
-        <div class="row">
-          <button class="knopf link">link</button>
-        </div>
-
-        <h4>Corners</h4>
-
-        <div class="row">
-          <button class="knopf sharp">sharp</button>
-          <button class="knopf pill">pill</button>
-        </div>
-
-        <h4>Spacing</h4>
-
-        <div class="row">
-          <button class="knopf even">even</button>
-          <button class="knopf wide">wide</button>
-        </div>
-
-        <h4>Sizes</h4>
-        <div class="row">
-          <button class="knopf small">small</button>
-          <button class="knopf">regular</button>
-          <button class="knopf large">large</button>
-          <button class="knopf huge">huge</button>
-        </div>
+        <h3 class="mt-0 mb-32">Usage</h3>
 
         <h4>Icons</h4>
 
@@ -230,12 +184,6 @@
               <use xlink:href="#icon-flame" />
             </svg>
           </button>
-        </div>
-
-        <h4>Block</h4>
-
-        <div class="row">
-          <button class="knopf block">block</button>
         </div>
 
         <h5>Floating Icon</h5>
@@ -353,108 +301,128 @@
 
         <div id="Demo" class="rounded bg-body">
           <form id="Settings" class="p-24">
-            <fieldset class="mb-16">
-              <legend class="mb-4">State</legend>
+            <details class="mb-16">
+              <summary>State</summary>
 
-              <label class="knopf pill pale outline">
+              <label class="knopf flat outline">
                 <input class="sr-only" type="checkbox" name="disabled">
                 <span>Disabled</span>
               </label>
 
-              <label class="knopf pill pale outline">
+              <label class="knopf flat outline">
                 <input class="sr-only" type="checkbox" name="active">
                 <span>Active</span>
               </label>
-            </fieldset>
+            </details>
 
-            <fieldset class="mb-16">
-              <legend class="mb-4">Type</legend>
+            <details class="mb-16">
+              <summary>Type</summary>
 
-              <div class="group">
-                <label class="knopf flat outline solid active">
+              <div class="flex flex-no-wrap mb-16">
+                <label class="knopf active secondary">
                   <input class="sr-only" type="radio" name="type" checked value="">
                   <span>Default</span>
                 </label>
 
-                <label class="knopf flat outline solid">
+                <label class="knopf pale ml-8">
                   <input class="sr-only" type="radio" name="type" value="pale">
                   <span>Pale</span>
                 </label>
 
-                <label class="knopf flat outline solid">
+                <label class="knopf flat ml-8">
                   <input class="sr-only" type="radio" name="type" value="flat">
                   <span>Flat</span>
                 </label>
+
+                <label class="knopf link ml-8">
+                  <input class="sr-only" type="radio" name="type" value="link">
+                  <span>link</span>
+                </label>
               </div>
-            </fieldset>
 
-            <fieldset class="mb-16">
-              <legend class="mb-4">Size</legend>
+              <div class="group pill">
+                <label class="knopf flat outline">
+                  <input class="sr-only" type="checkbox" name="outline">
+                  <span>Outline</span>
+                </label>
 
-              <div class="group">
-                <label class="knopf flat outline solid">
+                <label class="knopf flat outline solid wide ml-8">
+                  <input class="sr-only" type="checkbox" name="solid">
+                  <span>Solid</span>
+                </label>
+              </div>
+            </details>
+
+            <details class="mb-16">
+              <summary>Size</summary>
+
+              <div class="flex flex-no-wrap items-end mb-16">
+                <label class="knopf flat outline small">
                   <input class="sr-only" type="radio" name="size" value="small">
                   <span>Small</span>
                 </label>
 
-                <label class="knopf flat outline solid active">
+                <label class="knopf flat outline active secondary ml-8">
                   <input class="sr-only" type="radio" name="size" checked value="">
                   <span>Base</span>
                 </label>
 
-                <label class="knopf flat outline solid">
+                <label class="knopf flat outline large ml-8">
                   <input class="sr-only" type="radio" name="size" value="large">
                   <span>Large</span>
                 </label>
 
-                <label class="knopf flat outline solid">
+                <label class="knopf flat outline huge ml-8">
                   <input class="sr-only" type="radio" name="size" value="huge">
                   <span>Huge</span>
                 </label>
               </div>
-            </fieldset>
 
-            <fieldset class="mb-16">
-              <legend class="mb-4">Spacing</legend>
+              <label class="knopf flat outline block">
+                <input class="sr-only" type="checkbox" name="block">
+                <span>Block</span>
+              </label>
+            </details>
 
-              <div class="group">
-                <label class="knopf flat outline solid">
+            <details class="mb-16">
+              <summary>Spacing</summary>
+
+              <div>
+                <label class="knopf flat outline even">
                   <input class="sr-only" type="radio" name="spacing" value="even">
                   <span>Even</span>
                 </label>
 
-                <label class="knopf flat outline solid active">
+                <label class="knopf flat outline active secondary">
                   <input class="sr-only" type="radio" name="spacing" checked value="">
                   <span>Regular</span>
                 </label>
 
-                <label class="knopf flat outline solid">
+                <label class="knopf flat outline wide">
                   <input class="sr-only" type="radio" name="spacing" value="wide">
                   <span>Wide</span>
                 </label>
               </div>
-            </fieldset>
+            </details>
 
-            <fieldset>
-              <legend class="mb-4">Corners</legend>
+            <details>
+              <summary>Corners</summary>
 
-              <div class="group">
-                <label class="knopf flat outline solid">
-                  <input class="sr-only" type="radio" name="corners" value="pill">
-                  <span>Pill</span>
-                </label>
+              <label class="knopf flat outline pill">
+                <input class="sr-only" type="radio" name="corners" value="pill">
+                <span>Pill</span>
+              </label>
 
-                <label class="knopf flat outline solid active">
-                  <input class="sr-only" type="radio" name="corners" checked value="">
-                  <span>Rounded</span>
-                </label>
+              <label class="knopf flat outline active secondary">
+                <input class="sr-only" type="radio" name="corners" checked value="">
+                <span>Rounded</span>
+              </label>
 
-                <label class="knopf flat outline solid">
-                  <input class="sr-only" type="radio" name="corners" value="sharp">
-                  <span>Sharp</span>
-                </label>
-              </div>
-            </fieldset>
+              <label class="knopf flat outline sharp">
+                <input class="sr-only" type="radio" name="corners" value="sharp">
+                <span>Sharp</span>
+              </label>
+            </details>
           </form>
           <div id="Result" class="p-24 text-center">
             <button id="Button" class="knopf">
@@ -496,6 +464,9 @@
         $Button.disabled = bools.includes('disabled')
 
         if (bools.includes('active')) classes.push('active')
+        if (bools.includes('block')) classes.push('block')
+        if (bools.includes('outline')) classes.push('outline')
+        if (bools.includes('solid')) classes.push('solid')
 
         classes.push(...Array.from($$radios)
           .filter(({ checked, value }) => checked && value)
@@ -512,11 +483,14 @@
       }
 
       const setActiveButton = button => {
-        button.parentNode.querySelector('.active').classList.remove('active')
-        button.classList.add('active')
+        button.parentNode.querySelector('.active').classList.remove('active', 'secondary')
+        button.classList.add('active', 'secondary')
       }
 
-      const toggleActiveButton = button => button.classList.toggle('active')
+      const toggleActiveButton = ({ classList }) => {
+        classList.toggle('active')
+        classList.toggle('secondary')
+      }
 
       $$radios.forEach($radio => $radio.addEventListener('change', ({ currentTarget }) => {
         setActiveButton(currentTarget.parentNode)

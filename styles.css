@@ -87,6 +87,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Recursive';
@@ -136,10 +140,8 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  left: 0;
   position: absolute;
-  right: 0;
-  top: 0;
+  width: 100%;
 }
 
 main {
@@ -160,7 +162,7 @@ section {
 }
 
 @media (min-width: 50em) {
-  section {
+  section:first-child {
     padding-block-end: 128px;
     padding-block-start: 128px;
   }
@@ -170,8 +172,16 @@ section:nth-child(even) {
   background-color: var(--section);
 }
 
-legend {
-  font-weight: bold;
+summary {
+  cursor: pointer;
+}
+
+details {
+  overflow: auto;
+}
+
+details[open] > summary {
+  margin-block-end: 12px;
 }
 
 pre {
@@ -192,6 +202,17 @@ pre {
   font-weight: normal;
 }
 
+.Package {
+  display: grid;
+  grid-gap: 32px;
+}
+
+@media (min-width: 50em) {
+  .Package {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 h3 {
   font-size: 1.524em;
 }
@@ -210,6 +231,7 @@ h3 {
 /* Playground */
 
 #Demo {
+  border: 1px solid #DBDEE4;
   overflow: hidden;
 }
 
@@ -217,7 +239,7 @@ h3 {
   #Demo {
     margin: auto;
     display: grid;
-    grid-auto-columns: min-content auto;
+    grid-auto-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
     grid-template-areas:
       'Settings Result'
@@ -226,7 +248,9 @@ h3 {
 }
 
 #Settings {
+  border: 1px solid #DBDEE4;
   grid-area: Settings;
+  margin: -1px;
 }
 
 #Result {
@@ -247,6 +271,14 @@ h3 {
 
 .flex {
   display: flex;
+}
+
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .rounded {
@@ -275,8 +307,8 @@ h3 {
   margin-block-start: 48px;
 }
 
-.mb-4 {
-  margin-bottom: 4px;
+.mb-8 {
+  margin-bottom: 8px;
 }
 
 .mb-16 {
@@ -285,6 +317,14 @@ h3 {
 
 .mb-32 {
   margin-bottom: 32px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.ml-16 {
+  margin-left: 16px;
 }
 
 .ml-24 {
@@ -305,6 +345,16 @@ h3 {
 
 .p-24 {
   padding: 24px;
+}
+
+.px-24 {
+  padding-inline-end: 24px;
+  padding-inline-start: 24px;
+}
+
+.py-16 {
+  padding-block-end: 16px;
+  padding-block-start: 16px;
 }
 
 /* ==========================================================================
