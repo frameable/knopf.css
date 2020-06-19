@@ -143,7 +143,6 @@ body {
 }
 
 header {
-  border-bottom: 1px solid var(--border);
   position: absolute;
   width: 100%;
 }
@@ -158,11 +157,11 @@ footer {
 
 .container {
   margin: auto;
-  max-width: 960px;
+  max-width: 45em;
 }
 
 .container--tight {
-  max-width: 480px;
+  max-width: 25em;
 }
 
 section {
@@ -176,6 +175,10 @@ section:first-child {
 
 section:nth-child(even) {
   background-color: var(--section);
+}
+
+hr {
+  border-color: var(--border);
 }
 
 summary {
@@ -217,7 +220,7 @@ h3 {
   grid-gap: 24px;
 }
 
-@media (min-width: 50em) {
+@media only screen and (min-width: 35em) {
   .Actions {
     grid-template-columns: 1fr 1fr;
   }
@@ -228,7 +231,7 @@ h3 {
   grid-gap: 32px;
 }
 
-@media (min-width: 50em) {
+@media only screen and (min-width: 35em) {
   .Packages {
     grid-template-columns: 1fr 1fr;
   }
@@ -240,7 +243,7 @@ h3 {
   overflow: hidden;
 }
 
-@media (min-width: 50em) {
+@media only screen and (min-width: 35em) {
   #Demo {
     margin: auto;
     display: grid;
@@ -313,10 +316,6 @@ h3 {
   margin: 0;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .my-auto {
   margin-block-end: auto;
   margin-block-start: auto;
@@ -345,14 +344,6 @@ h3 {
 
 .ml-8 {
   margin-inline-start: 8px;
-}
-
-.ml-16 {
-  margin-inline-start: 16px;
-}
-
-.ml-24 {
-  margin-inline-start: 24px;
 }
 
 .mt-0 {
@@ -473,37 +464,11 @@ h3 {
   visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
