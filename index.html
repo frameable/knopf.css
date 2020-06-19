@@ -352,22 +352,22 @@
 
               <div class="group">
                 <label for="default" class="knopf flat outline solid active">
-                  <input type="radio" id="default" name="type" checked value="">
+                  <input class="sr-only" type="radio" id="default" name="type" checked value="">
                   <span>Default</span>
                 </label>
 
                 <label for="pale" class="knopf flat outline solid">
-                  <input type="radio" id="pale" name="type" value="pale">
+                  <input class="sr-only" type="radio" id="pale" name="type" value="pale">
                   <span>Pale</span>
                 </label>
 
                 <label for="flat" class="knopf flat outline solid">
-                  <input type="radio" id="flat" name="type" value="flat">
+                  <input class="sr-only" type="radio" id="flat" name="type" value="flat">
                   <span>Flat</span>
                 </label>
 
                 <label for="link" class="knopf flat outline solid">
-                  <input type="radio" id="link" name="type" value="link">
+                  <input class="sr-only" type="radio" id="link" name="type" value="link">
                   <span>Link</span>
                 </label>
               </div>
@@ -378,22 +378,22 @@
 
               <div class="group">
                 <label for="small" class="knopf flat outline solid">
-                  <input type="radio" id="small" name="size" value="small">
+                  <input class="sr-only" type="radio" id="small" name="size" value="small">
                   <span>Small</span>
                 </label>
 
                 <label for="base" class="knopf flat outline solid active">
-                  <input type="radio" id="base" name="size" checked value="">
+                  <input class="sr-only" type="radio" id="base" name="size" checked value="">
                   <span>Base</span>
                 </label>
 
                 <label for="large" class="knopf flat outline solid">
-                  <input type="radio" id="large" name="size" value="large">
+                  <input class="sr-only" type="radio" id="large" name="size" value="large">
                   <span>Large</span>
                 </label>
 
                 <label for="huge" class="knopf flat outline solid">
-                  <input type="radio" id="huge" name="size" value="huge">
+                  <input class="sr-only" type="radio" id="huge" name="size" value="huge">
                   <span>Huge</span>
                 </label>
               </div>
@@ -404,17 +404,17 @@
 
               <div class="group">
                 <label for="even" class="knopf flat outline solid">
-                  <input type="radio" id="even" name="spacing" value="even">
+                  <input class="sr-only" type="radio" id="even" name="spacing" value="even">
                   <span>Even</span>
                 </label>
 
                 <label for="regular" class="knopf flat outline solid active">
-                  <input type="radio" id="regular" name="spacing" checked value="">
+                  <input class="sr-only" type="radio" id="regular" name="spacing" checked value="">
                   <span>Regular</span>
                 </label>
 
                 <label for="wide" class="knopf flat outline solid">
-                  <input type="radio" id="wide" name="spacing" value="wide">
+                  <input class="sr-only" type="radio" id="wide" name="spacing" value="wide">
                   <span>Wide</span>
                 </label>
               </div>
@@ -425,17 +425,17 @@
 
               <div class="group">
                 <label for="pill" class="knopf flat outline solid">
-                  <input type="radio" id="pill" name="corners" value="pill">
+                  <input class="sr-only" type="radio" id="pill" name="corners" value="pill">
                   <span>Pill</span>
                 </label>
 
                 <label for="rounded" class="knopf flat outline solid active">
-                  <input type="radio" id="rounded" name="corners" checked value="">
+                  <input class="sr-only" type="radio" id="rounded" name="corners" checked value="">
                   <span>Rounded</span>
                 </label>
 
                 <label for="sharp" class="knopf flat outline solid">
-                  <input type="radio" id="sharp" name="corners" value="sharp">
+                  <input class="sr-only" type="radio" id="sharp" name="corners" value="sharp">
                   <span>Sharp</span>
                 </label>
               </div>
@@ -455,7 +455,7 @@
   </main>
 
   <footer class="p-24 text-center">
-    <p class="m-0">Created out of 😩 but with ❤️ by the folks at <a href="https://team.video" class="knopf link">team.video</a></p>
+    <p class="m-0">Created out of 😩 but with ❤️ by the folks at <a href="https://team.video" class="knopf secondary link">team.video</a></p>
   </footer>
 
   <script>
@@ -469,7 +469,7 @@
 
       const $$radios = $$('input[type="radio"]')
 
-      const updateButton = () => {
+      const updateDemo = () => {
         const { classList } = $Button
         const classes = ['knopf']
 
@@ -487,7 +487,15 @@
         )
       }
 
-      $$radios.forEach($radio => $radio.addEventListener('change', updateButton))
+      const setActiveButton = button => {
+        button.parentNode.querySelector('.active').classList.remove('active')
+        button.classList.add('active')
+      }
+
+      $$radios.forEach($radio => $radio.addEventListener('change', ({ currentTarget }) => {
+        setActiveButton(currentTarget.parentNode)
+        updateDemo()
+      }))
     })
   </script>
 </body>
