@@ -1,6 +1,6 @@
 {
   "name": "knopf.css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open source button system leveraging CSS custom properties, designed for rapid prototyping and production–ready applications",
   "author": {
     "name": "team.video",
