@@ -275,6 +275,10 @@ h3 {
   margin-block-start: 48px;
 }
 
+.mb-4 {
+  margin-bottom: 4px;
+}
+
 .mb-16 {
   margin-bottom: 16px;
 }
