@@ -133,8 +133,9 @@ body {
 }
 
 header {
+  align-items: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   left: 0;
   position: absolute;
   right: 0;
