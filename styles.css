@@ -106,16 +106,6 @@ textarea {
   --section-to: hsl(228 16% 90%);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(219 76% 7%);
-    --border: hsl(221 21% 21%);
-    --text: hsl(0 0% 100%);
-    --section-from: hsl(220 34% 14%);
-    --section-to: hsl(220 34% 10%);
-  }
-} */
-
 html {
   scroll-behavior: smooth;
 }
