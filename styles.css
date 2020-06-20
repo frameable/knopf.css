@@ -276,6 +276,13 @@ h3 {
 #Pre {
   background-color: var(--border);
   grid-area: Code;
+  position: relative;
+}
+
+#Copy {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /* Utilities */
