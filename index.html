@@ -18,9 +18,9 @@
 
   <link rel="stylesheet" href="/knopf.css">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="preload" href="/prism.css" as="style" onload="this.rel='stylesheet'">
 
-  <script defer src="/prism.js"></script>
+  <link rel="preload" href="/prism.css" as="style">
+  <link rel="stylesheet" href="/prism.css" media="print" onload="this.media=`all`">
 
   <!-- Google Analytics -->
   <script>
@@ -379,6 +379,8 @@
       </a>
     </p>
   </footer>
+
+  <script defer src="/prism.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
