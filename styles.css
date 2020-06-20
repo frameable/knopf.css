@@ -199,28 +199,6 @@ details[open] > summary {
 
 summary {
   cursor: pointer;
-  list-style: none;
-  padding-left: 24px;
-  position: relative;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::before {
-  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>');
-  display: block;
-  left: 0;
-  height: 24px;
-  position: absolute;
-  top: 5px;
-  transition: transform ease-in-out 0.15s;
-  width: 24px;
-}
-
-details[open] > summary::before {
-  transform: translate(2px, 2px) rotate(0.25turn);
 }
 
 pre {
