@@ -210,7 +210,8 @@
 }
 
 /* Focus */
-.knopf:focus {
+.knopf:focus,
+.knopf:focus-within {
   box-shadow: 0 0 0 3px hsl(var(--knopf-color) / 0.4);
   outline: none;
 }
