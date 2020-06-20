@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preload" href="/prism.css" as="style">
+  <link rel="preload" href="/styles.css" as="style">
 
   <title>knopf.css</title>
   <meta name="description" content="Open source button system leveraging CSS custom properties, designed for rapid prototyping and production–ready applications.">
@@ -17,9 +19,8 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="stylesheet" href="/knopf.css">
-  <link rel="stylesheet" href="/styles.css">
 
-  <link rel="preload" href="/prism.css" as="style">
+  <link rel="stylesheet" href="/styles.css" media="print" onload="this.media=`all`">
   <link rel="stylesheet" href="/prism.css" media="print" onload="this.media=`all`">
 
   <!-- Google Analytics -->
