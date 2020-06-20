@@ -162,6 +162,16 @@ main {
   max-width: 25em;
 }
 
+@media only screen and (min-width: 200em) {
+  .container {
+    max-width: 55em;
+  }
+
+  .container--tight {
+    max-width: 35em;
+  }
+}
+
 section {
   padding: 80px 24px;
 }
