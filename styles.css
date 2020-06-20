@@ -290,31 +290,34 @@ h3 {
   margin: -1px;
 }
 
+@media only screen and (min-width: 50em) {
+  #Settings {
+    margin-inline-end: 0;
+  }
+}
+
 #Result {
   align-self: center;
   grid-area: Result;
 }
 
 #Source {
-  background-color: var(--border);
+  background-color: #f5f2f0;
   grid-area: Source;
+  overflow: auto;
   position: relative;
 }
 
-#Code {
-  white-space: pre-wrap;
-}
-
 #Copy {
+  bottom: 0;
   position: absolute;
   right: 0;
-  top: 0;
 }
 
 /* Utilities */
 
 .bg-body {
-  background-color: var(--background);
+  background-color: var(--background) !important;
 }
 
 .border {
@@ -354,7 +357,7 @@ h3 {
 }
 
 .m-0 {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .my-auto {

@@ -8,18 +8,19 @@
   <title>knopf.css</title>
   <meta name="description" content="Open source button system leveraging CSS custom properties, designed for rapid prototyping and production–ready applications.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E31587">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="/knopf.css">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="preload" href="/prism.css" as="style" onload="this.rel='stylesheet'">
 
-  <meta name="theme-color" content="#E31587">
+  <script defer src="/prism.js"></script>
 
   <!-- Google Analytics -->
   <script>
@@ -148,28 +149,32 @@
       <div class="container">
         <h3 class="mt-0 mb-32">Installation</h3>
 
-        <p>The easiest way to “install” <b>knopf.css</b> on your project is to include the stylesheet on your website.</p>
+        <p><a href="/knopf.css.zip" class="knopf link" download>Download</a> and include the minified stylesheet on your website.</p>
 
-        <pre class="m-0 px-24 py-16 rounded bg-body border"><code>&lt;link href="https://unpkg.com/knopf.css@1.0.1/knopf.min.css" rel="stylesheet"&gt;</code></pre>
+        <pre class="m-0 px-24 py-16 rounded bg-body border language-html"><code class="language-html">&lt;link rel="stylesheet" href="/knopf.min.css"&gt;</code></pre>
+
+        <p>You could also link to a CDN hosted file.</p>
+
+        <pre class="m-0 px-24 py-16 rounded bg-body border language-html"><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/knopf.css/knopf.min.css"&gt;</code></pre>
 
         <hr>
 
-        <p>Otherwise, you can use your favorite package manager:</p>
+        <p>Otherwise, you can use your favorite package manager to install it as a dependency.</p>
 
         <div class="Packages">
           <article>
             <h4 class="mt-0 mb-16">Install with npm</h4>
-            <pre class="m-0 px-24 py-16 rounded bg-body border"><code>npm install knopf.css</code></pre>
+            <pre class="m-0 px-24 py-16 rounded bg-body border language-markup"><code class="language-markup">npm install knopf.css</code></pre>
           </article>
 
           <article>
             <h4 class="mt-0 mb-16">Install with yarn</h4>
-            <pre class="m-0 px-24 py-16 rounded bg-body border"><code>yarn add knopf.css</code></pre>
+            <pre class="m-0 px-24 py-16 rounded bg-body border language-markup"><code class="language-markup">yarn add knopf.css</code></pre>
           </article>
         </div>
 
-        <p>You will then need to import it wherever you are currently importing your styles.</p>
-        <pre class="m-0 px-24 py-16 rounded bg-body border"><code>import 'knopf.css'</code></pre>
+        <p>And then import it wherever you are importing your styles.</p>
+        <pre class="m-0 px-24 py-16 rounded bg-body border language-js"><code class="language-js">import 'knopf.css'</code></pre>
       </div>
     </section>
     <section id="Usage">
@@ -348,19 +353,18 @@
               Button
             </button>
           </div>
-          <pre id="Source" class="m-0 flex">
-            <button id="Copy" class="knopf pale small sharp">
+          <div id="Source" class="flex">
+            <button id="Copy" class="knopf flat small wide pill">
               <svg class="knopf_icon" aria-hidden="true">
                 <use xlink:href="#icon-copy" />
               </svg>
               <span>Copy</span>
             </button>
-            <code id="Code" class="my-auto p-24">&lt;button class="knopf"&gt;
+            <pre class="m-0 flex items-center language-html"><code class="language-html" id="Code">&lt;button class="knopf"&gt;
   Button
-&lt;/button&gt;</code>
-          </pre>
+&lt;/button&gt;</code></pre>
+          </div>
         </div>
-      </div>
     </section>
   </main>
 
@@ -383,6 +387,7 @@
 
       const $Settings = $('#Settings')
       const $Button = $('#Button')
+      const $Source = $('#Source')
       const $Code = $('#Code')
       const $Copy = $('#Copy')
       const $Icon = $('#Icon')
@@ -426,6 +431,8 @@
   ${body}
 </button>`)
         )
+
+        Prism.highlightAllUnder($Source)
       }
 
       const setActiveButton = button => {
