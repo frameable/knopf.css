@@ -19,6 +19,133 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="stylesheet" href="/knopf.css">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      font-size: 1em;
+      line-height: 1.4;
+      scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    }
+
+    header {
+      position: absolute;
+      width: 100%;
+    }
+
+    section {
+      padding: 80px 24px;
+    }
+
+    section:first-child {
+      padding-block-end: 128px;
+      padding-block-start: 128px;
+    }
+
+    .container {
+      margin: auto;
+      max-width: 45em;
+    }
+
+    .container--tight {
+      max-width: 25em;
+    }
+
+    @media only screen and (min-width: 200em) {
+      .container {
+        max-width: 55em;
+      }
+
+      .container--tight {
+        max-width: 35em;
+      }
+    }
+
+    /* Utilities */
+
+    .m-0 {
+      margin: 0 !important;
+    }
+
+    .mt-48 {
+      margin-block-start: 48px;
+    }
+
+    .p-16 {
+      padding: 16px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Elements */
+
+    .Title {
+      font-family: 'Recursive', sans-serif;
+      font-size: 2.286em;
+    }
+
+    .Tagline {
+      font-size: 1.145em;
+      font-weight: normal;
+    }
+
+    .Actions {
+      display: grid;
+      grid-gap: 24px;
+    }
+
+    @media only screen and (min-width: 35em) {
+      .Actions {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* knopf */
+
+    .primary {
+      --knopf-hue: 327;
+      --knopf-saturation: 83%;
+      --knopf-luminosity: 48%;
+    }
+
+    .secondary {
+      --knopf-hue: 245;
+      --knopf-saturation: 65%;
+      --knopf-luminosity: 53%;
+    }
+
+  </style>
 
   <link rel="stylesheet" href="/styles.css" media="print" onload="this.media=`all`">
   <link rel="stylesheet" href="/prism.css" media="print" onload="this.media=`all`">
@@ -41,7 +168,7 @@
 </head>
 
 <body class="bg-body m-0">
-  <svg class="hidden">
+  <svg style="display: none;">
     <symbol id="icon-tv" viewBox="2 1 20 20">
       <path d="M3.66 5.5h10.014c.916 0 1.66.724 1.66 1.618v9.764c0 .894-.744 1.618-1.66 1.618H3.66c-.917 0-1.66-.724-1.66-1.618V7.118C2 6.224 2.743 5.5 3.66 5.5zm12.673 3.943l3.917-2.457C20.99 6.512 22 7 22 7.825v8.35c0 .828-1.014 1.313-1.75.838l-3.917-2.454V9.443zM8.667 13.95c1.104 0 2-.873 2-1.95s-.896-1.95-2-1.95c-1.105 0-2 .873-2 1.95s.895 1.95 2 1.95z" />
     </symbol>

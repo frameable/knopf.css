@@ -7,16 +7,6 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -87,10 +77,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 @font-face {
   font-display: swap;
   font-family: 'Recursive';
@@ -104,10 +90,6 @@ textarea {
   --text: hsl(219 76% 7%);
   --section-from: hsl(228 16% 94%);
   --section-to: hsl(228 16% 90%);
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 20em) {
@@ -127,58 +109,24 @@ html {
 body {
   color: var(--text);
   display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   flex-direction: column;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  position: absolute;
-  width: 100%;
-}
-
 main {
   flex-grow: 1;
 }
 
-.container {
-  margin: auto;
-  max-width: 45em;
-}
-
-.container--tight {
-  max-width: 25em;
-}
-
-@media only screen and (min-width: 200em) {
-  .container {
-    max-width: 55em;
-  }
-
-  .container--tight {
-    max-width: 35em;
-  }
-}
-
-section {
-  padding: 80px 24px;
-}
-
-section:first-child {
-  padding-block-end: 128px;
-  padding-block-start: 128px;
+section:nth-child(even) {
+  background-image: linear-gradient(120deg, var(--section-from), var(--section-to));
 }
 
 @media print {
   section {
     page-break-inside: avoid;
   }
-}
-
-section:nth-child(even) {
-  background-image: linear-gradient(120deg, var(--section-from), var(--section-to));
 }
 
 hr {
@@ -208,27 +156,6 @@ h3 {
 @media screen {
   .Logo {
     filter: drop-shadow(0px 4px 8px hsl(219 76% 7% / 0.08));
-  }
-}
-
-.Title {
-  font-family: 'Recursive', sans-serif;
-  font-size: 2.286em;
-}
-
-.Tagline {
-  font-size: 1.145em;
-  font-weight: normal;
-}
-
-.Actions {
-  display: grid;
-  grid-gap: 24px;
-}
-
-@media only screen and (min-width: 35em) {
-  .Actions {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -306,24 +233,8 @@ h3 {
   border: 1px solid var(--border);
 }
 
-.flex {
-  display: flex;
-}
-
 .flex-no-wrap {
   flex-wrap: nowrap;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.items-center {
-  align-items: center;
 }
 
 .items-end {
@@ -332,14 +243,6 @@ h3 {
 
 .rounded {
   border-radius: 16px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.m-0 {
-  margin: 0 !important;
 }
 
 .my-auto {
@@ -376,16 +279,8 @@ h3 {
   margin-block-start: 0;
 }
 
-.mt-48 {
-  margin-block-start: 48px;
-}
-
 .p-8 {
   padding: 8px;
-}
-
-.p-16 {
-  padding: 16px;
 }
 
 .p-24 {
@@ -405,18 +300,6 @@ h3 {
 /* ==========================================================================
    knopf
    ========================================================================== */
-
-.primary {
-  --knopf-hue: 327;
-  --knopf-saturation: 83%;
-  --knopf-luminosity: 48%;
-}
-
-.secondary {
-  --knopf-hue: 245;
-  --knopf-saturation: 65%;
-  --knopf-luminosity: 53%;
-}
 
 .positive {
   --knopf-hue: 164;
