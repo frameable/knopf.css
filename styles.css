@@ -126,6 +126,11 @@ main {
   flex-grow: 1;
 }
 
+#Gallery {
+  padding-inline-end: 16px;
+  padding-inline-start: 16px;
+}
+
 section:nth-child(odd):not(:first-child) {
   background-image: linear-gradient(120deg, var(--section-from), var(--section-to));
 }
@@ -254,6 +259,10 @@ h3 {
   overflow: hidden;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-no-wrap {
   flex-wrap: nowrap;
 }
@@ -271,6 +280,11 @@ h3 {
   margin-block-start: auto;
 }
 
+.my-24 {
+  margin-block-end: 24px;
+  margin-block-start: 24px;
+}
+
 .my-48 {
   margin-block-end: 48px;
   margin-block-start: 48px;
@@ -286,6 +300,10 @@ h3 {
 
 .mb-16 {
   margin-block-end: 16px;
+}
+
+.mb-24 {
+  margin-block-end: 24px;
 }
 
 .mb-32 {
@@ -343,6 +361,24 @@ h3 {
 /* ==========================================================================
    knopf
    ========================================================================== */
+
+.shade {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.inverse {
+  /* base */
+  --knopf-background-color: white;
+  --knopf-text-color: hsl(var(--knopf-color));
+
+  /* hover */
+  --knopf-hover-background-color: hsl(var(--knopf-color));
+  --knopf-hover-text-color: white;
+
+  /* active */
+  --knopf-active-background-color: hsl(var(--knopf-color));
+  --knopf-active-text-color: white;
+}
 
 .positive {
   --knopf-hue: 164;
