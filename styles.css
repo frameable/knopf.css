@@ -231,9 +231,9 @@ h3 {
 }
 
 #Copy {
-  bottom: 0;
+  bottom: 4px;
   position: absolute;
-  right: 0;
+  right: 4px;
 }
 
 /* Utilities */
