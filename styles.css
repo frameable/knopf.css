@@ -281,103 +281,57 @@ h3 {
 }
 
 .my-24 {
-  margin-block-end: 24px;
-  margin-block-start: 24px;
+  margin-block-end: 24px !important;
+  margin-block-start: 24px !important;
 }
 
 .my-48 {
-  margin-block-end: 48px;
-  margin-block-start: 48px;
+  margin-block-end: 48px !important;
+  margin-block-start: 48px !important;
 }
 
-.mb-0 {
-  margin-block-end: 0 !important;
-}
+.mb-0 { margin-block-end: 0 !important; }
+.mb-8 { margin-block-end: 8px !important; }
+.mb-16 { margin-block-end: 16px !important; }
+.mb-24 { margin-block-end: 24px !important; }
+.mb-32 { margin-block-end: 32px !important; }
 
-.mb-8 {
-  margin-block-end: 8px;
-}
+.ml-4 { margin-inline-start: 4px !important;}
 
-.mb-16 {
-  margin-block-end: 16px;
-}
+.mt-0 { margin-block-start: 0 !important;}
+.mt-12 { margin-block-start: 12px !important;}
+.mt-32 { margin-block-start: 32px !important;}
 
-.mb-24 {
-  margin-block-end: 24px;
-}
-
-.mb-32 {
-  margin-block-end: 32px;
-}
-
-.ml-4 {
-  margin-inline-start: 4px;
-}
-
-.mt-0 {
-  margin-block-start: 0;
-}
-
-.mt-12 {
-  margin-block-start: 12px;
-}
-
-.mt-32 {
-  margin-block-start: 32px;
-}
-
-.p-8 {
-  padding: 8px;
-}
-
-.p-16 {
-  padding: 16px !important;
-}
-
-.p-24 {
-  padding: 24px;
-}
+.p-8 { padding: 8px !important; }
+.p-16 { padding: 16px !important; }
+.p-24 { padding: 24px !important; }
 
 .px-16 {
-  padding-inline-end: 16px;
-  padding-inline-start: 16px;
+  padding-inline-end: 16px !important;
+  padding-inline-start: 16px !important;
 }
 
 .px-24 {
-  padding-inline-end: 24px;
-  padding-inline-start: 24px;
+  padding-inline-end: 24px !important;
+  padding-inline-start: 24px !important;
 }
 
 .py-8 {
-  padding-block-end: 8px;
-  padding-block-start: 8px;
+  padding-block-end: 8px !important;
+  padding-block-start: 8px !important;
 }
 
 .py-16 {
-  padding-block-end: 16px;
-  padding-block-start: 16px;
+  padding-block-end: 16px !important;
+  padding-block-start: 16px !important;
 }
 
 /* ==========================================================================
    knopf
    ========================================================================== */
 
-.shade {
+.knopf.shade {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-}
-
-.inverse {
-  /* base */
-  --knopf-background-color: white;
-  --knopf-text-color: hsl(var(--knopf-color));
-
-  /* hover */
-  --knopf-hover-background-color: hsl(var(--knopf-color));
-  --knopf-hover-text-color: white;
-
-  /* active */
-  --knopf-active-background-color: hsl(var(--knopf-color));
-  --knopf-active-text-color: white;
 }
 
 .positive {
@@ -392,7 +346,7 @@ h3 {
   --knopf-luminosity: 51%;
 }
 
-.raised {
+.knopf.raised {
   --knopf-raised-height: 6px;
   border-block-end-color: var(--knopf-hover-background-color);
   border-block-end-width: var(--knopf-raised-height);
