@@ -723,14 +723,14 @@
           <p class="mt-0">As with any CSS library, you can override the base class to make it your own. This aproach still lets you take advantage of the existing properties, variables and modifiers.</p>
 
           <div class="bg-body border rounded overflow-hidden">
-            <pre class="m-0 flex language-css"><code class="language-css">.knopf {
+            <pre class="m-0 flex language-css"><code class="language-css">.knopf.knopf {
   --knopf-raised-height: 6px;
   border-block-end-color: var(--knopf-hover-background-color);
   border-block-end-width: var(--knopf-raised-height);
   margin-block-start: calc(var(--knopf-raised-height) * -1);
 }
 
-.knopf:hover {
+.knopf.knopf:hover {
   --knopf-raised-height: 2px;
   border-block-end-color: var(--knopf-active-background-color);
 }</code>
