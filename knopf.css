@@ -70,25 +70,7 @@
    Class
    ========================================================================== */
 
-.knopf,
-.knopf.flat,
-.knopf.pale,
-.knopf.link,
-.knopf.disabled,
-.knopf.active,
-.knopf.small,
-.knopf.large,
-.knopf.huge,
-.knopf.block,
-.knopf.outline,
-.knopf.solid,
-.knopf.start,
-.knopf.center,
-.knopf.end,
-.knopf.even,
-.knopf.wide,
-.knopf.pill,
-.knopf.sharp {
+.knopf.knopf {
   /* Colors */
   --knopf-color: var(--knopf-hue) var(--knopf-saturation) var(--knopf-luminosity);
   --knopf-hover-color: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) - 10%);
@@ -328,7 +310,7 @@
    Icon
    ========================================================================== */
 
-.knopf_icon {
+.knopf > .icon {
   align-items: center;
   color: inherit;
   display: inline-flex;
@@ -340,29 +322,29 @@
   width: var(--knopf-icon-size);
 }
 
-.knopf_icon:first-child:not(:only-child) {
+.knopf > .icon:first-child:not(:only-child) {
   margin-inline-start: calc(var(--knopf-inline-padding) * -0.25);
   margin-inline-end: calc(var(--knopf-inline-padding) * 0.5);
 }
 
-.knopf_icon:last-child:not(:only-child) {
+.knopf > .icon:last-child:not(:only-child) {
   margin-inline-start: calc(var(--knopf-inline-padding) * 0.5);
   margin-inline-end: calc(var(--knopf-inline-padding) * -0.25);
 }
 
 /* Prevent floating icons on small screens */
 @media screen and (min-width: 576px) {
-  .knopf_icon--floating:not(:only-child) {
+  .knopf > .icon.floating:not(:only-child) {
     margin-inline-start: 0;
     margin-inline-end: 0;
     position: absolute;
   }
 
-  .knopf_icon--floating:first-child:not(:only-child) {
+  .knopf > .icon.floating:first-child:not(:only-child) {
     left: var(--knopf-inline-padding);
   }
 
-  .knopf_icon--floating:last-child:not(:only-child) {
+  .knopf > .icon.floating:last-child:not(:only-child) {
     right: var(--knopf-inline-padding);
   }
 }
@@ -371,7 +353,7 @@
    Groups
    ========================================================================== */
 
-.group {
+.knopf-group {
   align-items: stretch;
   display: inline-flex;
   flex-direction: var(--knopf-group-direction);
@@ -379,38 +361,38 @@
   justify-content: center;
 }
 
-.vertical {
+.knopf-group.vertical {
   --knopf-group-direction: column;
 }
 
-.vertical > .knopf:first-child:not(:last-child) {
+.knopf-group.vertical > .knopf:first-child:not(:last-child) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.vertical > .knopf:last-child:not(:first-child) {
+.knopf-group.vertical > .knopf:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.group:not(.vertical) > .knopf:first-child:not(:last-child) {
+.knopf-group:not(.vertical) > .knopf:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.group:not(.vertical) > .knopf:last-child:not(:first-child) {
+.knopf-group:not(.vertical) > .knopf:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.group > .knopf:not(:first-child):not(:last-child) {
+.knopf-group > .knopf:not(:first-child):not(:last-child) {
   --knopf-border-radius: 0;
 }
 
-.vertical > .knopf + .knopf {
+.knopf-group.vertical > .knopf + .knopf {
   margin-block-start: calc(var(--knopf-border-width) * -1);
 }
 
-.group:not(.vertical) > .knopf + .knopf {
+.knopf-group:not(.vertical) > .knopf + .knopf {
   margin-inline-start: calc(var(--knopf-border-width) * -1);
 }
