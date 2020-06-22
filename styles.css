@@ -231,7 +231,6 @@ h3 {
 #Source {
   background-color: #f5f2f0;
   grid-area: Source;
-  overflow: auto;
   position: relative;
 }
 
