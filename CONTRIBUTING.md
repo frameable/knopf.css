@@ -85,7 +85,7 @@ project:
    cd knopf.css
 
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream git@github.com:systemsthinkinginstitute/knopf.css.git
+   git remote add upstream git@github.com:team-video/knopf.css.git
 
    # Install the tools necessary for testing
    npm install
@@ -154,8 +154,8 @@ cutting new releases.
 version numbers are incremented in a project. Versions are written as
 MAJOR.MINOR.PATCH.
 
-[already been reported]: https://github.com/systemsthinkinginstitute/knopf.css/issues
-[fork this project]:     https://github.com/systemsthinkinginstitute/knopf.css/fork
+[already been reported]: https://github.com/team-video/knopf.css/issues
+[fork this project]:     https://github.com/team-video/knopf.css/fork
 [live example]:          https://codepen.io/pen
 [open a pull request]:   https://help.github.com/articles/using-pull-requests/
 [reduced test case]:     https://css-tricks.com/reduced-test-cases/
