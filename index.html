@@ -80,6 +80,10 @@
       margin: 0 !important;
     }
 
+    .ml-8 {
+      margin-inline-start: 8px;
+    }
+
     .mt-48 {
       margin-block-start: 48px;
     }
@@ -100,8 +104,8 @@
       justify-content: center;
     }
 
-    .justify-between {
-      justify-content: space-between;
+    .justify-end {
+      justify-content: flex-end;
     }
 
     .text-center {
@@ -192,14 +196,7 @@
     </symbol>
   </svg>
 
-  <header class="p-16 flex items-center justify-between">
-    <a href="https://team.video/" class="knopf secondary wide">
-      <svg class="knopf_icon" aria-hidden="true">
-        <use xlink:href="#icon-tv" />
-      </svg>
-      <span>team.video</span>
-    </a>
-
+  <header class="p-16 flex items-center justify-end">
     <a href="https://github.com/systemsthinkinginstitute/knopf.css" class="knopf small flat">
       <span>View on GitHub</span>
       <svg class="knopf_icon" aria-hidden="true">
@@ -259,6 +256,7 @@
 
         <h1 class="my-48 Title">knopf<small>.css</small></h1>
         <h2 class="m-0 Tagline">Modular button system leveraging CSS variables, designed for both rapid prototyping and production–ready applications</h2>
+
         <div class="Actions mt-48">
           <a href="#Playground" class="knopf primary large wide">
             <span>Playground</span>
@@ -266,26 +264,37 @@
               <use xlink:href="#icon-try" />
             </svg>
           </a>
-          <a href="/knopf.css.zip" class="knopf secondary pale large wide" download>
-            <span>Download</span>
+          <a href="#Installation" class="knopf secondary pale large wide">
+            <span>Install</span>
             <svg class="knopf_icon" aria-hidden="true">
               <use xlink:href="#icon-download" />
             </svg>
           </a>
         </div>
+
+        <p class="mt-32 mb-0 flex items-center justify-center">
+          <span>Made with ❤️ by the folks at</span>
+          <a href="https://team.video/" class="knopf secondary link ml-8">
+            <svg class="knopf_icon" aria-hidden="true">
+              <use xlink:href="#icon-tv" />
+            </svg>
+            <span class="ml-8">team.video</span>
+          </a>
+        </p>
       </div>
     </section>
+
     <section id="Installation">
       <div class="container">
         <h3 class="mt-0 mb-32">Installation</h3>
 
         <p>Just <a href="/knopf.css.zip" class="knopf secondary link" download>download</a> and include the minified stylesheet on your website.</p>
 
-        <pre class="m-0 px-24 py-16 rounded bg-body border language-html"><code class="language-html">&lt;link rel="stylesheet" href="/knopf.min.css"&gt;</code></pre>
+        <pre class="m-0 px-24 py-16 bg-body rounded border language-html"><code class="language-html">&lt;link rel="stylesheet" href="/knopf.min.css"&gt;</code></pre>
 
         <p>You could also link to a CDN hosted file.</p>
 
-        <pre class="m-0 px-24 py-16 rounded bg-body border language-html"><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/knopf.css/knopf.min.css"&gt;</code></pre>
+        <pre class="m-0 px-24 py-16 bg-body rounded border language-html"><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/knopf.css/knopf.min.css"&gt;</code></pre>
 
         <hr>
 
@@ -294,19 +303,20 @@
         <div class="Packages">
           <article>
             <h4 class="mt-0 mb-8">Install with npm</h4>
-            <pre class="m-0 px-24 py-16 rounded bg-body border language-markup"><code class="language-markup">npm install knopf.css</code></pre>
+            <pre class="m-0 px-24 py-16 bg-body rounded border language-markup"><code class="language-markup">npm install knopf.css</code></pre>
           </article>
 
           <article>
             <h4 class="mt-0 mb-8">Install with yarn</h4>
-            <pre class="m-0 px-24 py-16 rounded bg-body border language-markup"><code class="language-markup">yarn add knopf.css</code></pre>
+            <pre class="m-0 px-24 py-16 bg-body rounded border language-markup"><code class="language-markup">yarn add knopf.css</code></pre>
           </article>
         </div>
 
         <p>And then import it wherever you are importing your styles.</p>
-        <pre class="m-0 px-24 py-16 rounded bg-body border language-js"><code class="language-js">import 'knopf.css'</code></pre>
+        <pre class="m-0 px-24 py-16 bg-body rounded border language-js"><code class="language-js">import 'knopf.css'</code></pre>
       </div>
     </section>
+
     <section id="Usage">
       <div class="container">
         <h3 class="mt-0 mb-32">Usage</h3>
@@ -316,7 +326,7 @@
         <article class="mt-32">
           <h4 class="mt-0 mb-8">Override default values</h4>
           <p class="mt-0">All of the base values can be changed by overriding the custom properties at root:</p>
-          <div class="Example border rounded">
+          <div class="Example bg-body border rounded overflow-hidden">
             <div>
               <pre class="m-0 flex language-css"><code class="language-css">:root {
   --knopf-hue: 164;
@@ -341,7 +351,7 @@
         <article class="mt-32">
           <h4 class="mt-0 mb-8">Extend via modifier</h4>
           <p class="mt-0">You can also create your own class that sets new values for a particular instance:</p>
-          <div class="Example border rounded">
+          <div class="Example bg-body border rounded overflow-hidden">
             <div>
               <pre class="m-0 flex language-css"><code class="language-css">.negative {
   --knopf-hue: 356;
@@ -366,7 +376,7 @@
         <article class="mt-32">
           <h4 class="mt-0 mb-8">Leverage the cascade</h4>
           <p class="mt-0">As with any CSS library, you can override the base class to make it your own. This aproach still lets you take advantage of the existing properties, variables and modifiers.</p>
-          <div class="border rounded">
+          <div class="bg-body border rounded overflow-hidden">
             <pre class="m-0 flex language-css"><code class="language-css">.knopf {
   --knopf-raised-height: 6px;
   border-block-end-color: var(--knopf-hover-background-color);
@@ -382,7 +392,7 @@
             <pre class="mb-0 flex language-html"><code class="language-html">&lt;button class="knopf large wide pill"&gt;
   Button
 &lt;/button&gt;</code>
-          </pre>
+            </pre>
 
             <div class="p-24 flex items-center justify-center">
               <button class="knopf large wide pill raised">
@@ -395,11 +405,12 @@
         <hr>
 
         <p class="mb-0">
-          The same logic is aplicable to all of the built–in modifiers, try out the <a href="#Playground" class="knopf primary link">playground</a> to check them out. <br>
+          The same logic is applicable to all of the built–in modifiers, try out the <a href="#Playground" class="knopf primary link">playground</a> to check them out. <br>
           I would also suggest taking a look at the <a href="https://github.com/systemsthinkinginstitute/knopf.css/blob/main/knopf.css" class="knopf link">source code</a> for the full list of customizable custom properties.
         </p>
       </div>
     </section>
+
     <section id="Playground">
       <div class="container">
         <h3 class="mt-0 mb-32">Playground</h3>
@@ -408,45 +419,63 @@
           <p>The playground <strong>requires</strong> JavaScript to be enabled.</p>
         </noscript>
         <div id="Demo" class="rounded bg-body border">
-          <form id="Settings" class="p-16 border">
-            <details class="p-8">
-              <summary>State</summary>
+          <div id="Result" class="p-24 text-center">
+            <button id="Button" class="knopf">
+              Shuffle
+            </button>
+          </div>
+          <div id="Source" class="flex">
+            <button id="Copy" class="knopf flat small wide sharp">
+              <svg class="knopf_icon" aria-hidden="true">
+                <use xlink:href="#icon-copy" />
+              </svg>
+              <span>Copy</span>
+            </button>
+            <pre class="m-0 p-16 flex items-center language-html"><code class="language-html" id="Code">&lt;button class="knopf"&gt;
+  Shuffle
+&lt;/button&gt;</code></pre>
+          </div>
+          <form id="Settings" class="py-8">
+            <fieldset class="mt-12 py-8 px-16">
+              <legend>State</legend>
 
               <label class="knopf flat outline">
                 <input class="sr-only" type="checkbox" name="disabled">
                 <span>Disabled</span>
               </label>
 
-              <label class="knopf flat outline">
+              <label class="knopf flat outline ml-8">
                 <input class="sr-only" type="checkbox" name="active">
                 <span>Active</span>
               </label>
-            </details>
+            </fieldset>
 
-            <details class="p-8">
-              <summary>Type</summary>
+            <fieldset class="mt-12 py-8 px-16">
+              <legend>Type</legend>
 
-              <div class="flex flex-no-wrap mb-16">
-                <label class="knopf active secondary">
-                  <input class="sr-only" type="radio" name="type" checked value="">
-                  <span>Default</span>
-                </label>
+              <label class="knopf active">
+                <input class="sr-only" type="radio" name="type" checked value="">
+                <span>Default</span>
+              </label>
 
-                <label class="knopf pale ml-8">
-                  <input class="sr-only" type="radio" name="type" value="pale">
-                  <span>Pale</span>
-                </label>
+              <label class="knopf pale ml-8">
+                <input class="sr-only" type="radio" name="type" value="pale">
+                <span>Pale</span>
+              </label>
 
-                <label class="knopf flat ml-8">
-                  <input class="sr-only" type="radio" name="type" value="flat">
-                  <span>Flat</span>
-                </label>
+              <label class="knopf flat ml-8">
+                <input class="sr-only" type="radio" name="type" value="flat">
+                <span>Flat</span>
+              </label>
 
-                <label class="knopf link ml-8">
-                  <input class="sr-only" type="radio" name="type" value="link">
-                  <span>link</span>
-                </label>
-              </div>
+              <label class="knopf link ml-8">
+                <input class="sr-only" type="radio" name="type" value="link">
+                <span>Link</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="mt-12 py-8 px-16">
+              <legend>Border</legend>
 
               <div class="group pill">
                 <label class="knopf flat outline">
@@ -454,65 +483,52 @@
                   <span>Outline</span>
                 </label>
 
-                <label class="knopf flat outline solid wide ml-8">
+                <label class="knopf flat outline solid wide">
                   <input class="sr-only" type="checkbox" name="solid">
                   <span>Solid</span>
                 </label>
               </div>
-            </details>
+            </fieldset>
 
-            <details class="p-8">
-              <summary>Size</summary>
+            <fieldset class="mt-12 py-8 px-16">
+              <legend>Size</legend>
 
-              <div class="flex flex-no-wrap items-end">
-                <label class="knopf flat outline small">
-                  <input class="sr-only" type="radio" name="size" value="small">
-                  <span>Small</span>
-                </label>
-
-                <label class="knopf flat outline active secondary ml-8">
-                  <input class="sr-only" type="radio" name="size" checked value="">
-                  <span>Base</span>
-                </label>
-
-                <label class="knopf flat outline large ml-8">
-                  <input class="sr-only" type="radio" name="size" value="large">
-                  <span>Large</span>
-                </label>
-
-                <label class="knopf flat outline huge ml-8">
-                  <input class="sr-only" type="radio" name="size" value="huge">
-                  <span>Huge</span>
-                </label>
-              </div>
-            </details>
-
-            <details class="p-8">
-              <summary>Icon</summary>
-
-              <input class="sr-only" type="checkbox" id="Icon" name="icon">
-              <label for="Icon" class="knopf flat outline even pill">
-                <svg class="knopf_icon large" aria-label="Toggle icon">
-                  <use xlink:href="#icon-flame" />
-                </svg>
+              <label class="knopf flat outline small">
+                <input class="sr-only" type="radio" name="size" value="small">
+                <span>Small</span>
               </label>
-            </details>
 
-            <details class="p-8">
-              <summary>Alignment</summary>
+              <label class="knopf flat outline active ml-4">
+                <input class="sr-only" type="radio" name="size" checked value="">
+                <span>Base</span>
+              </label>
+
+              <label class="knopf flat outline large ml-4">
+                <input class="sr-only" type="radio" name="size" value="large">
+                <span>Large</span>
+              </label>
+
+              <label class="knopf flat outline huge ml-4">
+                <input class="sr-only" type="radio" name="size" value="huge">
+                <span>Huge</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="mt-12 py-8 px-16">
+              <legend>Alignment</legend>
 
               <label class="knopf flat outline block mb-16">
                 <input class="sr-only" type="checkbox" name="block">
                 <span>Block</span>
               </label>
 
-              <div class="flex flex-no-wrap">
+              <div class="flex">
                 <label class="knopf flat outline block start">
                   <input class="sr-only" type="radio" name="alignment" value="start">
                   <span>Start</span>
                 </label>
 
-                <label class="knopf flat outline block active secondary ml-8">
+                <label class="knopf flat outline block active ml-8">
                   <input class="sr-only" type="radio" name="alignment" checked value="">
                   <span>Center</span>
                 </label>
@@ -522,64 +538,46 @@
                   <span>End</span>
                 </label>
               </div>
-            </details>
+            </fieldset>
 
-            <details class="p-8">
-              <summary>Spacing</summary>
+            <fieldset class="mt-12 py-8 px-16">
+              <legend>Spacing</legend>
 
-              <div>
-                <label class="knopf flat outline even">
-                  <input class="sr-only" type="radio" name="spacing" value="even">
-                  <span>Even</span>
-                </label>
+              <label class="knopf flat outline even">
+                <input class="sr-only" type="radio" name="spacing" value="even">
+                <span>Even</span>
+              </label>
 
-                <label class="knopf flat outline active secondary">
-                  <input class="sr-only" type="radio" name="spacing" checked value="">
-                  <span>Regular</span>
-                </label>
+              <label class="knopf flat outline active ml-8">
+                <input class="sr-only" type="radio" name="spacing" checked value="">
+                <span>Regular</span>
+              </label>
 
-                <label class="knopf flat outline wide">
-                  <input class="sr-only" type="radio" name="spacing" value="wide">
-                  <span>Wide</span>
-                </label>
-              </div>
-            </details>
+              <label class="knopf flat outline wide ml-8">
+                <input class="sr-only" type="radio" name="spacing" value="wide">
+                <span>Wide</span>
+              </label>
+            </fieldset>
 
-            <details class="p-8">
-              <summary>Corners</summary>
+            <fieldset class="mt-12 py-8 px-16">
+              <legend>Corners</legend>
 
               <label class="knopf flat outline pill">
                 <input class="sr-only" type="radio" name="corners" value="pill">
                 <span>Pill</span>
               </label>
 
-              <label class="knopf flat outline active secondary">
+              <label class="knopf flat outline active ml-8">
                 <input class="sr-only" type="radio" name="corners" checked value="">
                 <span>Rounded</span>
               </label>
 
-              <label class="knopf flat outline sharp">
+              <label class="knopf flat outline sharp ml-8">
                 <input class="sr-only" type="radio" name="corners" value="sharp">
                 <span>Sharp</span>
               </label>
-            </details>
+            </fieldset>
           </form>
-          <div id="Result" class="p-24 text-center">
-            <button id="Button" class="knopf">
-              Button
-            </button>
-          </div>
-          <div id="Source" class="flex">
-            <button id="Copy" class="knopf flat small wide pill">
-              <svg class="knopf_icon" aria-hidden="true">
-                <use xlink:href="#icon-copy" />
-              </svg>
-              <span>Copy</span>
-            </button>
-            <pre class="m-0 flex items-center language-html"><code class="language-html" id="Code">&lt;button class="knopf"&gt;
-  Button
-&lt;/button&gt;</code></pre>
-          </div>
         </div>
 
         <p class="mb-0">You can see the full test suite on <a href="https://codepen.io/HiroAgustin/full/mdVRdVg" class="knopf link">this pen</a>.</p>
@@ -588,7 +586,7 @@
 
   <footer class="p-24 text-center">
     <p class="m-0 flex items-center justify-center">
-      <span>Created out of 😩 but with ❤️ by the folks at</span>
+      <span>Made with ❤️ by the folks at</span>
       <a href="https://team.video/" class="knopf secondary flat ml-8">
         <svg class="knopf_icon" aria-hidden="true">
           <use xlink:href="#icon-tv" />
@@ -608,7 +606,6 @@
       const $Source = $('#Source')
       const $Code = $('#Code')
       const $Copy = $('#Copy')
-      const $Icon = $('#Icon')
 
       const $$radios = $$('input[type="radio"]')
       const $$checkboxes = $$('input[type="checkbox"]')
@@ -616,7 +613,7 @@
       const updateDemo = () => {
         const { classList } = $Button
         const classes = ['knopf']
-        let body = 'Button'
+        let body = 'Shuffle'
 
         const bools = Array.from($$checkboxes)
           .filter(({ checked }) => checked)
@@ -626,13 +623,6 @@
         if (bools.includes('block')) classes.push('block')
         if (bools.includes('outline')) classes.push('outline')
         if (bools.includes('solid')) classes.push('solid')
-
-        if (bools.includes('icon')) {
-          body = `<svg class="knopf_icon" aria-hidden="true">
-    <use xlink:href="#icon-flame" />
-  </svg>
-  <span>Button</span>`
-        }
 
         $Button.disabled = bools.includes('disabled')
         $Button.innerHTML = body
@@ -654,13 +644,12 @@
       }
 
       const setActiveButton = button => {
-        button.parentNode.querySelector('.active').classList.remove('active', 'secondary')
-        button.classList.add('active', 'secondary')
+        button.parentNode.querySelector('.active').classList.remove('active')
+        button.classList.add('active')
       }
 
       const toggleActiveButton = ({ classList }) => {
         classList.toggle('active')
-        classList.toggle('secondary')
       }
 
       $$radios.forEach($radio => $radio.addEventListener('change', ({ currentTarget }) => {
@@ -672,10 +661,6 @@
         toggleActiveButton(currentTarget.parentNode)
         updateDemo()
       }))
-
-      $Icon.addEventListener('change', ({ currentTarget }) => {
-        toggleActiveButton(currentTarget.nextElementSibling)
-      })
 
       $Copy.addEventListener('click', () => {
         const { body } = document

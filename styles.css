@@ -126,7 +126,7 @@ main {
   flex-grow: 1;
 }
 
-section:nth-child(even) {
+section:nth-child(odd):not(:first-child) {
   background-image: linear-gradient(120deg, var(--section-from), var(--section-to));
 }
 
@@ -140,16 +140,15 @@ hr {
   border-color: var(--border);
 }
 
-details {
-  overflow: auto;
+legend {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.25em;
 }
 
-details[open] > summary {
-  margin-block-end: 12px;
-}
-
-summary {
-  cursor: pointer;
+fieldset {
+  display: inline-block;
+  width: 100%;
 }
 
 pre {
@@ -195,27 +194,33 @@ h3 {
   }
 }
 
-@media only screen and (min-width: 50em) {
+#Demo {
+  margin-inline-end: -24px;
+  margin-inline-start: -24px;
+}
+
+@media only screen and (min-width: 30em) {
   #Demo {
-    margin: auto;
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-areas:
-      'Settings Result'
-      'Settings Source';
+    margin-inline-end: 0;
+    margin-inline-start: 0;
   }
 }
 
 #Settings {
+  columns: 1;
+  column-gap: 0;
   grid-area: Settings;
-  margin: -1px;
 }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 60em) {
   #Settings {
-    margin-inline-end: 0;
+    columns: 2;
   }
+}
+
+#Code {
+  font-size: 18px;
+  white-space: pre-wrap;
 }
 
 #Result {
@@ -231,9 +236,9 @@ h3 {
 }
 
 #Copy {
-  bottom: 4px;
+  bottom: 0;
   position: absolute;
-  right: 4px;
+  right: 0;
 }
 
 /* Utilities */
@@ -244,6 +249,9 @@ h3 {
 
 .border {
   border: 1px solid var(--border);
+}
+
+.overflow-hidden {
   overflow: hidden;
 }
 
@@ -285,12 +293,16 @@ h3 {
   margin-block-end: 32px;
 }
 
-.ml-8 {
-  margin-inline-start: 8px;
+.ml-4 {
+  margin-inline-start: 4px;
 }
 
 .mt-0 {
   margin-block-start: 0;
+}
+
+.mt-12 {
+  margin-block-start: 12px;
 }
 
 .mt-32 {
@@ -301,13 +313,27 @@ h3 {
   padding: 8px;
 }
 
+.p-16 {
+  padding: 16px !important;
+}
+
 .p-24 {
   padding: 24px;
+}
+
+.px-16 {
+  padding-inline-end: 16px;
+  padding-inline-start: 16px;
 }
 
 .px-24 {
   padding-inline-end: 24px;
   padding-inline-start: 24px;
+}
+
+.py-8 {
+  padding-block-end: 8px;
+  padding-block-start: 8px;
 }
 
 .py-16 {
