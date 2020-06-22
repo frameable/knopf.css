@@ -2,6 +2,8 @@
 
 Modular button system leveraging CSS variables, designed for both rapid prototyping and production–ready applications.
 
+Made with ❤️ by the folks at [team.video](https://team.video/)
+
 ## Installation
 
 Just [download](http://knopf.dev/knopf.css.zip) and include the minified stylesheet on your website.</p>
@@ -101,7 +103,7 @@ As with any CSS library, you can override the base class to make it your own. Th
 
 ***
 
-The same logic is aplicable to all of the built–in modifiers, try out the [playground](https://knopf.dev/#Playground) to check them out.
+The same logic is applicable to all of the built–in modifiers, try out the [playground](https://knopf.dev/#Playground) to check them out.
 
 I would also suggest taking a look at the [source code](https://github.com/systemsthinkinginstitute/knopf.css/blob/main/knopf.css) for the full list of customizable custom properties.
 
@@ -110,7 +112,3 @@ You can see the full test suite on [this pen](https://codepen.io/HiroAgustin/ful
 ## Contributing
 
 Please read the [contribution guidelines](CONTRIBUTING.md) in order to make the contribution process easy and effective for everyone involved.
-
-## Team
-
-Created out of 😩 but with ❤️ by the folks at [team.video](https://team.video/)
