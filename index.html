@@ -258,7 +258,7 @@
         </svg>
 
         <h1 class="my-48 Title">knopf<small>.css</small></h1>
-        <h2 class="m-0 Tagline">Open source button system leveraging CSS variables, designed for rapid prototyping and production-ready applications</h2>
+        <h2 class="m-0 Tagline">Modular button system leveraging CSS variables, designed for both rapid prototyping and production–ready applications</h2>
         <div class="Actions mt-48">
           <a href="#Playground" class="knopf primary large wide">
             <span>Playground</span>
@@ -279,7 +279,7 @@
       <div class="container">
         <h3 class="mt-0 mb-32">Installation</h3>
 
-        <p><a href="/knopf.css.zip" class="knopf link" download>Download</a> and include the minified stylesheet on your website.</p>
+        <p>Just <a href="/knopf.css.zip" class="knopf secondary link" download>download</a> and include the minified stylesheet on your website.</p>
 
         <pre class="m-0 px-24 py-16 rounded bg-body border language-html"><code class="language-html">&lt;link rel="stylesheet" href="/knopf.min.css"&gt;</code></pre>
 
@@ -293,12 +293,12 @@
 
         <div class="Packages">
           <article>
-            <h4 class="mt-0 mb-16">Install with npm</h4>
+            <h4 class="mt-0 mb-8">Install with npm</h4>
             <pre class="m-0 px-24 py-16 rounded bg-body border language-markup"><code class="language-markup">npm install knopf.css</code></pre>
           </article>
 
           <article>
-            <h4 class="mt-0 mb-16">Install with yarn</h4>
+            <h4 class="mt-0 mb-8">Install with yarn</h4>
             <pre class="m-0 px-24 py-16 rounded bg-body border language-markup"><code class="language-markup">yarn add knopf.css</code></pre>
           </article>
         </div>
@@ -311,13 +311,99 @@
       <div class="container">
         <h3 class="mt-0 mb-32">Usage</h3>
 
-        <p class="mb-0">You can check out the full test suite on <a href="https://codepen.io/HiroAgustin/pen/mdVRdVg" class="knopf link">this pen</a>.</p>
+        <p>By including <strong>knopf</strong> you get a <a href="https://codepen.io/HiroAgustin/full/mdVRdVg" class="knopf link">bunch of goodies</a> out of the box; however, you should probably customize the styles to meet your design needs, and there are multiple ways of doing just that.</p>
+
+        <article class="mt-24">
+          <h4 class="mt-0 mb-8">Override default values</h4>
+          <p class="mt-0">All of the base values can be changed by overriding the custom properties at root:</p>
+          <div class="Example border rounded">
+            <div>
+              <pre class="m-0 flex language-css"><code class="language-css">:root {
+  --knopf-hue: 164;
+  --knopf-saturation: 88%;
+  --knopf-luminosity: 28%;
+}</code>
+              </pre>
+              <pre class="mb-0 flex language-html"><code class="language-html">&lt;button class="knopf"&gt;
+  Button
+&lt;/button&gt;</code>
+              </pre>
+            </div>
+
+            <div class="p-24 flex items-center justify-center">
+              <button class="knopf positive">
+                Button
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mt-24">
+          <h4 class="mt-0 mb-8">Extend via modifier</h4>
+          <p class="mt-0">You can also create your own class that sets new values for a particular instance:</p>
+          <div class="Example border rounded">
+            <div>
+              <pre class="m-0 flex language-css"><code class="language-css">.negative {
+  --knopf-hue: 356;
+  --knopf-saturation: 57%;
+  --knopf-luminosity: 51%;
+}</code>
+              </pre>
+              <pre class="mb-0 flex language-html"><code class="language-html">&lt;button class="knopf negative"&gt;
+  Button
+&lt;/button&gt;</code>
+              </pre>
+            </div>
+
+            <div class="p-24 flex items-center justify-center">
+              <button class="knopf negative">
+                Button
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mt-24">
+          <h4 class="mt-0 mb-8">Leverage the cascade</h4>
+          <p class="mt-0">As with any CSS library, you can override the base class to make it your own. This aproach still lets you take advantage of the existing properties, variables and modifiers.</p>
+          <div class="border rounded">
+            <pre class="m-0 flex language-css"><code class="language-css">.knopf {
+  --knopf-raised-height: 6px;
+  border-block-end-color: var(--knopf-hover-background-color);
+  border-block-end-width: var(--knopf-raised-height);
+  margin-block-start: calc(var(--knopf-raised-height) * -1);
+}
+
+.knopf:hover {
+  --knopf-raised-height: 2px;
+  border-block-end-color: var(--knopf-active-background-color);
+}</code>
+            </pre>
+            <pre class="mb-0 flex language-html"><code class="language-html">&lt;button class="knopf large wide pill"&gt;
+  Button
+&lt;/button&gt;</code>
+          </pre>
+
+            <div class="p-24 flex items-center justify-center">
+              <button class="knopf large wide pill raised">
+                Button
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <hr>
+
+        <p class="mb-0">
+          The same logic is aplicable to all of the built–in modifiers, try out the <a href="#Playground" class="knopf primary link">playground</a> to check them out. <br>
+          I would also suggest taking a look at the <a href="https://github.com/systemsthinkinginstitute/knopf.css/blob/main/knopf.css" class="knopf link">source code</a> for the full list of customizable custom properties.
+        </p>
       </div>
     </section>
     <section id="Playground">
       <div class="container">
         <h3 class="mt-0 mb-32">Playground</h3>
-        <p>Try out the different built-in modifiers to find the style that you need.</p>
+        <p>Try out the different built–in modifiers to find the style that you need.</p>
         <noscript>
           <p>The playground <strong>requires</strong> JavaScript to be enabled.</p>
         </noscript>
@@ -495,6 +581,8 @@
 &lt;/button&gt;</code></pre>
           </div>
         </div>
+
+        <p class="mb-0">You can see the full test suite on <a href="https://codepen.io/HiroAgustin/full/mdVRdVg" class="knopf link">this pen</a>.</p>
     </section>
   </main>
 
