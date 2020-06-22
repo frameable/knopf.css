@@ -1,6 +1,6 @@
 {
   "name": "knopf.css",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Modular button system leveraging CSS variables, designed for both rapid prototyping and production–ready applications",
   "author": {
     "name": "team.video",
