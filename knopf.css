@@ -70,7 +70,25 @@
    Class
    ========================================================================== */
 
-.knopf {
+.knopf,
+.knopf.flat,
+.knopf.pale,
+.knopf.link,
+.knopf.disabled,
+.knopf.active,
+.knopf.small,
+.knopf.large,
+.knopf.huge,
+.knopf.block,
+.knopf.outline,
+.knopf.solid,
+.knopf.start,
+.knopf.center,
+.knopf.end,
+.knopf.even,
+.knopf.wide,
+.knopf.pill,
+.knopf.sharp {
   /* Colors */
   --knopf-color: var(--knopf-hue) var(--knopf-saturation) var(--knopf-luminosity);
   --knopf-hover-color: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) - 10%);
@@ -96,6 +114,7 @@
   --knopf-inline-padding: calc(var(--knopf-padding) * 2);
 
   /* Properties */
+  all: unset;
   align-items: center;
   background-color: var(--knopf-background-color);
   border-color: var(--knopf-border-color);
@@ -128,7 +147,7 @@
    Types
    ========================================================================== */
 
-.flat {
+.knopf.flat {
   /* base */
   --knopf-background-color: transparent;
   --knopf-text-color: hsl(var(--knopf-color));
@@ -142,7 +161,7 @@
   --knopf-active-text-color: hsl(var(--knopf-active-color));
 }
 
-.pale {
+.knopf.pale {
   /* base */
   --knopf-background-color: hsl(var(--knopf-color) / 0.1);
   --knopf-text-color: hsl(var(--knopf-color));
@@ -156,7 +175,7 @@
   --knopf-active-text-color: hsl(var(--knopf-active-color));
 }
 
-.link {
+.knopf.link {
   --knopf-border-width: 0;
   --knopf-border-radius: 0;
   --knopf-padding: 0;
@@ -189,7 +208,7 @@
 
 /* Disabled */
 .knopf:disabled,
-.disabled {
+.knopf.disabled {
   cursor: default;
   opacity: 0.4;
   pointer-events: none;
@@ -217,7 +236,7 @@
 }
 
 /* Active */
-.active {
+.knopf.active {
   --knopf-background-color: var(--knopf-active-background-color);
   --knopf-border-color: var(--knopf-active-border-color);
   --knopf-text-color: var(--knopf-active-text-color);
@@ -228,25 +247,25 @@
    Sizes
    ========================================================================== */
 
-.small {
+.knopf.small {
   --knopf-font-size: var(--knopf-font-size-small);
   --knopf-padding: var(--knopf-padding-small);
   --knopf-icon-size: var(--knopf-icon-size-small);
 }
 
-.large {
+.knopf.large {
   --knopf-font-size: var(--knopf-font-size-large);
   --knopf-padding: var(--knopf-padding-large);
   --knopf-icon-size: var(--knopf-icon-size-large);
 }
 
-.huge {
+.knopf.huge {
   --knopf-font-size: var(--knopf-font-size-huge);
   --knopf-padding: var(--knopf-padding-huge);
   --knopf-icon-size: var(--knopf-icon-size-huge);
 }
 
-.block {
+.knopf.block {
   --knopf-display: flex;
   width: 100%;
 }
@@ -255,13 +274,13 @@
    Modifiers
    ========================================================================== */
 
-.outline {
+.knopf.outline {
   --knopf-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
   --knopf-hover-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
   --knopf-active-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
 }
 
-.solid {
+.knopf.solid {
   --knopf-border-alpha: 1;
 }
 
@@ -269,15 +288,15 @@
    Alignment
    ========================================================================== */
 
-.start {
+.knopf.start {
   --knopf-justify-content: flex-start;
 }
 
-.center {
+.knopf.center {
   --knopf-justify-content: center;
 }
 
-.end {
+.knopf.end {
   --knopf-justify-content: flex-end;
 }
 
@@ -285,11 +304,11 @@
    Spacing
    ========================================================================== */
 
-.even {
+.knopf.even {
   --knopf-inline-padding: var(--knopf-padding);
 }
 
-.wide {
+.knopf.wide {
   --knopf-inline-padding: calc(var(--knopf-padding) * 3);
 }
 
@@ -297,11 +316,11 @@
    Corners
    ========================================================================== */
 
-.pill {
+.knopf.pill {
   --knopf-border-radius: 9999px;
 }
 
-.sharp {
+.knopf.sharp {
   --knopf-border-radius: 0;
 }
 
