@@ -82,14 +82,14 @@ You can also create your own class that sets new values for a particular instanc
 As with any CSS library, you can override the base class to make it your own. This aproach still lets you take advantage of the existing properties, variables and modifiers.
 
 ```css
-.knopf {
+.knopf.knopf {
   --knopf-raised-height: 6px;
   border-block-end-color: var(--knopf-hover-background-color);
   border-block-end-width: var(--knopf-raised-height);
   margin-block-start: calc(var(--knopf-raised-height) * -1);
 }
 
-.knopf:hover {
+.knopf.knopf:hover {
   --knopf-raised-height: 2px;
   border-block-end-color: var(--knopf-active-background-color);
 }
