@@ -1,16 +1,24 @@
 # knopf.css
 
-Open source button system leveraging CSS custom properties, designed for rapid prototyping and production–ready applications.
+Modular button system leveraging CSS variables, designed for both rapid prototyping and production–ready applications.
 
 ## Installation
 
-The easiest way to “install” **knopf.css** on your project is to include the stylesheet on your website.
+Just [download](http://knopf.dev/knopf.css.zip) and include the minified stylesheet on your website.</p>
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/knopf.min.css">
+<link rel="stylesheet" href="/knopf.min.css">
 ```
 
-You can also install it via your favorite package manager:
+You could also link to a CDN hosted file.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/knopf.css/knopf.min.css">
+```
+
+***
+
+Otherwise, you can use your favorite package manager to install it as a dependency.
 
 ### Install with npm
 ```
@@ -22,27 +30,87 @@ npm install knopf.css
 yarn add knopf.css
 ```
 
-You will then need to import it wherever you are currently importing your styles.
+And then import it wherever you are importing your styles.
 ```node
 import 'knopf.css'
 ```
 
 ## Usage
 
-Just add the `knopf` class name to any anchor, button, or label, to start using the built-in component styles and modifiers.
+By including **knopf** you get a [bunch of goodies](https://codepen.io/HiroAgustin/full/mdVRdVg) out of the box; however, you should probably customize the styles to meet your design needs, and there are multiple ways of doing just that.
 
+### Override default values
+
+All of the base values can be changed by overriding the custom properties at root:
+
+```css
+:root {
+  --knopf-hue: 164;
+  --knopf-saturation: 88%;
+  --knopf-luminosity: 28%;
+}
 ```
-<a href="#" class="knopf pale outline solid large wide pill">
+
+```html
+<button class="knopf">
   Button
-</a>
+</button>
 ```
 
-For the list of available features, check out [knopf.dev](https://knopf.dev/#Features); or use the [playground](https://knopf.dev/#Playground) to see them in action.
+### Extend via modifier
 
-The true power of the library lies in its extensibility. Ideally you would modify the default values (like border-radius or the initial hsl color) to match your product’s branding. You are also encouraged to build your own modifiers to achieve whatever styles might be missing.
+You can also create your own class that sets new values for a particular instance:
 
-It is worth noting that **knopf.css** is completely framework agnostic and should work whether you are using jQuery, React, Vue, Bootstrap, Tailwind or any other tool.
+```css
+.negative {
+  --knopf-hue: 356;
+  --knopf-saturation: 57%;
+  --knopf-luminosity: 51%;
+}
+```
+
+```html
+<button class="knopf negative">
+  Button
+</button>
+```
+
+### Leverage the cascade
+
+As with any CSS library, you can override the base class to make it your own. This aproach still lets you take advantage of the existing properties, variables and modifiers.
+
+```css
+.knopf {
+  --knopf-raised-height: 6px;
+  border-block-end-color: var(--knopf-hover-background-color);
+  border-block-end-width: var(--knopf-raised-height);
+  margin-block-start: calc(var(--knopf-raised-height) * -1);
+}
+
+.knopf:hover {
+  --knopf-raised-height: 2px;
+  border-block-end-color: var(--knopf-active-background-color);
+}
+```
+
+```html
+<button class="knopf large wide pill">
+  Button
+</button>
+```
+
+***
+
+The same logic is aplicable to all of the built–in modifiers, try out the [playground](https://knopf.dev/#Playground) to check them out.
+
+I would also suggest taking a look at the [source code](https://github.com/systemsthinkinginstitute/knopf.css/blob/main/knopf.css) for the full list of customizable custom properties.
+
+You can see the full test suite on [this pen](https://codepen.io/HiroAgustin/full/mdVRdVg).
 
 ## Contributing
 
 Please read the [contribution guidelines](CONTRIBUTING.md) in order to make the contribution process easy and effective for everyone involved.
+
+## Team
+
+Created out of 😩 but with ❤️ by the folks at [team.video](https://team.video/)
