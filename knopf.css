@@ -1,4 +1,4 @@
-/*! knopf v1.0.3 | MIT License | https://knopf.dev/ */
+/*! knopf v1.0.4 | MIT License | https://knopf.dev/ */
 
 :root {
   /* ==========================================================================
@@ -143,6 +143,20 @@
   --knopf-active-text-color: hsl(var(--knopf-active-color));
 }
 
+.knopf.inverse {
+  /* base */
+  --knopf-background-color: transparent;
+  --knopf-text-color: hsl(var(--knopf-color));
+
+  /* hover */
+  --knopf-hover-background-color: hsl(var(--knopf-color));
+  --knopf-hover-text-color: white;
+
+  /* active */
+  --knopf-active-background-color: hsl(var(--knopf-color));
+  --knopf-active-text-color: white;
+}
+
 .knopf.pale {
   /* base */
   --knopf-background-color: hsl(var(--knopf-color) / 0.1);
@@ -189,7 +203,7 @@
    ========================================================================== */
 
 /* Disabled */
-.knopf:disabled,
+.knopf.knopf:disabled,
 .knopf.disabled {
   cursor: default;
   opacity: 0.4;
@@ -197,13 +211,13 @@
 }
 
 /* Visited */
-.knopf:visited {
+.knopf.knopf:visited {
   color: var(--knopf-text-color);
 }
 
 /* Hover */
-.knopf:hover,
-.knopf:active {
+.knopf.knopf:hover,
+.knopf.knopf:active {
   --knopf-background-color: var(--knopf-hover-background-color);
   --knopf-border-color: var(--knopf-hover-border-color);
   --knopf-text-color: var(--knopf-hover-text-color);
@@ -211,8 +225,8 @@
 }
 
 /* Focus */
-.knopf:focus,
-.knopf:focus-within {
+.knopf.knopf:focus,
+.knopf.knopf:focus-within {
   box-shadow: 0 0 0 3px hsl(var(--knopf-color) / 0.4);
   outline: none;
 }
