@@ -31,8 +31,12 @@
     "lint": "stylelint knopf.css"
   },
   "keywords": [
-    "buttons",
-    "css"
+    "knopf",
+    "css",
+    "css-framework",
+    "utility-classes",
+    "design-system",
+    "ui-component"
   ],
   "devDependencies": {
     "stylelint": "^13.6.1",
