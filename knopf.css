@@ -105,6 +105,7 @@
   border-width: var(--knopf-border-width);
   box-sizing: border-box;
   color: var(--knopf-text-color);
+  -webkit-text-fill-color: var(--knopf-text-color);
   cursor: pointer;
   display: var(--knopf-display);
   flex-direction: var(--knopf-flex-direction);
@@ -129,6 +130,20 @@
    Types
    ========================================================================== */
 
+.knopf.inverse {
+  /* base */
+  --knopf-background-color: transparent;
+  --knopf-text-color: hsl(var(--knopf-color));
+
+  /* hover */
+  --knopf-hover-background-color: hsl(var(--knopf-color));
+  --knopf-hover-text-color: white;
+
+  /* active */
+  --knopf-active-background-color: hsl(var(--knopf-active-color));
+  --knopf-active-text-color: white;
+}
+
 .knopf.flat {
   /* base */
   --knopf-background-color: transparent;
@@ -143,20 +158,6 @@
   --knopf-active-text-color: hsl(var(--knopf-active-color));
 }
 
-.knopf.inverse {
-  /* base */
-  --knopf-background-color: transparent;
-  --knopf-text-color: hsl(var(--knopf-color));
-
-  /* hover */
-  --knopf-hover-background-color: hsl(var(--knopf-color));
-  --knopf-hover-text-color: white;
-
-  /* active */
-  --knopf-active-background-color: hsl(var(--knopf-color));
-  --knopf-active-text-color: white;
-}
-
 .knopf.pale {
   /* base */
   --knopf-background-color: hsl(var(--knopf-color) / 0.1);
@@ -168,33 +169,6 @@
 
   /* active */
   --knopf-active-background-color: hsl(var(--knopf-color) / 0.3);
-  --knopf-active-text-color: hsl(var(--knopf-active-color));
-}
-
-.knopf.link {
-  --knopf-border-width: 0;
-  --knopf-border-radius: 0;
-  --knopf-padding: 0;
-
-  /* Text decoration */
-  --knopf-text-decoration-line: underline;
-  --knopf-text-decoration-color: hsl(var(--knopf-color) / 0.4);
-  --knopf-hover-text-decoration-color: hsl(var(--knopf-hover-color));
-  --knopf-active-text-decoration-color: hsl(var(--knopf-active-color));
-
-  /* base */
-  --knopf-background-color: transparent;
-  --knopf-border-color: transparent;
-  --knopf-text-color: hsl(var(--knopf-color));
-
-  /* hover */
-  --knopf-hover-background-color: transparent;
-  --knopf-hover-border-color: transparent;
-  --knopf-hover-text-color: hsl(var(--knopf-hover-color));
-
-  /* active */
-  --knopf-active-background-color: transparent;
-  --knopf-active-border-color: transparent;
   --knopf-active-text-color: hsl(var(--knopf-active-color));
 }
 
@@ -261,12 +235,6 @@
   --knopf-icon-size: var(--knopf-icon-size-huge);
 }
 
-.knopf.block {
-  --knopf-display: flex;
-
-  width: 100%;
-}
-
 /* ==========================================================================
    Modifiers
    ========================================================================== */
@@ -284,6 +252,12 @@
 /* ==========================================================================
    Alignment
    ========================================================================== */
+
+.knopf.block {
+  --knopf-display: flex;
+
+  width: 100%;
+}
 
 .knopf.start {
   --knopf-justify-content: flex-start;
@@ -319,6 +293,37 @@
 
 .knopf.sharp {
   --knopf-border-radius: 0;
+}
+
+/* ==========================================================================
+   Other
+   ========================================================================== */
+
+.knopf.link {
+  --knopf-border-width: 0;
+  --knopf-border-radius: 0;
+  --knopf-padding: 0;
+
+  /* Text decoration */
+  --knopf-text-decoration-line: underline;
+  --knopf-text-decoration-color: hsl(var(--knopf-color) / 0.4);
+  --knopf-hover-text-decoration-color: hsl(var(--knopf-hover-color));
+  --knopf-active-text-decoration-color: hsl(var(--knopf-active-color));
+
+  /* base */
+  --knopf-background-color: transparent;
+  --knopf-border-color: transparent;
+  --knopf-text-color: hsl(var(--knopf-color));
+
+  /* hover */
+  --knopf-hover-background-color: transparent;
+  --knopf-hover-border-color: transparent;
+  --knopf-hover-text-color: hsl(var(--knopf-hover-color));
+
+  /* active */
+  --knopf-active-background-color: transparent;
+  --knopf-active-border-color: transparent;
+  --knopf-active-text-color: hsl(var(--knopf-active-color));
 }
 
 /* ==========================================================================
