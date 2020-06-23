@@ -748,8 +748,6 @@
           </div>
         </article>
 
-        <hr>
-
         <p class="mb-0">
           The same logic is applicable to all of the built-in modifiers, try out the <a href="#Playground" class="knopf primary link">playground</a> to check them out. <br>
           I would also suggest taking a look at the <a href="https://github.com/team-video/knopf.css/blob/main/knopf.css" class="knopf link">source code</a> for the full list of customizable custom properties.
@@ -760,174 +758,185 @@
     <section id="Playground">
       <div class="container">
         <h3 class="mt-0 mb-32">Playground</h3>
-        <p>Try out the different built-in modifiers to find the style that you need.</p>
+        <p>
+          Try out the different built-in modifiers to find the style that you need. <br>
+          You can also see the full test suite on <a href="https://codepen.io/HiroAgustin/full/mdVRdVg" class="knopf link">this pen</a>.
+        </p>
         <noscript>
           <p>The playground <strong>requires</strong> JavaScript to be enabled.</p>
         </noscript>
+      </div>
 
-        <div id="Demo" class="rounded bg-body border">
-          <div id="Result" class="p-24 text-center">
-            <button id="Button" class="knopf">
-              Shuffle
-            </button>
-          </div>
-          <div id="Source" class="flex">
-            <button id="Copy" class="knopf flat small wide sharp">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-copy" />
-              </svg>
-              <span>Copy</span>
-            </button>
-            <pre class="m-0 p-16 flex items-center language-html"><code class="language-html" id="Code">&lt;button class="knopf"&gt;
+      <div id="Demo" class="rounded bg-body border">
+        <div id="Result" class="p-24 text-center">
+          <button id="Button" class="knopf">
+            Shuffle
+          </button>
+        </div>
+        <div id="Source" class="flex">
+          <button id="Copy" class="knopf flat small wide sharp">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-copy" />
+            </svg>
+            <span>Copy</span>
+          </button>
+          <pre class="m-0 p-24 flex items-center language-html"><code class="language-html" id="Code">&lt;button class="knopf"&gt;
   Shuffle
 &lt;/button&gt;</code></pre>
-          </div>
-          <form id="Settings" class="py-8">
-            <fieldset class="mt-12 py-8 px-16">
-              <legend>State</legend>
-
-              <label class="knopf flat outline">
-                <input class="sr-only" type="checkbox" name="disabled">
-                <span>Disabled</span>
-              </label>
-
-              <label class="knopf flat outline ml-8">
-                <input class="sr-only" type="checkbox" name="active">
-                <span>Active</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="mt-12 py-8 px-16">
-              <legend>Type</legend>
-
-              <label class="knopf active">
-                <input class="sr-only" type="radio" name="type" checked value="">
-                <span>Default</span>
-              </label>
-
-              <label class="knopf pale ml-8">
-                <input class="sr-only" type="radio" name="type" value="pale">
-                <span>Pale</span>
-              </label>
-
-              <label class="knopf inverse ml-8">
-                <input class="sr-only" type="radio" name="type" value="inverse">
-                <span>Inverse</span>
-              </label>
-
-              <label class="knopf flat ml-8">
-                <input class="sr-only" type="radio" name="type" value="flat">
-                <span>Flat</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="mt-12 py-8 px-16">
-              <legend>Border</legend>
-
-              <div class="knopf-group pill">
-                <label class="knopf flat outline">
-                  <input class="sr-only" type="checkbox" name="outline">
-                  <span>Outline</span>
-                </label>
-
-                <label class="knopf flat outline solid wide">
-                  <input class="sr-only" type="checkbox" name="solid">
-                  <span>Solid</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="mt-12 py-8 px-16">
-              <legend>Size</legend>
-
-              <label class="knopf flat outline small">
-                <input class="sr-only" type="radio" name="size" value="small">
-                <span>Small</span>
-              </label>
-
-              <label class="knopf flat outline active ml-4">
-                <input class="sr-only" type="radio" name="size" checked value="">
-                <span>Base</span>
-              </label>
-
-              <label class="knopf flat outline large ml-4">
-                <input class="sr-only" type="radio" name="size" value="large">
-                <span>Large</span>
-              </label>
-
-              <label class="knopf flat outline huge ml-4">
-                <input class="sr-only" type="radio" name="size" value="huge">
-                <span>Huge</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="mt-12 py-8 px-16">
-              <legend>Alignment</legend>
-
-              <label class="knopf flat outline block mb-16">
-                <input class="sr-only" type="checkbox" name="block">
-                <span>Block</span>
-              </label>
-
-              <div class="flex">
-                <label class="knopf flat outline block start">
-                  <input class="sr-only" type="radio" name="alignment" value="start">
-                  <span>Start</span>
-                </label>
-
-                <label class="knopf flat outline block active ml-8">
-                  <input class="sr-only" type="radio" name="alignment" checked value="">
-                  <span>Center</span>
-                </label>
-
-                <label class="knopf flat outline block end ml-8">
-                  <input class="sr-only" type="radio" name="alignment" value="end">
-                  <span>End</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="mt-12 py-8 px-16">
-              <legend>Spacing</legend>
-
-              <label class="knopf flat outline even">
-                <input class="sr-only" type="radio" name="spacing" value="even">
-                <span>Even</span>
-              </label>
-
-              <label class="knopf flat outline active ml-8">
-                <input class="sr-only" type="radio" name="spacing" checked value="">
-                <span>Regular</span>
-              </label>
-
-              <label class="knopf flat outline wide ml-8">
-                <input class="sr-only" type="radio" name="spacing" value="wide">
-                <span>Wide</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="mt-12 py-8 px-16">
-              <legend>Corners</legend>
-
-              <label class="knopf flat outline pill">
-                <input class="sr-only" type="radio" name="corners" value="pill">
-                <span>Pill</span>
-              </label>
-
-              <label class="knopf flat outline active ml-8">
-                <input class="sr-only" type="radio" name="corners" checked value="">
-                <span>Rounded</span>
-              </label>
-
-              <label class="knopf flat outline sharp ml-8">
-                <input class="sr-only" type="radio" name="corners" value="sharp">
-                <span>Sharp</span>
-              </label>
-            </fieldset>
-          </form>
         </div>
+        <form id="Settings" class="p-8">
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>State</legend>
 
-        <p class="mb-0">You can see the full test suite on <a href="https://codepen.io/HiroAgustin/full/mdVRdVg" class="knopf link">this pen</a>.</p>
+            <label class="knopf flat outline">
+              <input class="sr-only" type="checkbox" name="disabled">
+              <span>Disabled</span>
+            </label>
+
+            <label class="knopf flat outline ml-8">
+              <input class="sr-only" type="checkbox" name="active">
+              <span>Active</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>Type</legend>
+
+            <label class="knopf active">
+              <input class="sr-only" type="radio" name="type" checked value="">
+              <span>Default</span>
+            </label>
+
+            <label class="knopf inverse ml-8">
+              <input class="sr-only" type="radio" name="type" value="inverse">
+              <span>Inverse</span>
+            </label>
+
+            <label class="knopf flat ml-8">
+              <input class="sr-only" type="radio" name="type" value="flat">
+              <span>Flat</span>
+            </label>
+
+            <label class="knopf pale ml-8">
+              <input class="sr-only" type="radio" name="type" value="pale">
+              <span>Pale</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>Border</legend>
+
+            <div class="knopf-group pill">
+              <label class="knopf flat outline">
+                <input class="sr-only" type="checkbox" name="outline">
+                <span>Outline</span>
+              </label>
+
+              <label class="knopf flat outline solid wide">
+                <input class="sr-only" type="checkbox" name="solid">
+                <span>Solid</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>Spacing</legend>
+
+            <label class="knopf flat outline even">
+              <input class="sr-only" type="radio" name="spacing" value="even">
+              <span>Even</span>
+            </label>
+
+            <label class="knopf flat outline active ml-8">
+              <input class="sr-only" type="radio" name="spacing" checked value="">
+              <span>Regular</span>
+            </label>
+
+            <label class="knopf flat outline wide ml-8">
+              <input class="sr-only" type="radio" name="spacing" value="wide">
+              <span>Wide</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>Corners</legend>
+
+            <label class="knopf flat outline pill">
+              <input class="sr-only" type="radio" name="corners" value="pill">
+              <span>Pill</span>
+            </label>
+
+            <label class="knopf flat outline active ml-8">
+              <input class="sr-only" type="radio" name="corners" checked value="">
+              <span>Rounded</span>
+            </label>
+
+            <label class="knopf flat outline sharp ml-8">
+              <input class="sr-only" type="radio" name="corners" value="sharp">
+              <span>Sharp</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>Other</legend>
+
+            <label class="knopf link">
+              <input class="sr-only" type="checkbox" name="link">
+              <span>Link</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>Size</legend>
+
+            <label class="knopf flat small outline small">
+              <input class="sr-only" type="radio" name="size" value="small">
+              <span>Small</span>
+            </label>
+
+            <label class="knopf flat outline active ml-4">
+              <input class="sr-only" type="radio" name="size" checked value="">
+              <span>Base</span>
+            </label>
+
+            <label class="knopf flat outline large ml-4">
+              <input class="sr-only" type="radio" name="size" value="large">
+              <span>Large</span>
+            </label>
+
+            <label class="knopf flat outline huge ml-4">
+              <input class="sr-only" type="radio" name="size" value="huge">
+              <span>Huge</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mt-12 py-8 px-16">
+            <legend>Alignment</legend>
+
+            <label class="knopf flat outline block mb-16">
+              <input class="sr-only" type="checkbox" name="block">
+              <span>Block</span>
+            </label>
+
+            <div class="flex">
+              <label class="knopf flat outline block start">
+                <input class="sr-only" type="radio" name="alignment" value="start">
+                <span>Start</span>
+              </label>
+
+              <label class="knopf flat outline block active ml-8">
+                <input class="sr-only" type="radio" name="alignment" checked value="">
+                <span>Center</span>
+              </label>
+
+              <label class="knopf flat outline block end ml-8">
+                <input class="sr-only" type="radio" name="alignment" value="end">
+                <span>End</span>
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -970,6 +979,7 @@
         if (bools.includes('block')) classes.push('block')
         if (bools.includes('outline')) classes.push('outline')
         if (bools.includes('solid')) classes.push('solid')
+        if (bools.includes('link')) classes.push('link')
 
         $Button.disabled = bools.includes('disabled')
         $Button.innerHTML = body

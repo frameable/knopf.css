@@ -146,9 +146,7 @@ hr {
 }
 
 legend {
-  font-size: 16px;
   font-weight: bold;
-  line-height: 1.25em;
 }
 
 fieldset {
@@ -199,32 +197,26 @@ h3 {
   }
 }
 
-#Demo {
-  margin-inline-end: -24px;
-  margin-inline-start: -24px;
-}
-
-@media only screen and (min-width: 30em) {
-  #Demo {
-    margin-inline-end: 0;
-    margin-inline-start: 0;
-  }
-}
-
 #Settings {
   columns: 1;
   column-gap: 0;
   grid-area: Settings;
 }
 
-@media only screen and (min-width: 60em) {
+
+@media screen and (min-width: 56em) {
   #Settings {
     columns: 2;
   }
 }
 
+@media screen and (min-width: 80em) {
+  #Settings {
+    columns: 3;
+  }
+}
+
 #Code {
-  font-size: 18px;
   white-space: pre-wrap;
 }
 
