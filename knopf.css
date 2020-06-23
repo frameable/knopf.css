@@ -105,6 +105,7 @@
   border-width: var(--knopf-border-width);
   box-sizing: border-box;
   color: var(--knopf-text-color);
+  -webkit-text-fill-color: var(--knopf-text-color);
   cursor: pointer;
   display: var(--knopf-display);
   flex-direction: var(--knopf-flex-direction);
