@@ -63,6 +63,10 @@
       max-width: 25em;
     }
 
+    .container--loose {
+      max-width: 72em;
+    }
+
     @media only screen and (min-width: 200em) {
       .container {
         max-width: 60em;
@@ -767,10 +771,10 @@
         </noscript>
       </div>
 
-      <div id="Demo" class="rounded bg-body border">
+      <div id="Demo" class="rounded bg-body border container container--loose">
         <div id="Result" class="p-24 text-center">
           <button id="Button" class="knopf">
-            Shuffle
+            Button
           </button>
         </div>
         <div id="Source" class="flex">
@@ -781,7 +785,7 @@
             <span>Copy</span>
           </button>
           <pre class="m-0 p-24 flex items-center language-html"><code class="language-html" id="Code">&lt;button class="knopf"&gt;
-  Shuffle
+  Button
 &lt;/button&gt;</code></pre>
         </div>
         <form id="Settings" class="p-8">
@@ -969,7 +973,7 @@
       const updateDemo = () => {
         const { classList } = $Button
         const classes = ['knopf']
-        let body = 'Shuffle'
+        let body = 'Button'
 
         const bools = Array.from($$checkboxes)
           .filter(({ checked }) => checked)
