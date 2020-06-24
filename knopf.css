@@ -342,6 +342,22 @@
   width: var(--knopf-icon-size);
 }
 
+.knopf > .icon.small {
+  --knopf-icon-size: var(--knopf-icon-size-small);
+}
+
+.knopf > .icon.base {
+  --knopf-icon-size: var(--knopf-icon-size-base);
+}
+
+.knopf > .icon.large {
+  --knopf-icon-size: var(--knopf-icon-size-large);
+}
+
+.knopf > .icon.huge {
+  --knopf-icon-size: var(--knopf-icon-size-huge);
+}
+
 .knopf > .icon:first-child:not(:only-child) {
   margin-inline-start: calc(var(--knopf-inline-padding) * -0.25);
   margin-inline-end: calc(var(--knopf-inline-padding) * 0.5);
