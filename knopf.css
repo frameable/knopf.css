@@ -302,6 +302,7 @@
 .knopf.link {
   --knopf-border-width: 0;
   --knopf-border-radius: 0;
+  --knopf-font-size: 1em;
   --knopf-padding: 0;
 
   /* Text decoration */
