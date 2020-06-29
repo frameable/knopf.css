@@ -1,4 +1,4 @@
-/*! knopf v1.0.6 | MIT License | https://knopf.dev/ */
+/*! knopf v1.0.7 | MIT License | https://knopf.dev/ */
 
 :root {
   /* ==========================================================================
@@ -302,6 +302,7 @@
 .knopf.link {
   --knopf-border-width: 0;
   --knopf-border-radius: 0;
+  --knopf-font-size: 1em;
   --knopf-padding: 0;
 
   /* Text decoration */
@@ -340,6 +341,22 @@
   height: var(--knopf-icon-size);
   justify-content: center;
   width: var(--knopf-icon-size);
+}
+
+.knopf > .icon.small {
+  --knopf-icon-size: var(--knopf-icon-size-small);
+}
+
+.knopf > .icon.base {
+  --knopf-icon-size: var(--knopf-icon-size-base);
+}
+
+.knopf > .icon.large {
+  --knopf-icon-size: var(--knopf-icon-size-large);
+}
+
+.knopf > .icon.huge {
+  --knopf-icon-size: var(--knopf-icon-size-huge);
 }
 
 .knopf > .icon:first-child:not(:only-child) {
