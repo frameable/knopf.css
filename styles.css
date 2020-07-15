@@ -81,7 +81,7 @@ textarea {
   font-display: swap;
   font-family: 'Recursive';
   font-weight: 300 1000;
-  src: url('RecursiveSansCslSt-ExtraBd.woff2') format('woff2-variations');
+  src: url('RecursiveSansCslSt-ExtraBd.woff2') format('woff2');
 }
 
 :root {
