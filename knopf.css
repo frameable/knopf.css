@@ -44,7 +44,7 @@
   --knopf-border-radius: 0.25em;
   --knopf-border-style: solid;
   --knopf-border-width: 1px;
-  --knopf-border-alpha: 0.33;
+  --knopf-border-alpha: 33%;
 
   /* Text */
   --knopf-font-family: inherit;
