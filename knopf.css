@@ -242,13 +242,14 @@
    Modifiers
    ========================================================================== */
 
-.knopf.outline {
+.knopf.traced,
+.knopf.outlined {
   --knopf-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
   --knopf-hover-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
   --knopf-active-border-color: hsl(var(--knopf-color) / var(--knopf-border-alpha));
 }
 
-.knopf.solid {
+.knopf.outlined {
   --knopf-border-alpha: 1;
 }
 
