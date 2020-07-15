@@ -41,7 +41,7 @@
   --knopf-icon-size: var(--knopf-icon-size-base);
 
   /* Border */
-  --knopf-border-radius: 6px;
+  --knopf-border-radius: 0.25em;
   --knopf-border-style: solid;
   --knopf-border-width: 1px;
   --knopf-border-alpha: 0.33;
@@ -203,7 +203,7 @@
 /* Focus */
 .knopf.knopf:focus,
 .knopf.knopf:focus-within {
-  --knopf-box-shadow: 0 0 0 3px hsl(var(--knopf-color) / 0.4);
+  --knopf-box-shadow: 0 0 0 0.15em hsl(var(--knopf-color) / 0.4);
 
   outline: none;
 }
