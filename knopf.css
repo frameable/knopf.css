@@ -41,7 +41,7 @@
   --knopf-icon-size: var(--knopf-icon-size-base);
 
   /* Border */
-  --knopf-border-radius: 0.25em;
+  --knopf-border-radius: 0.33em;
   --knopf-border-style: solid;
   --knopf-border-width: 1px;
   --knopf-border-alpha: 33%;
