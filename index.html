@@ -65,9 +65,11 @@
       padding: 80px 24px;
     }
 
-    section:first-child {
-      padding-block-end: 128px;
-      padding-block-start: 128px;
+    @media only screen and (min-width: 768px) {
+      section:first-child {
+        padding-block-end: 128px;
+        padding-block-start: 128px;
+      }
     }
 
     .container {
@@ -338,13 +340,10 @@
           </a>
         </div>
 
-        <p class="mt-32 mb-0 flex items-center justify-center">
+        <p class="mt-32 mb-0 text-center">
           <span>Made with ❤️ by the folks at</span>
-          <a href="https://team.video/" class="knopf secondary link ml-8">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-tv" />
-            </svg>
-            <span class="ml-8">team.video</span>
+          <a href="https://team.video/" class="knopf secondary link">
+            team.video
           </a>
         </p>
       </div>
