@@ -142,7 +142,7 @@
   --knopf-hover-text-color: white;
 
   /* active */
-  --knopf-active-background-color: hsl(var(--knopf-active-color));
+  --knopf-active-background-color: hsl(var(--knopf-hover-color));
   --knopf-active-text-color: white;
 }
 
