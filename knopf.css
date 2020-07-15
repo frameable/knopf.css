@@ -1,4 +1,4 @@
-/*! knopf v1.0.7 | MIT License | https://knopf.dev/ */
+/*! knopf v1.0.8 | MIT License | https://knopf.dev/ */
 
 :root {
   /* ==========================================================================
@@ -41,10 +41,10 @@
   --knopf-icon-size: var(--knopf-icon-size-base);
 
   /* Border */
-  --knopf-border-radius: 6px;
+  --knopf-border-radius: 0.25em;
   --knopf-border-style: solid;
   --knopf-border-width: 1px;
-  --knopf-border-alpha: 0.33;
+  --knopf-border-alpha: 33%;
 
   /* Text */
   --knopf-font-family: inherit;
@@ -63,6 +63,7 @@
   --knopf-group-direction: row;
 
   /* Misc */
+  --knopf-box-shadow: none;
   --knopf-transition: all 0.15s ease-in-out;
 }
 
@@ -103,6 +104,7 @@
   border-radius: var(--knopf-border-radius);
   border-style: var(--knopf-border-style);
   border-width: var(--knopf-border-width);
+  box-shadow: var(--knopf-box-shadow);
   box-sizing: border-box;
   color: var(--knopf-text-color);
   -webkit-text-fill-color: var(--knopf-text-color);
@@ -201,7 +203,8 @@
 /* Focus */
 .knopf.knopf:focus,
 .knopf.knopf:focus-within {
-  box-shadow: 0 0 0 3px hsl(var(--knopf-color) / 0.4);
+  --knopf-box-shadow: 0 0 0 0.15em hsl(var(--knopf-color) / 0.4);
+
   outline: none;
 }
 
