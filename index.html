@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <link rel="preconnect" href="https://www.google-analytics.com">
   <link rel="preload" href="/RecursiveSansCslSt-ExtraBd.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -49,6 +49,8 @@
       font-size: 1em;
       line-height: 1.4;
       scroll-behavior: smooth;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
     }
 
     h1,
@@ -64,7 +66,9 @@
     }
 
     section {
-      padding: 80px 24px;
+      padding: 80px 16px;
+      padding-inline-start: max(16px, env(safe-area-inset-left));
+      padding-inline-end: max(16px, env(safe-area-inset-right));
     }
 
     section:first-child {
@@ -846,7 +850,7 @@
 &lt;/button&gt;</code></pre>
         </div>
         <form id="Settings" class="p-8">
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>Type</legend>
 
             <label class="knopf active">
@@ -854,23 +858,23 @@
               <span>Default</span>
             </label>
 
-            <label class="knopf inverse ml-8">
+            <label class="knopf inverse">
               <input class="sr-only" type="radio" name="type" value="inverse">
               <span>Inverse</span>
             </label>
 
-            <label class="knopf flat ml-8">
+            <label class="knopf flat">
               <input class="sr-only" type="radio" name="type" value="flat">
               <span>Flat</span>
             </label>
 
-            <label class="knopf pale ml-8">
+            <label class="knopf pale">
               <input class="sr-only" type="radio" name="type" value="pale">
               <span>Pale</span>
             </label>
           </fieldset>
 
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>State</legend>
 
             <label class="knopf flat outline">
@@ -878,13 +882,13 @@
               <span>Disabled</span>
             </label>
 
-            <label class="knopf flat traced ml-8">
+            <label class="knopf flat traced">
               <input class="sr-only" type="checkbox" name="active">
               <span>Active</span>
             </label>
           </fieldset>
 
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>Border</legend>
 
             <label class="knopf flat active">
@@ -892,18 +896,18 @@
               <span>None</span>
             </label>
 
-            <label class="knopf flat traced ml-8">
+            <label class="knopf flat traced">
               <input class="sr-only" type="radio" name="border" value="traced">
               <span>Traced</span>
             </label>
 
-            <label class="knopf flat outlined ml-8">
+            <label class="knopf flat outlined">
               <input class="sr-only" type="radio" name="border" value="outlined">
               <span>Outlined</span>
             </label>
           </fieldset>
 
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>Spacing</legend>
 
             <label class="knopf flat traced even">
@@ -911,18 +915,18 @@
               <span>Even</span>
             </label>
 
-            <label class="knopf flat traced active ml-8">
+            <label class="knopf flat traced active">
               <input class="sr-only" type="radio" name="spacing" checked value="">
               <span>Regular</span>
             </label>
 
-            <label class="knopf flat traced wide ml-8">
+            <label class="knopf flat traced wide">
               <input class="sr-only" type="radio" name="spacing" value="wide">
               <span>Wide</span>
             </label>
           </fieldset>
 
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>Corners</legend>
 
             <label class="knopf flat traced pill">
@@ -930,18 +934,18 @@
               <span>Pill</span>
             </label>
 
-            <label class="knopf flat traced active ml-8">
+            <label class="knopf flat traced active">
               <input class="sr-only" type="radio" name="corners" checked value="">
               <span>Rounded</span>
             </label>
 
-            <label class="knopf flat traced sharp ml-8">
+            <label class="knopf flat traced sharp">
               <input class="sr-only" type="radio" name="corners" value="sharp">
               <span>Sharp</span>
             </label>
           </fieldset>
 
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>Other</legend>
 
             <label class="knopf link">
@@ -950,7 +954,7 @@
             </label>
           </fieldset>
 
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>Size</legend>
 
             <label class="knopf flat small traced small">
@@ -958,23 +962,23 @@
               <span>Small</span>
             </label>
 
-            <label class="knopf flat traced active ml-4">
+            <label class="knopf flat traced active">
               <input class="sr-only" type="radio" name="size" checked value="">
               <span>Base</span>
             </label>
 
-            <label class="knopf flat traced large ml-4">
+            <label class="knopf flat traced large">
               <input class="sr-only" type="radio" name="size" value="large">
               <span>Large</span>
             </label>
 
-            <label class="knopf flat traced huge ml-4">
+            <label class="knopf flat traced huge">
               <input class="sr-only" type="radio" name="size" value="huge">
               <span>Huge</span>
             </label>
           </fieldset>
 
-          <fieldset class="mt-12 py-8 px-16">
+          <fieldset>
             <legend>Alignment</legend>
 
             <label class="knopf flat traced block mb-16">

@@ -126,11 +126,6 @@ main {
   flex-grow: 1;
 }
 
-#Gallery {
-  padding-inline-end: 16px;
-  padding-inline-start: 16px;
-}
-
 section:nth-child(odd):not(:first-child) {
   background-image: linear-gradient(120deg, var(--section-from), var(--section-to));
 }
@@ -182,7 +177,7 @@ h3 > a:hover::before {
 
 @media screen {
   .Logo {
-    filter: drop-shadow(0px 4px 8px hsl(219 76% 7% / 0.08));
+    filter: drop-shadow(0px 4px 8px hsl(219 76% 7% / 8%));
   }
 }
 
@@ -221,7 +216,6 @@ h3 > a:hover::before {
   grid-area: Settings;
 }
 
-
 @media screen and (min-width: 56em) {
   #Settings {
     columns: 2;
@@ -231,6 +225,19 @@ h3 > a:hover::before {
 @media screen and (min-width: 80em) {
   #Settings {
     columns: 3;
+  }
+}
+
+#Settings > fieldset {
+  margin-top: 12px;
+  padding-block-end: 8px;
+  padding-block-start: 8px;
+}
+
+@media only screen and (min-width: 576px) {
+  #Settings > fieldset {
+    padding-inline-end: 16px;
+    padding-inline-start: 16px;
   }
 }
 
@@ -273,21 +280,8 @@ h3 > a:hover::before {
   flex-wrap: wrap;
 }
 
-.flex-no-wrap {
-  flex-wrap: nowrap;
-}
-
-.items-end {
-  align-items: flex-end;
-}
-
 .rounded {
   border-radius: 16px;
-}
-
-.my-auto {
-  margin-block-end: auto;
-  margin-block-start: auto;
 }
 
 .my-24 {
@@ -306,29 +300,16 @@ h3 > a:hover::before {
 .mb-24 { margin-block-end: 24px !important; }
 .mb-32 { margin-block-end: 32px !important; }
 
-.ml-4 { margin-inline-start: 4px !important;}
-
 .mt-0 { margin-block-start: 0 !important;}
-.mt-12 { margin-block-start: 12px !important;}
 .mt-32 { margin-block-start: 32px !important;}
 
 .p-8 { padding: 8px !important; }
 .p-16 { padding: 16px !important; }
 .p-24 { padding: 24px !important; }
 
-.px-16 {
-  padding-inline-end: 16px !important;
-  padding-inline-start: 16px !important;
-}
-
 .px-24 {
   padding-inline-end: 24px !important;
   padding-inline-start: 24px !important;
-}
-
-.py-8 {
-  padding-block-end: 8px !important;
-  padding-block-start: 8px !important;
 }
 
 .py-16 {
