@@ -1,7 +1,84 @@
-import '../knopf.css';
+import '../knopf.css'
 
-export default { title: 'Knopf' };
+export default {
+  title: 'Playground',
+  argTypes: {
+    type: {
+      defaultValue: 'default',
+      control: {
+        type: 'inline-radio',
+        options: ['default', 'inverse', 'flat', 'pale'],
+      },
+    },
+    border: {
+      defaultValue: 'none',
+      control: {
+        type: 'inline-radio',
+        options: ['none', 'traced', 'outlined'],
+      },
+    },
+    spacing: {
+      defaultValue: 'regular',
+      control: {
+        type: 'inline-radio',
+        options: ['even', 'regular', 'wide'],
+      },
+    },
+    corners: {
+      defaultValue: 'rounded',
+      control: {
+        type: 'inline-radio',
+        options: ['pill', 'rounded', 'sharp'],
+      },
+    },
+    size: {
+      defaultValue: 'base',
+      control: {
+        type: 'inline-radio',
+        options: ['small', 'base', 'large', 'huge'],
+      },
+    },
+    isBlock: {
+      control: 'boolean',
+      defaultValue: false,
+    },
+    alignment: {
+      defaultValue: 'center',
+      control: {
+        type: 'inline-radio',
+        options: ['start', 'center', 'end'],
+      },
+    },
+    label: {
+      control: 'text',
+      defaultValue: 'Button',
+    },
+    isActive: {
+      control: 'boolean',
+      defaultValue: false,
+    },
+    isDisabled: {
+      control: 'boolean',
+      defaultValue: false,
+    },
+  },
+}
 
-export const Knopf = () => '<button class="knopf">Knopf</button>';
+export const button = ({ type, border, spacing, corners, size, isBlock, alignment, label, isActive, isDisabled }) => {
+  const classes = ['knopf']
 
-export const Flat = () => '<button class="knopf flat">Flat</button>';
+  if (type !== 'default') classes.push(type)
+  if (border !== 'none') classes.push(border)
+  if (spacing !== 'regular') classes.push(spacing)
+  if (corners !== 'rounded') classes.push(corners)
+  if (size !== 'base') classes.push(size)
+  if (isBlock) classes.push('block')
+  if (alignment !== 'center') classes.push(alignment)
+  if (isActive) classes.push('active')
+
+  return `
+    <button class="${classes.join(' ')}"${isDisabled ? ' disabled' : ''}>
+      ${label}
+    </button>
+  `
+}
