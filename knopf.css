@@ -63,6 +63,7 @@
   --knopf-group-direction: row;
 
   /* Misc */
+  --knopf-background-image: none;
   --knopf-box-shadow: none;
   --knopf-transition: all 150ms ease-in-out;
 }
@@ -104,6 +105,7 @@
   all: unset;
   align-items: center;
   background-color: var(--knopf-background-color);
+  background-image: var(--knopf-background-image);
   border-color: var(--knopf-border-color);
   border-radius: var(--knopf-border-radius);
   border-style: var(--knopf-border-style);
@@ -255,6 +257,14 @@
 
 .knopf.outlined {
   --knopf-border-alpha: 1;
+}
+
+.knopf.gradient {
+  --knopf-background-image: linear-gradient(hsl(var(--knopf-color-light)), hsl(var(--knopf-color-dark)));
+}
+
+.knopf.gradient:hover {
+  --knopf-background-image: linear-gradient(hsl(var(--knopf-color-lighter)), hsl(var(--knopf-color)));
 }
 
 /* ==========================================================================
