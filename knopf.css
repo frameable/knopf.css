@@ -74,9 +74,11 @@
 .knopf.knopf {
   /* Colors */
   --knopf-color: var(--knopf-hue) var(--knopf-saturation) var(--knopf-luminosity);
+
   /* Light */
   --knopf-color-light: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) + 10%);
   --knopf-color-lighter: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) + 15%);
+
   /* Dark */
   --knopf-color-dark: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) - 10%);
   --knopf-color-darker: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) - 15%);
