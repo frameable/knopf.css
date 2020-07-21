@@ -90,18 +90,24 @@
   --knopf-background-alpha: 100%;
   --knopf-background-color: var(--knopf-color);
   --knopf-border-color: var(--knopf-color);
+  --knopf-gradient-from: var(--knopf-color-light);
+  --knopf-gradient-to: var(--knopf-color-dark);
   --knopf-text-color: var(--knopf-white);
 
   /* Hover */
   --knopf-hover-background-alpha: 100%;
   --knopf-hover-background-color: var(--knopf-color-dark);
   --knopf-hover-border-color: var(--knopf-color-dark);
+  --knopf-hover-gradient-from: var(--knopf-color-lighter);
+  --knopf-hover-gradient-to: var(--knopf-color);
   --knopf-hover-text-color: var(--knopf-white);
 
   /* Active */
   --knopf-active-background-alpha: 100%;
   --knopf-active-background-color: var(--knopf-color-darker);
   --knopf-active-border-color: var(--knopf-color-darker);
+  --knopf-active-gradient-from: var(--knopf-color-dark);
+  --knopf-active-gradient-to: var(--knopf-color);
   --knopf-active-text-color: var(--knopf-white);
 
   /* Spacing */
@@ -111,7 +117,7 @@
   /* Properties */
   all: unset;
   align-items: center;
-  background-color: hsl(var(--knopf-background-color) / var(--knopf-background-alpha));
+  background-color: var(--knopf-named-background-color, hsl(var(--knopf-background-color) / var(--knopf-background-alpha)));
   background-image: var(--knopf-background-image);
   background-origin: border-box;
   border-color: hsl(var(--knopf-border-color) / var(--knopf-border-alpha));
@@ -333,19 +339,7 @@
    ========================================================================== */
 
 .knopf.gradient {
-  --knopf-background-color: var(--knopf-white);
-  --knopf-hover-background-color: var(--knopf-white);
-  --knopf-active-background-color: var(--knopf-white);
-
-  --knopf-gradient-from: var(--knopf-color-light);
-  --knopf-gradient-to: var(--knopf-color-dark);
-
-  --knopf-hover-gradient-from: var(--knopf-color-lighter);
-  --knopf-hover-gradient-to: var(--knopf-color);
-
-  --knopf-active-gradient-from: var(--knopf-color);
-  --knopf-active-gradient-to: var(--knopf-color-darker);
-
+  --knopf-named-background-color: transparent;
   --knopf-background-image: linear-gradient(hsl(var(--knopf-gradient-from) / var(--knopf-background-alpha)), hsl(var(--knopf-gradient-to) / var(--knopf-background-alpha)));
 }
 
