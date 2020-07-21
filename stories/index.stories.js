@@ -1,84 +1,68 @@
+import 'sanitize.css/typography.css'
 import '../knopf.css'
 
 export default {
-  title: 'Playground',
-  argTypes: {
-    type: {
-      defaultValue: 'default',
-      control: {
-        type: 'inline-radio',
-        options: ['default', 'inverse', 'flat', 'pale'],
-      },
-    },
-    border: {
-      defaultValue: 'none',
-      control: {
-        type: 'inline-radio',
-        options: ['none', 'traced', 'outlined'],
-      },
-    },
-    spacing: {
-      defaultValue: 'regular',
-      control: {
-        type: 'inline-radio',
-        options: ['even', 'regular', 'wide'],
-      },
-    },
-    corners: {
-      defaultValue: 'rounded',
-      control: {
-        type: 'inline-radio',
-        options: ['pill', 'rounded', 'sharp'],
-      },
-    },
-    size: {
-      defaultValue: 'base',
-      control: {
-        type: 'inline-radio',
-        options: ['small', 'base', 'large', 'huge'],
-      },
-    },
-    isBlock: {
-      control: 'boolean',
-      defaultValue: false,
-    },
-    alignment: {
-      defaultValue: 'center',
-      control: {
-        type: 'inline-radio',
-        options: ['start', 'center', 'end'],
-      },
-    },
-    label: {
-      control: 'text',
-      defaultValue: 'Button',
-    },
-    isActive: {
-      control: 'boolean',
-      defaultValue: false,
-    },
-    isDisabled: {
-      control: 'boolean',
-      defaultValue: false,
-    },
-  },
+  title: 'Test Suite',
 }
 
-export const button = ({ type, border, spacing, corners, size, isBlock, alignment, label, isActive, isDisabled }) => {
-  const classes = ['knopf']
+export const State = () => `
+  <button class="knopf" disabled>
+    disabled
+  </button>
+  <button class="knopf">
+    default
+  </button>
+  <button class="knopf active">
+    active
+  </button>
+`
+export const Type = () => `
+  <button class="knopf inverse">
+    inverse
+  </button>
+  <button class="knopf flat">
+    flat
+  </button>
+  <button class="knopf pale">
+    pale
+  </button>
+`
 
-  if (type !== 'default') classes.push(type)
-  if (border !== 'none') classes.push(border)
-  if (spacing !== 'regular') classes.push(spacing)
-  if (corners !== 'rounded') classes.push(corners)
-  if (size !== 'base') classes.push(size)
-  if (isBlock) classes.push('block')
-  if (alignment !== 'center') classes.push(alignment)
-  if (isActive) classes.push('active')
+export const Spacing = () => `
+  <button class="knopf even">
+    even
+  </button>
+  <button class="knopf">
+    regular
+  </button>
+  <button class="knopf wide">
+    wide
+  </button>
+`
 
-  return `
-    <button class="${classes.join(' ')}"${isDisabled ? ' disabled' : ''}>
-      ${label}
-    </button>
-  `
-}
+export const Corners = () => `
+  <button class="knopf sharp">
+    sharp
+  </button>
+  <button class="knopf">
+    rounded
+  </button>
+  <button class="knopf pill">
+    pill
+  </button>
+`
+
+export const Size = () => `
+  <button class="knopf small">
+    small
+  </button>
+  <button class="knopf">
+    base
+  </button>
+  <button class="knopf large">
+    large
+  </button>
+  <button class="knopf huge">
+    huge
+  </button>
+`

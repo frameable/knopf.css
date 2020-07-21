@@ -41,11 +41,14 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.10.5",
-    "@storybook/addon-a11y": "^6.0.0-rc.12",
-    "@storybook/addon-controls": "^6.0.0-rc.12",
-    "@storybook/addon-docs": "^6.0.0-rc.12",
-    "@storybook/html": "^6.0.0-rc.12",
+    "@storybook/addon-a11y": "^6.0.0-rc.13",
+    "@storybook/addon-controls": "^6.0.0-rc.13",
+    "@storybook/addon-docs": "^6.0.0-rc.13",
+    "@storybook/addons": "^6.0.0-rc.13",
+    "@storybook/html": "^6.0.0-rc.13",
+    "@storybook/theming": "^6.0.0-rc.13",
     "babel-loader": "^8.1.0",
+    "sanitize.css": "^11.0.1",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "uglifycss": "0.0.29"
@@ -55,9 +58,5 @@
     "rules": {
       "no-descending-specificity": null
     }
-  },
-  "dependencies": {
-    "@storybook/addons": "^5.3.19",
-    "@storybook/theming": "^5.3.19"
   }
 }
