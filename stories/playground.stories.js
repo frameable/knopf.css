@@ -68,10 +68,34 @@ export default {
       control: 'boolean',
       defaultValue: false,
     },
+    hue: {
+      defaultValue: 218,
+      control: {
+        type: 'range',
+        min: 0,
+        max: 360,
+      },
+    },
+    saturation: {
+      defaultValue: 77,
+      control: {
+        type: 'range',
+        min: 0,
+        max: 100,
+      },
+    },
+    luminosity: {
+      defaultValue: 37,
+      control: {
+        type: 'range',
+        min: 0,
+        max: 100,
+      },
+    },
   },
 }
 
-export const button = ({ type, misc, border, spacing, corners, size, isBlock, alignment, label, isActive, isDisabled }) => {
+export const button = ({ type, misc, border, spacing, corners, size, isBlock, alignment, label, isActive, isDisabled, hue, saturation, luminosity }) => {
   const classes = ['knopf'].concat(misc)
 
   if (type !== 'default') classes.push(type)
@@ -83,8 +107,14 @@ export const button = ({ type, misc, border, spacing, corners, size, isBlock, al
   if (alignment !== 'center') classes.push(alignment)
   if (isActive) classes.push('active')
 
+  const styles = [
+    `--knopf-hue: ${hue};`,
+    `--knopf-saturation: ${saturation}%;`,
+    `--knopf-luminosity: ${luminosity}%;`,
+  ]
+
   return `
-    <button class="${classes.join(' ')}"${isDisabled ? ' disabled' : ''}>
+    <button class="${classes.join(' ')}"${isDisabled ? ' disabled' : ''} style="${styles.join('')}">
       ${label}
     </button>
   `
