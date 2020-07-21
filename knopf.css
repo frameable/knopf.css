@@ -111,9 +111,9 @@
   /* Properties */
   all: unset;
   align-items: center;
-  background-clip: padding-box;
   background-color: hsl(var(--knopf-background-color) / var(--knopf-background-alpha));
   background-image: var(--knopf-background-image);
+  background-origin: border-box;
   border-color: hsl(var(--knopf-border-color) / var(--knopf-border-alpha));
   border-radius: var(--knopf-border-radius);
   border-style: var(--knopf-border-style);
