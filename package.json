@@ -28,7 +28,8 @@
   },
   "scripts": {
     "build": "uglifycss knopf.css > knopf.min.css",
-    "lint": "stylelint knopf.css"
+    "lint": "stylelint knopf.css",
+    "test": "start-storybook"
   },
   "keywords": [
     "knopf",
@@ -39,6 +40,15 @@
     "ui-component"
   ],
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-a11y": "^6.0.16",
+    "@storybook/addon-controls": "^6.0.16",
+    "@storybook/addon-docs": "^6.0.16",
+    "@storybook/addons": "^6.0.16",
+    "@storybook/html": "^6.0.16",
+    "@storybook/theming": "^6.0.16",
+    "babel-loader": "^8.1.0",
+    "sanitize.css": "^12.0.1",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "uglifycss": "0.0.29"
