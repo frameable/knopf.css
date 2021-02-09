@@ -16,6 +16,7 @@ export const State = () => `
     active
   </button>
 `
+
 export const Type = () => `
   <button class="knopf inverse">
     inverse
@@ -65,4 +66,8 @@ export const Size = () => `
   <button class="knopf huge">
     huge
   </button>
+`
+
+export const Link = () => `
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <a class="knopf link" href="#">incididunt</a> ut labore et dolore magna aliqua.</p>
 `

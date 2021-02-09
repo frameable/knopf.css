@@ -134,7 +134,7 @@
   display: var(--knopf-display);
   flex-direction: var(--knopf-flex-direction);
   font-family: var(--knopf-font-family);
-  font-size: var(--knopf-font-size);
+  font-size: var(--knopf-font-size, inherit);
   font-weight: var(--knopf-font-weight);
   line-height: var(--knopf-line-height);
   justify-content: var(--knopf-justify-content);
@@ -147,7 +147,6 @@
   text-decoration-line: var(--knopf-text-decoration-line);
   text-transform: var(--knopf-text-transform);
   transition: var(--knopf-transition);
-  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -217,7 +216,7 @@
 
 /* Visited */
 .knopf.knopf:visited {
-  color: var(--knopf-text-color);
+  color: hsl(var(--knopf-text-color));
 }
 
 /* Hover */
@@ -349,6 +348,8 @@
   --knopf-border-width: 0;
   --knopf-border-radius: 0;
   --knopf-padding: 0;
+
+  --knopf-font-size: null;
 
   /* Text decoration */
   --knopf-text-decoration-line: underline;
