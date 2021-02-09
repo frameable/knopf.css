@@ -117,6 +117,7 @@
 
   /* Properties */
   all: unset;
+  -webkit-user-drag: element;
   align-items: center;
   background-color: var(--knopf-named-background-color, hsl(var(--knopf-background-color) / var(--knopf-background-alpha)));
   background-image: var(--knopf-background-image);
