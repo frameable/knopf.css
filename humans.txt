@@ -8,7 +8,7 @@
 
 # THANKS
 
-    team.video
+    Frameable -- https://frameableinc.com/
 
 # TECHNOLOGY COLOPHON
 

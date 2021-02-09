@@ -262,6 +262,80 @@ h3 > a:hover::before {
   right: 0;
 }
 
+/* GlobalFooter */
+
+.GlobalFooter {
+  background: #F5F5F5;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+}
+
+.GlobalFooter_Container {
+  align-items: baseline;
+  display: grid;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1184px;
+  padding: 32px 16px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .GlobalFooter_Container {
+    gap: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.GlobalFooter_Logo {
+  color: hsl(0 0% 0% / 80%);
+  font-size: 18px;
+}
+
+.GlobalFooter_Logo a {
+  color: hsl(0 0% 0%);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.GlobalFooter_Logo a:hover {
+  text-decoration: underline;
+}
+
+.GlobalFooter_Links {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(5, min-content);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .GlobalFooter_Links {
+    margin-left: auto;
+    margin-right: 24px;
+  }
+}
+
+.GlobalFooter_Links a {
+  color: hsl(0 0% 0% / 50%);
+  text-decoration: none;
+}
+
+.GlobalFooter_Links a:hover {
+  color: hsl(0 0% 0% / 100%);
+  text-decoration: underline;
+}
+
+.GlobalFooter_Copy {
+  color: hsl(0 0% 0% / 50%);
+}
+
 /* Utilities */
 
 .bg-body {
