@@ -217,7 +217,7 @@
 
 /* Visited */
 .knopf.knopf:visited {
-  color: var(--knopf-text-color);
+  color: hsl(var(--knopf-text-color));
 }
 
 /* Hover */
