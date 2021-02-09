@@ -147,7 +147,6 @@
   text-decoration-line: var(--knopf-text-decoration-line);
   text-transform: var(--knopf-text-transform);
   transition: var(--knopf-transition);
-  white-space: nowrap;
 }
 
 /* ==========================================================================
