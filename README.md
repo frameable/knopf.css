@@ -2,7 +2,7 @@
 
 Modern, modular, extensible button system designed for both rapid prototyping and production-ready applications.
 
-Made with ❤️ by the folks at [team.video](https://team.video/)
+Made by the folks at [Frameable](https://frameableinc.com/)
 
 ## Installation
 
