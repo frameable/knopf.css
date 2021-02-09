@@ -84,14 +84,14 @@ As with any CSS library, you can override the base class to make it your own. Th
 ```css
 .knopf.knopf {
   --knopf-raised-height: 6px;
-  border-block-end-color: var(--knopf-hover-background-color);
+  border-block-end-color: hsl(var(--knopf-hover-background-color));
   border-block-end-width: var(--knopf-raised-height);
   margin-block-start: calc(var(--knopf-raised-height) * -1);
 }
 
 .knopf.knopf:hover {
   --knopf-raised-height: 2px;
-  border-block-end-color: var(--knopf-active-background-color);
+  border-block-end-color: hsl(var(--knopf-active-background-color));
 }
 ```
 
