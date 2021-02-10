@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+.knopf.positive {
+  --knopf-hue: 164;
+  --knopf-saturation: 88%;
+  --knopf-luminosity: 28%;
+}
+
+.knopf.negative {
+  --knopf-hue: 356;
+  --knopf-saturation: 57%;
+  --knopf-luminosity: 51%;
+}
