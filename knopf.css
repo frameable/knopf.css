@@ -1,6 +1,4 @@
-/*! knopf v1.0.9 | MIT License | https://knopf.dev/ */
-
-:root {
+html {
   /* ==========================================================================
      Color
      ========================================================================== */
@@ -114,6 +112,9 @@
   /* Spacing */
   --knopf-block-padding: var(--knopf-padding);
   --knopf-inline-padding: calc(var(--knopf-padding) * 2);
+
+  /* Misc */
+  --knopf-focus-ring: 0 0 0 0.15em hsl(var(--knopf-color) / 40%);
 
   /* Properties */
   all: unset;
@@ -234,7 +235,7 @@
 /* Focus */
 .knopf.knopf:focus,
 .knopf.knopf:focus-within {
-  --knopf-box-shadow: 0 0 0 0.15em hsl(var(--knopf-color) / 40%);
+  --knopf-box-shadow: var(--knopf-focus-ring);
 
   outline: none;
 }
