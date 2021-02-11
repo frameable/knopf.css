@@ -395,10 +395,6 @@ h3 > a:hover::before {
    knopf
    ========================================================================== */
 
-.knopf.shade {
-  --knopf-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-}
-
 .positive {
   --knopf-hue: 164;
   --knopf-saturation: 88%;
@@ -409,18 +405,6 @@ h3 > a:hover::before {
   --knopf-hue: 356;
   --knopf-saturation: 57%;
   --knopf-luminosity: 51%;
-}
-
-.knopf.raised {
-  --knopf-raised-height: 6px;
-  border-block-end-color: hsl(var(--knopf-hover-background-color));
-  border-block-end-width: var(--knopf-raised-height);
-  margin-block-start: calc(var(--knopf-raised-height) * -1);
-}
-
-.raised:hover {
-  --knopf-raised-height: 2px;
-  border-block-end-color: hsl(var(--knopf-active-background-color));
 }
 
 /* ==========================================================================
