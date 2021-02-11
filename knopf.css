@@ -113,6 +113,9 @@
   --knopf-block-padding: var(--knopf-padding);
   --knopf-inline-padding: calc(var(--knopf-padding) * 2);
 
+  /* Misc */
+  --knopf-focus-ring: 0 0 0 0.15em hsl(var(--knopf-color) / 40%);
+
   /* Properties */
   all: unset;
   -webkit-user-drag: element;
@@ -232,7 +235,7 @@
 /* Focus */
 .knopf.knopf:focus,
 .knopf.knopf:focus-within {
-  --knopf-box-shadow: 0 0 0 0.15em hsl(var(--knopf-color) / 40%);
+  --knopf-box-shadow: var(--knopf-focus-ring);
 
   outline: none;
 }
