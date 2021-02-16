@@ -65,7 +65,7 @@ html {
 
   /* Misc */
   --knopf-background-image: none;
-  --knopf-box-shadow: none;
+  --knopf-blank-shadow: 0 0 0 transparent;
   --knopf-transition: all 150ms ease-in-out;
 }
 
@@ -127,7 +127,7 @@ html {
   border-radius: var(--knopf-border-radius);
   border-style: var(--knopf-border-style);
   border-width: var(--knopf-border-width);
-  box-shadow: var(--knopf-box-shadow);
+  box-shadow: var(--knopf-box-shadow, var(--knopf-blank-shadow)), var(--knopf-focus-shadow, var(--knopf-blank-shadow));
   box-sizing: border-box;
   color: hsl(var(--knopf-text-color));
   -webkit-text-fill-color: hsl(var(--knopf-text-color));
@@ -235,7 +235,7 @@ html {
 /* Focus */
 .knopf.knopf:focus,
 .knopf.knopf:focus-within {
-  --knopf-box-shadow: var(--knopf-focus-ring);
+  --knopf-focus-shadow: var(--knopf-focus-ring);
 
   outline: none;
 }
