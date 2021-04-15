@@ -2,7 +2,7 @@
 
 Modern, modular, extensible button system designed for both rapid prototyping and production-ready applications.
 
-Made by the folks at [Frameable](https://frameableinc.com/)
+Made by [Frameable](https://frameableinc.com/), the team behind [Social hour](https://socialhour.com) and [Subtask](https://subtask.co).
 
 ## Installation
 
