@@ -271,7 +271,7 @@ h3 > a:hover::before {
 }
 
 .GlobalFooter_Container {
-  align-items: baseline;
+  align-items: center;
   display: grid;
   gap: 24px;
   margin: 0 auto;
@@ -293,6 +293,8 @@ h3 > a:hover::before {
 .GlobalFooter_Logo {
   color: hsl(0 0% 0% / 80%);
   font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
 }
 
 .GlobalFooter_Logo a {
@@ -303,6 +305,16 @@ h3 > a:hover::before {
 
 .GlobalFooter_Logo a:hover {
   text-decoration: underline;
+}
+
+.GlobalFooter_Team {
+  font-size: 13px;
+  margin: 0;
+  opacity: 0.67;
+}
+
+.GlobalFooter_Team a {
+  font-weight: 500;
 }
 
 .GlobalFooter_Links {
