@@ -165,7 +165,7 @@ html {
   --knopf-hover-text-color: var(--knopf-white);
 
   /* active */
-  --knopf-hover-background-alpha: 100%;
+  --knopf-active-background-alpha: 100%;
   --knopf-active-background-color: var(--knopf-color-dark);
   --knopf-active-text-color: var(--knopf-white);
 }
@@ -349,7 +349,6 @@ html {
   --knopf-border-width: 0;
   --knopf-border-radius: 0;
   --knopf-padding: 0;
-
   --knopf-font-size: null;
 
   /* Text decoration */
