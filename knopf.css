@@ -117,6 +117,7 @@ html {
   --knopf-active-text-alpha: 100%;
 
   /* Properties */
+  accent-color: hsl(var(--knopf-color));
   align-items: var(--knopf-align-items);
   background-color: var(--knopf-named-background-color, hsl(var(--knopf-background-color) / var(--knopf-background-alpha)));
   background-image: var(--knopf-background-image);
