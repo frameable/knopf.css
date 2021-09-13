@@ -203,13 +203,6 @@ html {
    States
    ========================================================================== */
 
-/* Disabled */
-.knopf:where(:disabled, .disabled) {
-  cursor: default;
-  opacity: 40%;
-  pointer-events: none;
-}
-
 /* Hover */
 .knopf:hover {
   --knopf-background-alpha: var(--knopf-hover-background-alpha);
