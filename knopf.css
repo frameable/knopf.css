@@ -7,9 +7,6 @@ html {
   --knopf-saturation: 77%;
   --knopf-luminosity: 37%;
 
-  /* White */
-  --knopf-white: 0 100% 100%;
-
   /* ==========================================================================
      Sizes
      ========================================================================== */
@@ -65,6 +62,7 @@ html {
 
   /* Misc */
   --knopf-background-image: none;
+  --knopf-foreground-color: 0 0% 100%;
   --knopf-blank-shadow: 0 0 0 transparent;
   --knopf-transition: all 150ms ease-in-out;
 }
@@ -91,7 +89,8 @@ html {
   --knopf-border-color: var(--knopf-color);
   --knopf-gradient-from: var(--knopf-color-light);
   --knopf-gradient-to: var(--knopf-color-dark);
-  --knopf-text-color: var(--knopf-white);
+  --knopf-text-color: var(--knopf-foreground-color);
+  --knopf-text-alpha: 100%;
 
   /* Hover */
   --knopf-hover-background-alpha: 100%;
@@ -99,7 +98,8 @@ html {
   --knopf-hover-border-color: var(--knopf-color-dark);
   --knopf-hover-gradient-from: var(--knopf-color-lighter);
   --knopf-hover-gradient-to: var(--knopf-color);
-  --knopf-hover-text-color: var(--knopf-white);
+  --knopf-hover-text-color: var(--knopf-foreground-color);
+  --knopf-hover-text-alpha: 100%;
 
   /* Active */
   --knopf-active-background-alpha: 100%;
@@ -107,7 +107,8 @@ html {
   --knopf-active-border-color: var(--knopf-color-darker);
   --knopf-active-gradient-from: var(--knopf-color-dark);
   --knopf-active-gradient-to: var(--knopf-color);
-  --knopf-active-text-color: var(--knopf-white);
+  --knopf-active-text-color: var(--knopf-foreground-color);
+  --knopf-active-text-alpha: 100%;
 
   /* Spacing */
   --knopf-block-padding: var(--knopf-padding);
@@ -129,7 +130,7 @@ html {
   border-width: var(--knopf-border-width);
   box-shadow: var(--knopf-box-shadow, var(--knopf-blank-shadow)), var(--knopf-focus-shadow, var(--knopf-blank-shadow));
   box-sizing: border-box;
-  color: hsl(var(--knopf-text-color));
+  color: hsl(var(--knopf-text-color) / var(--knopf-text-alpha));
   -webkit-text-fill-color: hsl(var(--knopf-text-color));
   cursor: pointer;
   display: var(--knopf-display);
@@ -162,12 +163,12 @@ html {
   /* hover */
   --knopf-hover-background-alpha: 100%;
   --knopf-hover-background-color: var(--knopf-color);
-  --knopf-hover-text-color: var(--knopf-white);
+  --knopf-hover-text-color: var(--knopf-foreground-color);
 
   /* active */
   --knopf-active-background-alpha: 100%;
   --knopf-active-background-color: var(--knopf-color-dark);
-  --knopf-active-text-color: var(--knopf-white);
+  --knopf-active-text-color: var(--knopf-foreground-color);
 }
 
 .knopf.flat {
