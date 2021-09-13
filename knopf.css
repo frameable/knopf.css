@@ -65,6 +65,7 @@ html {
   --knopf-background-image: none;
   --knopf-box-shadow: none;
   --knopf-foreground-color: 0 0% 100%;
+  --knopf--position: relative;
   --knopf-transition: all 150ms ease-in-out;
 }
 
@@ -137,7 +138,7 @@ html {
   justify-content: var(--knopf-justify-content);
   padding-block: var(--knopf-padding-block);
   padding-inline: var(--knopf-padding-inline);
-  position: relative;
+  position: var(--knopf--position);
   text-decoration-color: var(--knopf-text-decoration-color);
   text-decoration-line: var(--knopf-text-decoration-line);
   text-transform: var(--knopf-text-transform);
