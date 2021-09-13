@@ -48,6 +48,7 @@ html {
   --knopf-font-family: inherit;
   --knopf-font-weight: 500;
   --knopf-line-height: 1.5;
+  --knopf-align-items: center;
   --knopf-justify-content: center;
   --knopf-text-decoration-line: none;
   --knopf-text-decoration-color: currentColor;
@@ -62,8 +63,8 @@ html {
 
   /* Misc */
   --knopf-background-image: none;
+  --knopf-box-shadow: none;
   --knopf-foreground-color: 0 0% 100%;
-  --knopf-blank-shadow: 0 0 0 transparent;
   --knopf-transition: all 150ms ease-in-out;
 }
 
@@ -71,7 +72,7 @@ html {
    Class
    ========================================================================== */
 
-.knopf.knopf {
+.knopf {
   /* Colors */
   --knopf-color: var(--knopf-hue) var(--knopf-saturation) var(--knopf-luminosity);
 
@@ -82,6 +83,10 @@ html {
   /* Dark */
   --knopf-color-dark: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) - 10%);
   --knopf-color-darker: var(--knopf-hue) var(--knopf-saturation) calc(var(--knopf-luminosity) - 15%);
+
+  /* Spacing */
+  --knopf-padding-block: var(--knopf-padding);
+  --knopf-padding-inline: calc(var(--knopf-padding) * 2);
 
   /* Default */
   --knopf-background-alpha: 100%;
@@ -110,17 +115,8 @@ html {
   --knopf-active-text-color: var(--knopf-foreground-color);
   --knopf-active-text-alpha: 100%;
 
-  /* Spacing */
-  --knopf-block-padding: var(--knopf-padding);
-  --knopf-inline-padding: calc(var(--knopf-padding) * 2);
-
-  /* Misc */
-  --knopf-focus-ring: 0 0 0 0.15em hsl(var(--knopf-color) / 40%);
-
   /* Properties */
-  all: unset;
-  -webkit-user-drag: element;
-  align-items: center;
+  align-items: var(--knopf-align-items);
   background-color: var(--knopf-named-background-color, hsl(var(--knopf-background-color) / var(--knopf-background-alpha)));
   background-image: var(--knopf-background-image);
   background-origin: border-box;
@@ -128,10 +124,9 @@ html {
   border-radius: var(--knopf-border-radius);
   border-style: var(--knopf-border-style);
   border-width: var(--knopf-border-width);
-  box-shadow: var(--knopf-box-shadow, var(--knopf-blank-shadow)), var(--knopf-focus-shadow, var(--knopf-blank-shadow));
+  box-shadow: var(--knopf-box-shadow);
   box-sizing: border-box;
   color: hsl(var(--knopf-text-color) / var(--knopf-text-alpha));
-  -webkit-text-fill-color: hsl(var(--knopf-text-color));
   cursor: pointer;
   display: var(--knopf-display);
   flex-direction: var(--knopf-flex-direction);
@@ -140,10 +135,8 @@ html {
   font-weight: var(--knopf-font-weight);
   line-height: var(--knopf-line-height);
   justify-content: var(--knopf-justify-content);
-  padding-block-end: var(--knopf-block-padding);
-  padding-block-start: var(--knopf-block-padding);
-  padding-inline-end: var(--knopf-inline-padding);
-  padding-inline-start: var(--knopf-inline-padding);
+  padding-block: var(--knopf-padding-block);
+  padding-inline: var(--knopf-padding-inline);
   position: relative;
   text-decoration-color: var(--knopf-text-decoration-color);
   text-decoration-line: var(--knopf-text-decoration-line);
@@ -209,21 +202,14 @@ html {
    ========================================================================== */
 
 /* Disabled */
-.knopf.knopf:disabled,
-.knopf.disabled {
+.knopf:where(:disabled, .disabled) {
   cursor: default;
   opacity: 40%;
   pointer-events: none;
 }
 
-/* Visited */
-.knopf.knopf:visited {
-  color: hsl(var(--knopf-text-color));
-}
-
 /* Hover */
-.knopf.knopf:hover,
-.knopf.knopf:active {
+.knopf:hover {
   --knopf-background-alpha: var(--knopf-hover-background-alpha);
   --knopf-background-color: var(--knopf-hover-background-color);
   --knopf-border-color: var(--knopf-hover-border-color);
@@ -231,14 +217,6 @@ html {
   --knopf-gradient-to: var(--knopf-hover-gradient-to);
   --knopf-text-color: var(--knopf-hover-text-color);
   --knopf-text-decoration-color: var(--knopf-hover-text-decoration-color);
-}
-
-/* Focus */
-.knopf.knopf:focus,
-.knopf.knopf:focus-within {
-  --knopf-focus-shadow: var(--knopf-focus-ring);
-
-  outline: none;
 }
 
 /* Active */
@@ -278,8 +256,7 @@ html {
    Modifiers
    ========================================================================== */
 
-.knopf.traced,
-.knopf.outlined {
+.knopf:where(.traced, .outlined) {
   --knopf-border-color: var(--knopf-color);
 }
 
@@ -318,11 +295,11 @@ html {
    ========================================================================== */
 
 .knopf.even {
-  --knopf-inline-padding: var(--knopf-padding);
+  --knopf-padding-inline: var(--knopf-padding);
 }
 
 .knopf.wide {
-  --knopf-inline-padding: calc(var(--knopf-padding) * 3);
+  --knopf-padding-inline: calc(var(--knopf-padding) * 3);
 }
 
 /* ==========================================================================
@@ -407,13 +384,13 @@ html {
 }
 
 .knopf > .icon:first-child:not(:only-child) {
-  margin-inline-start: calc(var(--knopf-inline-padding) * -0.25);
-  margin-inline-end: calc(var(--knopf-inline-padding) * 0.5);
+  margin-inline-start: calc(var(--knopf-padding-inline) * -0.25);
+  margin-inline-end: calc(var(--knopf-padding-inline) * 0.5);
 }
 
 .knopf > .icon:last-child:not(:only-child) {
-  margin-inline-start: calc(var(--knopf-inline-padding) * 0.5);
-  margin-inline-end: calc(var(--knopf-inline-padding) * -0.25);
+  margin-inline-start: calc(var(--knopf-padding-inline) * 0.5);
+  margin-inline-end: calc(var(--knopf-padding-inline) * -0.25);
 }
 
 /* Prevent floating icons on small screens */
@@ -425,11 +402,11 @@ html {
   }
 
   .knopf > .icon.floating:first-child:not(:only-child) {
-    left: var(--knopf-inline-padding);
+    left: var(--knopf-padding-inline);
   }
 
   .knopf > .icon.floating:last-child:not(:only-child) {
-    right: var(--knopf-inline-padding);
+    right: var(--knopf-padding-inline);
   }
 }
 
