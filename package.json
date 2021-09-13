@@ -40,17 +40,17 @@
     "ui-component"
   ],
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@storybook/addon-a11y": "^6.1.18",
-    "@storybook/addon-controls": "^6.1.18",
-    "@storybook/addon-docs": "^6.1.18",
-    "@storybook/addons": "^6.1.18",
-    "@storybook/html": "^6.1.18",
-    "@storybook/theming": "^6.1.18",
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-a11y": "^6.3.8",
+    "@storybook/addon-controls": "^6.3.8",
+    "@storybook/addon-docs": "^6.3.8",
+    "@storybook/addons": "^6.3.8",
+    "@storybook/html": "^6.3.8",
+    "@storybook/theming": "^6.3.8",
     "babel-loader": "^8.2.2",
     "sanitize.css": "^12.0.1",
-    "stylelint": "^13.10.0",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "uglifycss": "0.0.29"
   },
   "stylelint": {
