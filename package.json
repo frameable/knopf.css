@@ -15,8 +15,7 @@
   "style": "knopf.css",
   "main": "knopf.css",
   "files": [
-    "knopf.css",
-    "knopf.min.css"
+    "knopf.css"
   ],
   "license": "MIT",
   "repository": {
@@ -27,7 +26,6 @@
     "url": "https://github.com/team-video/knopf.css/issues"
   },
   "scripts": {
-    "build": "uglifycss knopf.css > knopf.min.css",
     "lint": "stylelint knopf.css"
   },
   "keywords": [
@@ -40,8 +38,7 @@
   ],
   "devDependencies": {
     "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0",
-    "uglifycss": "0.0.29"
+    "stylelint-config-standard": "^22.0.0"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",

@@ -6,16 +6,16 @@ Made by [Frameable](https://frameableinc.com/), the team behind [Social hour](ht
 
 ## Installation
 
-Just [download](http://knopf.dev/knopf.css.zip) and include the minified stylesheet on your website.</p>
+Just [download](http://knopf.dev/knopf.css.zip) and include the stylesheet on your website.</p>
 
 ```html
-<link rel="stylesheet" href="/knopf.min.css">
+<link rel="stylesheet" href="/knopf.css">
 ```
 
 You could also link to a CDN hosted file.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/knopf.css/knopf.min.css">
+<link rel="stylesheet" href="https://unpkg.com/knopf.css">
 ```
 
 ***
