@@ -14,8 +14,8 @@ html {
   /* Font */
   --knopf-font-size-base: 1rem;
   --knopf-font-size-small: calc(var(--knopf-font-size-base) - 0.25rem);
-  --knopf-font-size-large: calc(var(--knopf-font-size-base) + 0.2rem);
-  --knopf-font-size-huge: calc(var(--knopf-font-size-base) + 0.5rem);
+  --knopf-font-size-large: calc(var(--knopf-font-size-base) + 0.20rem);
+  --knopf-font-size-huge: calc(var(--knopf-font-size-base) + 0.50rem);
 
   /* Padding */
   --knopf-padding-base: 0.375rem;
