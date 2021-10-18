@@ -58,14 +58,9 @@ html {
   --knopf-display: inline-flex;
   --knopf-flex-direction: row;
 
-  /* Group */
-  --knopf-group-direction: row;
-
   /* Misc */
-  --knopf-background-image: none;
   --knopf-box-shadow: none;
   --knopf-foreground-color: 0 0% 100%;
-  --knopf--position: relative;
   --knopf-transition: all 150ms ease-in-out;
 }
 
@@ -93,8 +88,6 @@ html {
   --knopf-background-alpha: 100%;
   --knopf-background-color: var(--knopf-color);
   --knopf-border-color: var(--knopf-color);
-  --knopf-gradient-from: var(--knopf-color-light);
-  --knopf-gradient-to: var(--knopf-color-dark);
   --knopf-text-color: var(--knopf-foreground-color);
   --knopf-text-alpha: 100%;
 
@@ -102,8 +95,6 @@ html {
   --knopf-hover-background-alpha: 100%;
   --knopf-hover-background-color: var(--knopf-color-dark);
   --knopf-hover-border-color: var(--knopf-color-dark);
-  --knopf-hover-gradient-from: var(--knopf-color-lighter);
-  --knopf-hover-gradient-to: var(--knopf-color);
   --knopf-hover-text-color: var(--knopf-foreground-color);
   --knopf-hover-text-alpha: 100%;
 
@@ -111,16 +102,14 @@ html {
   --knopf-active-background-alpha: 100%;
   --knopf-active-background-color: var(--knopf-color-darker);
   --knopf-active-border-color: var(--knopf-color-darker);
-  --knopf-active-gradient-from: var(--knopf-color-dark);
-  --knopf-active-gradient-to: var(--knopf-color);
   --knopf-active-text-color: var(--knopf-foreground-color);
   --knopf-active-text-alpha: 100%;
 
   /* Properties */
   accent-color: hsl(var(--knopf-color));
   align-items: var(--knopf-align-items);
-  background-color: var(--knopf-named-background-color, hsl(var(--knopf-background-color) / var(--knopf-background-alpha)));
-  background-image: var(--knopf-background-image);
+  background-color: hsl(var(--knopf-background-color) / var(--knopf-background-alpha));
+  background-image: var(--knopf-background-image, none);
   background-origin: border-box;
   border-color: hsl(var(--knopf-border-color) / var(--knopf-border-alpha));
   border-radius: var(--knopf-border-radius);
@@ -139,7 +128,7 @@ html {
   justify-content: var(--knopf-justify-content);
   padding-block: var(--knopf-padding-block);
   padding-inline: var(--knopf-padding-inline);
-  position: var(--knopf--position);
+  position: var(--knopf--position, relative);
   text-decoration-color: var(--knopf-text-decoration-color);
   text-decoration-line: var(--knopf-text-decoration-line);
   text-transform: var(--knopf-text-transform);
@@ -208,8 +197,6 @@ html {
   --knopf-background-alpha: var(--knopf-hover-background-alpha);
   --knopf-background-color: var(--knopf-hover-background-color);
   --knopf-border-color: var(--knopf-hover-border-color);
-  --knopf-gradient-from: var(--knopf-hover-gradient-from);
-  --knopf-gradient-to: var(--knopf-hover-gradient-to);
   --knopf-text-color: var(--knopf-hover-text-color);
   --knopf-text-decoration-color: var(--knopf-hover-text-decoration-color);
 }
@@ -219,8 +206,6 @@ html {
   --knopf-background-alpha: var(--knopf-active-background-alpha);
   --knopf-background-color: var(--knopf-active-background-color);
   --knopf-border-color: var(--knopf-active-border-color);
-  --knopf-gradient-from: var(--knopf-active-gradient-from);
-  --knopf-gradient-to: var(--knopf-active-gradient-to);
   --knopf-text-color: var(--knopf-active-text-color);
   --knopf-text-decoration-color: var(--knopf-active-text-decoration-color);
 }
@@ -312,11 +297,6 @@ html {
 /* ==========================================================================
    Other
    ========================================================================== */
-
-.knopf.gradient {
-  --knopf-named-background-color: transparent;
-  --knopf-background-image: linear-gradient(hsl(var(--knopf-gradient-from) / var(--knopf-background-alpha)), hsl(var(--knopf-gradient-to) / var(--knopf-background-alpha)));
-}
 
 .knopf.link {
   --knopf-border-width: 0;
