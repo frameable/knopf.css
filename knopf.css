@@ -23,12 +23,6 @@ html {
   --knopf-padding-large: calc(var(--knopf-padding-base) + 0.125rem);
   --knopf-padding-huge: calc(var(--knopf-padding-base) + 0.375rem);
 
-  /* Icon */
-  --knopf-icon-size-base: 1.125rem;
-  --knopf-icon-size-small: calc(var(--knopf-icon-size-base) - 0.25rem);
-  --knopf-icon-size-large: calc(var(--knopf-icon-size-base) + 0.375rem);
-  --knopf-icon-size-huge: calc(var(--knopf-icon-size-base) + 0.625rem);
-
   /* ==========================================================================
      Initial
      ========================================================================== */
@@ -324,46 +318,4 @@ html {
   --knopf-active-background-alpha: 0;
   --knopf-active-border-alpha: 0;
   --knopf-active-text-color: var(--knopf-color-darker);
-}
-
-/* ==========================================================================
-   Icon
-   ========================================================================== */
-
-.knopf > .icon {
-  align-items: center;
-  color: inherit;
-  display: inline-flex;
-  fill: currentColor;
-  flex-shrink: 0;
-  font-size: var(--knopf-icon-size);
-  height: var(--knopf-icon-size);
-  justify-content: center;
-  width: var(--knopf-icon-size);
-}
-
-.knopf > .icon.small {
-  --knopf-icon-size: var(--knopf-icon-size-small);
-}
-
-.knopf > .icon.base {
-  --knopf-icon-size: var(--knopf-icon-size-base);
-}
-
-.knopf > .icon.large {
-  --knopf-icon-size: var(--knopf-icon-size-large);
-}
-
-.knopf > .icon.huge {
-  --knopf-icon-size: var(--knopf-icon-size-huge);
-}
-
-.knopf > .icon:first-child:not(:only-child) {
-  margin-inline-start: calc(var(--knopf-padding-inline) * -0.25);
-  margin-inline-end: calc(var(--knopf-padding-inline) * 0.5);
-}
-
-.knopf > .icon:last-child:not(:only-child) {
-  margin-inline-start: calc(var(--knopf-padding-inline) * 0.5);
-  margin-inline-end: calc(var(--knopf-padding-inline) * -0.25);
 }
