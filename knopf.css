@@ -34,26 +34,19 @@ html {
 
   /* Border */
   --knopf-border-radius: 0.33em;
-  --knopf-border-style: solid;
-  --knopf-border-width: 1px;
   --knopf-border-alpha: 0%;
 
   /* Text */
-  --knopf-font-family: inherit;
   --knopf-font-weight: 500;
   --knopf-line-height: 1.5;
   --knopf-align-items: center;
   --knopf-justify-content: center;
+
   --knopf-text-decoration-line: none;
   --knopf-text-decoration-color: currentColor;
   --knopf-text-transform: none;
 
-  /* Flex */
-  --knopf-display: inline-flex;
-  --knopf-flex-direction: row;
-
   /* Misc */
-  --knopf-box-shadow: none;
   --knopf-foreground-color: 0 0% 100%;
   --knopf-transition: all 150ms ease-in-out;
 }
@@ -107,15 +100,15 @@ html {
   background-origin: border-box;
   border-color: hsl(var(--knopf-border-color) / var(--knopf-border-alpha));
   border-radius: var(--knopf-border-radius);
-  border-style: var(--knopf-border-style);
-  border-width: var(--knopf-border-width);
-  box-shadow: var(--knopf-box-shadow);
+  border-style: var(--knopf-border-style, solid);
+  border-width: var(--knopf-border-width, 1px);
+  box-shadow: var(--knopf-box-shadow, none);
   box-sizing: border-box;
   color: hsl(var(--knopf-text-color) / var(--knopf-text-alpha));
   cursor: pointer;
-  display: var(--knopf-display);
-  flex-direction: var(--knopf-flex-direction);
-  font-family: var(--knopf-font-family);
+  display: var(--knopf-display, inline-flex);
+  flex-direction: var(--knopf-flex-direction, row);
+  font-family: var(--knopf-font-family, inherit);
   font-size: var(--knopf-font-size, inherit);
   font-weight: var(--knopf-font-weight);
   line-height: var(--knopf-line-height);
